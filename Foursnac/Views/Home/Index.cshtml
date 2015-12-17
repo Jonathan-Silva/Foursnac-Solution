@@ -1,0 +1,264 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Foursnac</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="~/Content/css/main.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="~/Scripts/FuncoesPersonalizadas.js"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body class="landing">
+
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+
+            <h1><a href="index.html">Foursnac</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#Passo">Passos</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li><a href="#">Log In</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Banner -->
+        @*/@ViewBag.Imagem*@
+        <section id="Titulo" class="Titulo" style="background-image:url(/Content/img/wallpapper/);">
+            <div class="LogoCentral"></div>
+
+            <div id="CaixaCep" class="CaixaCep">
+
+                <div class="divCep">
+                    <input type="text" name="Cep" value="" id="cep" onkeypress="return somenteNumeros(event);" style="color:#000" class="Cep" placeholder="digite seu cep" />
+                </div>
+
+
+                <button type="button" name="btCep" value="" id="btcep" class="btcep">pedir comida</button>
+
+
+
+            </div>
+
+            <div><a href="http://www.google.com" class="NaoSeiCep">Não sei meu cep </a></div>
+
+
+
+
+
+        </section>
+
+        <section id="Passo" class="Passo">
+            <div class="container">
+
+                <div class="col-md-12 col-sm-12  col-xs-12">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo1"></i>
+                                <i class="icon-location74" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
+                            </span>
+                            <div><b>1.</b><span>Localize</span></div>
+                            <div>facilmente</div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo2" mou></i>
+                                <i class="icon-iconesestabelecimentos" style="position:absolute; margin:30px 15PX 0 -25PX; color:#FFF; font-size:50px; font-weight:500">  </i>
+
+                            </span>
+                            <div><b>2.</b><span>Selecione um</span></div>
+                            <div>estabelecimento</div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo3"></i>
+                                <i class="icon-pizza2" style="position:absolute; margin:35px 15PX 0 -16PX; color:#FFF; font-size:40px;">  </i>
+                            </span>
+                            <div><b>3.</b><span>Escolha sua</span></div>
+                            <div>comida</div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo4"></i>
+                                <i class="icon-money-card4" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
+                            </span>
+                            <div><b>4.</b><span>Defina como</span></div>
+                            <div>pagar</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+
+
+            <div class="container">
+
+                <div class="col-md-12 col-sm-12  col-xs-12">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
+                            <div class="FooterTitulo">CIDADES</div>
+                            <div class="FooterTexto">Araçatuba</div>
+                            <div class="FooterTexto">Birigui</div>
+                            <div class="FooterTexto">Bauru</div>
+                            <div class="FooterTexto">São Paulo</div>
+                            <div class="FooterTexto">Guarulhos</div>
+                            <div class="FooterTexto">Campo Grande</div>
+                            <div class="FooterTexto">Brasilha</div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
+                            <div class="FooterTitulo">COMPANY</div>
+                            <div class="FooterTexto">home</div>
+                            <div class="FooterTexto">contato</div>
+                            <div class="FooterTexto">empregos</div>
+                            <div class="FooterTexto">sobre</div>
+                            <div class="FooterTexto">brand guidelines</div>
+                            <div class="FooterTitulo FooterDiv">LEGAL</div>
+                            <div class="FooterTexto">termos de usuário</div>
+                            <div class="FooterTexto">politica de privaciade</div>
+                            <div class="FooterTexto">copyrights</div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
+                            <div class="FooterTitulo">APPS</div>
+                            <div class="FooterTexto">IOS</div>
+                            <div class="FooterTexto">Android</div>
+                            <div class="FooterTexto">WindosPhone</div>
+                            <div class="FooterTitulo FooterDiv">SOCIAL</div>
+                            <div class="FooterTexto">facebook</div>
+                            <div class="FooterTexto">twitter</div>
+                            <div class="FooterTexto">blog</div>
+                            <div class="FooterTexto">instagram</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
+                            <div class="FooterTitulo">ESTABELECIMENTOS</div>
+                            <div class="FooterTexto">cadastro</div>
+                            <div class="FooterTexto">login</div>
+                            <div class="FooterTexto">planos</div>
+                            <div class="FooterTexto">dúvidas</div>
+                            <div class="FooterTexto">suporte</div>
+                            <div class="FooterTexto">beneficios</div>
+                            <div class="FooterTitulo FooterDiv">FRANQUIAS</div>
+                            <div class="FooterTexto">dúvidas</div>
+                            <div class="FooterTexto">cadastrar</div>
+                            <div class="FooterTexto">suporte</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
+    <script src="~/Scripts/main.js"></script>
+
+
+</body>
+</html>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script>
+    $('#Passo1').mouseenter(function () {
+
+        $('#Passo1').addClass('corPassoHover');
+
+    });
+
+    $('#Passo1').mouseleave(function () {
+
+        $('#Passo1').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo2').mouseenter(function () {
+
+        $('#Passo2').addClass('corPassoHover');
+
+    });
+
+    $('#Passo2').mouseleave(function () {
+
+        $('#Passo2').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo3').mouseenter(function () {
+
+        $('#Passo3').addClass('corPassoHover');
+
+    });
+
+    $('#Passo3').mouseleave(function () {
+
+        $('#Passo3').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo4').mouseenter(function () {
+
+        $('#Passo4').addClass('corPassoHover');
+
+    });
+
+    $('#Passo4').mouseleave(function () {
+
+        $('#Passo4').removeClass('corPassoHover');
+
+    });
+
+
+    function alert(valor) {
+        console.log(valor);
+    }
+
+</script>

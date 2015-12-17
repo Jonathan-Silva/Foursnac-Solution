@@ -1,0 +1,486 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?tqklk8');
+	src:url('fonts/icomoon.eot?tqklk8#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?tqklk8') format('truetype'),
+		url('fonts/icomoon.woff?tqklk8') format('woff'),
+		url('fonts/icomoon.svg?tqklk8#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconesestabelecimentos:before {
+	content: "\e998";
+}
+.icon-a-glassofbrandy:before {
+	content: "\e902";
+}
+.icon-a-glassofwine:before {
+	content: "\e903";
+}
+.icon-apple:before {
+	content: "\e904";
+}
+.icon-apron:before {
+	content: "\e905";
+}
+.icon-avocado:before {
+	content: "\e906";
+}
+.icon-bales:before {
+	content: "\e907";
+}
+.icon-banana:before {
+	content: "\e908";
+}
+.icon-barbecue:before {
+	content: "\e909";
+}
+.icon-beer:before {
+	content: "\e90a";
+}
+.icon-blade:before {
+	content: "\e90b";
+}
+.icon-blender:before {
+	content: "\e90c";
+}
+.icon-bottle-ofbeer:before {
+	content: "\e90d";
+}
+.icon-bottle-ofcocacola:before {
+	content: "\e90e";
+}
+.icon-bottle-offanta:before {
+	content: "\e90f";
+}
+.icon-bread:before {
+	content: "\e910";
+}
+.icon-broccoli:before {
+	content: "\e911";
+}
+.icon-burrito:before {
+	content: "\e912";
+}
+.icon-cabbage:before {
+	content: "\e913";
+}
+.icon-cake:before {
+	content: "\e914";
+}
+.icon-cake2:before {
+	content: "\e915";
+}
+.icon-candy:before {
+	content: "\e916";
+}
+.icon-candy2:before {
+	content: "\e917";
+}
+.icon-canned-food:before {
+	content: "\e918";
+}
+.icon-canned-vegetables:before {
+	content: "\e919";
+}
+.icon-carrot:before {
+	content: "\e91a";
+}
+.icon-champagne:before {
+	content: "\e91b";
+}
+.icon-cheese:before {
+	content: "\e91c";
+}
+.icon-cherry:before {
+	content: "\e91d";
+}
+.icon-chicken:before {
+	content: "\e91e";
+}
+.icon-china-box:before {
+	content: "\e91f";
+}
+.icon-chocolate:before {
+	content: "\e920";
+}
+.icon-coca-colaglasscardboard:before {
+	content: "\e921";
+}
+.icon-cocktail:before {
+	content: "\e922";
+}
+.icon-cocktail2:before {
+	content: "\e923";
+}
+.icon-coctail3:before {
+	content: "\e924";
+}
+.icon-coffee:before {
+	content: "\e925";
+}
+.icon-coffee-maker:before {
+	content: "\e926";
+}
+.icon-coffee-maker2:before {
+	content: "\e927";
+}
+.icon-coffee-mill:before {
+	content: "\e928";
+}
+.icon-cognac:before {
+	content: "\e929";
+}
+.icon-cognac2:before {
+	content: "\e92a";
+}
+.icon-cognac3:before {
+	content: "\e92b";
+}
+.icon-colander:before {
+	content: "\e92c";
+}
+.icon-cooler:before {
+	content: "\e92d";
+}
+.icon-corkscrew:before {
+	content: "\e92e";
+}
+.icon-corolla:before {
+	content: "\e92f";
+}
+.icon-cracker:before {
+	content: "\e930";
+}
+.icon-cup:before {
+	content: "\e931";
+}
+.icon-cup-ofcoffee:before {
+	content: "\e932";
+}
+.icon-cutlery:before {
+	content: "\e933";
+}
+.icon-cutting-board:before {
+	content: "\e934";
+}
+.icon-dish:before {
+	content: "\e935";
+}
+.icon-eggs:before {
+	content: "\e936";
+}
+.icon-electric-kettle:before {
+	content: "\e937";
+}
+.icon-energy:before {
+	content: "\e938";
+}
+.icon-filter:before {
+	content: "\e939";
+}
+.icon-fish:before {
+	content: "\e93a";
+}
+.icon-fizzy-water:before {
+	content: "\e93b";
+}
+.icon-fizzy-water2:before {
+	content: "\e93c";
+}
+.icon-fizzy-water3:before {
+	content: "\e93d";
+}
+.icon-fork:before {
+	content: "\e93e";
+}
+.icon-glass-ofbeer:before {
+	content: "\e93f";
+}
+.icon-glass-ofwhiskey:before {
+	content: "\e940";
+}
+.icon-grater:before {
+	content: "\e941";
+}
+.icon-grill:before {
+	content: "\e942";
+}
+.icon-ham:before {
+	content: "\e943";
+}
+.icon-hamburger:before {
+	content: "\e944";
+}
+.icon-hot-dog:before {
+	content: "\e945";
+}
+.icon-ice-cream:before {
+	content: "\e946";
+}
+.icon-ice-cream2:before {
+	content: "\e947";
+}
+.icon-jelly-bean:before {
+	content: "\e948";
+}
+.icon-jug:before {
+	content: "\e949";
+}
+.icon-jug2:before {
+	content: "\e94a";
+}
+.icon-juice:before {
+	content: "\e94b";
+}
+.icon-juice-small:before {
+	content: "\e94c";
+}
+.icon-kettle:before {
+	content: "\e94d";
+}
+.icon-knife1:before {
+	content: "\e94e";
+}
+.icon-knife2:before {
+	content: "\e94f";
+}
+.icon-knife3:before {
+	content: "\e950";
+}
+.icon-knife4:before {
+	content: "\e951";
+}
+.icon-knife5:before {
+	content: "\e952";
+}
+.icon-knife-forpotatoes:before {
+	content: "\e953";
+}
+.icon-lemon:before {
+	content: "\e954";
+}
+.icon-lemonade:before {
+	content: "\e955";
+}
+.icon-lemonade2:before {
+	content: "\e956";
+}
+.icon-loaf:before {
+	content: "\e957";
+}
+.icon-martini:before {
+	content: "\e958";
+}
+.icon-martini-bottle:before {
+	content: "\e959";
+}
+.icon-microwave:before {
+	content: "\e95a";
+}
+.icon-milk:before {
+	content: "\e95b";
+}
+.icon-milk2:before {
+	content: "\e95c";
+}
+.icon-milkshake:before {
+	content: "\e95d";
+}
+.icon-mixer:before {
+	content: "\e95e";
+}
+.icon-mushroom:before {
+	content: "\e95f";
+}
+.icon-oil:before {
+	content: "\e960";
+}
+.icon-onion:before {
+	content: "\e961";
+}
+.icon-orange:before {
+	content: "\e962";
+}
+.icon-oven:before {
+	content: "\e963";
+}
+.icon-pan:before {
+	content: "\e964";
+}
+.icon-pan2:before {
+	content: "\e965";
+}
+.icon-pan3:before {
+	content: "\e966";
+}
+.icon-pan4:before {
+	content: "\e967";
+}
+.icon-papper2:before {
+	content: "\e968";
+}
+.icon-pear:before {
+	content: "\e969";
+}
+.icon-pepper:before {
+	content: "\e96a";
+}
+.icon-pepsi:before {
+	content: "\e96b";
+}
+.icon-pitcher-oflemonade:before {
+	content: "\e96c";
+}
+.icon-pizza:before {
+	content: "\e96d";
+}
+.icon-pizza2:before {
+	content: "\e96e";
+}
+.icon-plate:before {
+	content: "\e96f";
+}
+.icon-plunger:before {
+	content: "\e970";
+}
+.icon-pumpkin:before {
+	content: "\e971";
+}
+.icon-punder:before {
+	content: "\e972";
+}
+.icon-refrigerator:before {
+	content: "\e973";
+}
+.icon-salt-pepper:before {
+	content: "\e974";
+}
+.icon-saucers:before {
+	content: "\e975";
+}
+.icon-sauces:before {
+	content: "\e976";
+}
+.icon-sausage:before {
+	content: "\e977";
+}
+.icon-sausage2:before {
+	content: "\e978";
+}
+.icon-scales:before {
+	content: "\e979";
+}
+.icon-scotch-tape:before {
+	content: "\e97a";
+}
+.icon-scrambled-eggs:before {
+	content: "\e97b";
+}
+.icon-shashlik:before {
+	content: "\e97c";
+}
+.icon-shot:before {
+	content: "\e97d";
+}
+.icon-skimmer:before {
+	content: "\e97e";
+}
+.icon-soup:before {
+	content: "\e97f";
+}
+.icon-soup-ladle:before {
+	content: "\e980";
+}
+.icon-squash:before {
+	content: "\e981";
+}
+.icon-stove:before {
+	content: "\e982";
+}
+.icon-strawberry:before {
+	content: "\e983";
+}
+.icon-sugar:before {
+	content: "\e984";
+}
+.icon-sushi:before {
+	content: "\e985";
+}
+.icon-tea:before {
+	content: "\e986";
+}
+.icon-tea-bag:before {
+	content: "\e987";
+}
+.icon-tea-bag2:before {
+	content: "\e988";
+}
+.icon-teapot:before {
+	content: "\e989";
+}
+.icon-teapot2:before {
+	content: "\e98a";
+}
+.icon-timer:before {
+	content: "\e98b";
+}
+.icon-toaster:before {
+	content: "\e98c";
+}
+.icon-tomato:before {
+	content: "\e98d";
+}
+.icon-toque:before {
+	content: "\e98e";
+}
+.icon-vase:before {
+	content: "\e98f";
+}
+.icon-vodka:before {
+	content: "\e990";
+}
+.icon-water:before {
+	content: "\e991";
+}
+.icon-water2:before {
+	content: "\e992";
+}
+.icon-watermelon:before {
+	content: "\e993";
+}
+.icon-whiskey:before {
+	content: "\e994";
+}
+.icon-wine:before {
+	content: "\e995";
+}
+.icon-wine2:before {
+	content: "\e996";
+}
+.icon-wine-barrels:before {
+	content: "\e997";
+}
+.icon-location74:before {
+	content: "\e900";
+}
+.icon-money-card4:before {
+	content: "\e901";
+}
+
