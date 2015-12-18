@@ -248,6 +248,7 @@
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.eot" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.ttf" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.woff" />
+    <None Include="Properties\PublishProfiles\Foursnac.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\FuncoesPersonalizadas.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
