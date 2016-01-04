@@ -1,4 +1,25 @@
-﻿.LogoCentral {
+﻿.Barra {
+    background-color: #FF2930 !important;
+    -webkit-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
+    -moz-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
+    box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
+}
+
+.check {
+    font-size: 18px;
+    color: #2A87E5;
+    float: right !important;
+    width: 18px;
+    height: 18px;
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+.NoDisplay {
+    display: none !important;
+}
+
+.LogoCentral {
     height: 161px;
     max-width: 123px;
     background-image: url(/Content/img/logocentral.png) !important;
@@ -11,14 +32,73 @@
     z-index: 99999;
 }
 
+.LogoCentralBarra {
+    height: 40px;
+    max-width: 28px;
+    background-image: url(/Content/img/logocentral.png) !important;
+    background-size: 28px 40px;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 99999;
+}
+
 .Titulo {
     padding: 7% 0 0 0;
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     background-color: #FF2930;
     z-index: 99;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.Titulo1 {
+    padding: 7% 0 0 0;
+    width: 100%;
+    height: 100% !important;
+    background-color: #FFF !important;
+    z-index: 99;
+    text-align: center !important;
+}
+
+.Frase1 {
+    color: #1c85ea;
+    font-family: 'Segoe UI';
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.btPlay {
+    width: 100%;
+    height: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    margin-top: -35%;
+    font-size: 8em !important;
+    position: absolute;
+    color: #fff;
+}
+
+    .btPlay:hover {
+        color: #FF2930;
+    }
+
+.btPlayTrnasparent {
+    color: transparent;
 }
 
 .Passo {
@@ -30,10 +110,193 @@
     background-repeat: no-repeat;
 }
 
+
+
+.CaixaResultado {
+    max-width: 540px;
+    width: 100%;
+    height: 300px;
+    left: 0;
+    right: 0;
+    margin: 2% auto 0 auto;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 2%;
+    text-align: center;
+}
+
+.divUf {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important;
+    margin: 0 0 0 25px;
+    float: left;
+    height: 55px;
+    background-color: #b3b3b3;
+    padding-top: 7px;
+}
+
+.inputUf {
+    max-width: 50px;
+    height: 55px;
+    margin: 0 auto 0 auto !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Segoe WP SemiLight' !important;
+    background-color: transparent !important;
+    color: #FFF !important;
+    letter-spacing: 0px;
+}
+
+.divCidade {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important;
+    margin: 0 25px 0 0px;
+    float: right;
+    height: 55px;
+    background-color: #b3b3b3;
+    padding-top: 7px;
+}
+
+.inputCidade {
+    max-width: 340px;
+    height: 55px;
+    margin: 0 auto 0 auto !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Segoe WP SemiLight' !important;
+    background-color: transparent !important;
+    color: #FFF !important;
+    letter-spacing: 0px;
+}
+
+.divRua {
+    max-width: 490px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important;
+    margin: 10px 0 0 25px;
+    float: left;
+    height: 55px;
+    background-color: #b3b3b3;
+    padding-top: 7px;
+}
+
+.inputRua {
+    max-width: 470px;
+    height: 55px;
+    margin: 0 auto 0 auto !important;
+    left: 0;
+    font-size: 16px;
+    right: 0;
+    font-family: 'Segoe WP SemiLight' !important;
+    background-color: transparent !important;
+    color: #FFF !important;
+    text-align: center !important;
+    letter-spacing: 0px;
+}
+
+.divNum {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important;
+    margin: 10px 00px 0 25px;
+    float: left;
+    height: 55px;
+    background-color: #FFF;
+    padding-top: 7px;
+}
+
+.inputNum {
+    max-width: 80px;
+    height: 55px;
+    margin: 0 auto 0 auto !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Segoe WP SemiLight' !important;
+}
+
+.divComplemento {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important;
+    margin: 10px 25px 0 0px;
+    float: right;
+    height: 55px;
+    background-color: #FFF;
+    padding-top: 7px;
+}
+
+.inputComplemento {
+    max-width: 340px;
+    height: 55px;
+    margin: 0 auto 0 auto !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Segoe WP SemiLight' !important;
+}
+
+.btVoltar {
+    max-width: 100px;
+    width: 100%;
+    height: 55px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: rgba(102,102,102,1);
+    text-align: center;
+    padding: 0 0 0 0;
+    border: none !important;
+    border-radius: 8px;
+    color: #FFF;
+    margin: 10px 0px 0px 25px;
+    font-size: 16px;
+    float: left;
+    font-family: 'Segoe WP SemiLight' !important;
+}
+
+    .btVoltar:hover {
+        opacity: 0.7;
+    }
+
+.btContinuar {
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: #2A87E5;
+    text-align: center;
+    padding: 0 0 0 0;
+    border: none !important;
+    border-radius: 8px;
+    color: #FFF;
+    margin: 10px 10px 0px 10px;
+    font-size: 16px;
+    float: left;
+    font-family: 'Segoe WP SemiLight' !important;
+}
+
+    .btContinuar:hover {
+        opacity: 0.7;
+    }
+
+
+
+
 .CaixaCep {
     max-width: 340px;
     width: 100%;
-    height: 190px;
+    height: 175px;
     left: 0;
     right: 0;
     margin: 2% auto 0 auto;
@@ -45,9 +308,7 @@
 .divCep {
     max-width: 280px;
     width: 100%;
-    outline: none !important;
     text-decoration: none !important;
-    border: none !important;
     left: 0;
     right: 0;
     height: 55px;
@@ -56,6 +317,18 @@
     border-radius: 187px 187px;
     padding-top: 7px;
     color: #000 !important;
+    transition: 1s;
+}
+
+    .divCep:hover {
+        border: 1px solid #1c85ea !important;
+        box-shadow: 0px 0px 5px #2A87E5;
+    }
+
+.divCepShadow {
+    box-shadow: 0px 0px 5px #2A87E5;
+    border: 1px solid #1c85ea !important;
+    transition: 1s;
 }
 
 .Cep {
@@ -63,7 +336,7 @@
     width: 100%;
     outline: none !important;
     text-decoration: none !important;
-    border: none !important;
+    border: #FFF !important;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -72,7 +345,7 @@
     font-family: 'Segoe UI';
     color: #000 !important;
     text-align: center;
-    box-shadow: !important;
+    box-shadow: #fff !important;
 }
 
 .btcep {
@@ -90,9 +363,14 @@
     font-family: 'Segoe UI';
     color: #FFF;
     font-weight: lighter;
-    margin: 15px 30px;
+    margin: 10px 30px;
     font-size: 16px;
 }
+
+    .btcep:hover {
+        opacity: 0.7;
+    }
+
 
 .NaoSeiCep {
     text-decoration: none !important;
@@ -108,79 +386,161 @@
     font-weight: 100;
 }
 
-
     .NaoSeiCep:hover {
         color: #eae243;
         cursor: pointer;
     }
 
-.CaixaLojas {
-    max-width: 600px;
-    height: 60px;
-    margin: 6% auto 0 auto;
-    background-color: transparent;
-}
 
-.Loja1 {
-    max-width: 200px;
+.CaixaEmail {
+    max-width: 440px;
     width: 100%;
-    height: 60px;
-    float: left;
-}
-
-.Loja2 {
-    max-width: 200px;
-    width: 100%;
-    height: 60px;
-    float: left;
-}
-
-.Loja3 {
-    max-width: 200px;
-    width: 100%;
-    height: 60px;
-    float: left;
-}
-
-.btLoja1 {
-    max-width: 145px;
-    width: 100%;
-    height: 45px;
-    border-radius: 22px;
-    float: left;
-    background-color: rgba(0,0,0,0.4);
-    padding: 12px 0px 10px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFF;
-    font-size: 12px;
-}
-
-.btLoja2 {
-    max-width: 145px;
-    width: 100%;
-    height: 45px;
-    border-radius: 22px;
-    margin: 0 auto 0 auto;
-    background-color: rgba(0,0,0,0.4);
-    padding: 12px 0px 10px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 195px;
     left: 0;
     right: 0;
-    color: #FFF;
+    margin: 2% auto 0 auto;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 2%;
+    text-align: center;
 }
 
-.btLoja3 {
-    max-width: 145px;
+.divEmail {
+    max-width: 380px;
     width: 100%;
-    height: 45px;
-    border-radius: 22px;
-    background-color: rgba(0,0,0,0.4);
-    padding: 12px 0px 10px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFF;
-    float: right;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    left: 0;
+    right: 0;
+    height: 65px;
+    margin: 0 auto 0 auto;
+    background-color: #FFF !important;
+    border-radius: 8px;
+    padding-top: 10px;
+    color: #000 !important;
 }
 
+    .divEmail:hover {
+        box-shadow: -1px -2px 7px #2A87E5;
+        box-shadow: 1px 2px 7px #2A87E5;
+        transition: 1s;
+    }
+
+.divEmailShadow {
+    box-shadow: -1px -2px 7px #2A87E5;
+    box-shadow: 1px 2px 7px #2A87E5;
+    transition: 1s;
+}
+
+.btEmail {
+    max-width: 380px;
+    width: 100%;
+    height: 65px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: #2A87E5;
+    text-align: center;
+    padding: 0 0 0 0;
+    border: none !important;
+    border-radius: 8px;
+    font-family: 'Segoe UI';
+    color: #FFF;
+    font-weight: lighter;
+    margin: 10px 30px;
+    font-size: 16px;
+}
+
+.Email {
+    max-width: 250px;
+    width: 100%;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    font-family: 'Segoe UI' !important;
+    font-weight: lighter;
+    color: #000 !important;
+    text-align: center;
+    box-shadow: !important;
+}
+
+.inputRegistro {
+    max-width: 400px;
+    width: 100%;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #000 !important;
+    text-align: left;
+    box-shadow: !important;
+    float: left !important;
+    font-weight: lighter !important;
+}
+
+
+.divRegistro {
+    max-width: 460px;
+    width: 100%;
+    outline: none !important;
+    text-decoration: none !important;
+    border: 1px solid rgb(203,203,203) !important;
+    left: 0;
+    right: 0;
+    height: 66px;
+    margin: 0 auto 15px auto;
+    background-color: #FFF !important;
+    border-radius: 8px;
+    padding: 10px 0 0 20px;
+    color: #000 !important;
+    text-align: left !important;
+    font-weight: lighter !important;
+}
+
+    .divRegistro:hover {
+        box-shadow: 0px 0px 5px #2A87E5;
+        border: 1px solid #1c85ea !important;
+    }
+
+.btRegistro {
+    max-width: 460px;
+    width: 100%;
+    height: 66px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: #2A87E5;
+    text-align: center;
+    padding: 0 0 0 0;
+    border: none !important;
+    border-radius: 8px;
+    font-family: 'Segoe UI';
+    color: #FFF;
+    font-weight: lighter;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+    .btRegistro:hover {
+        opacity: 0.7;
+    }
+
+.TextoPasso {
+    font-family: 'Segoe UI' !important;
+    font-size: 14px;
+    color: #000 !important;
+    font-weight: lighter;
+}
 
 .FooterTitulo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -189,7 +549,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 .FooterTexto {
     font-family: 'Segoe UI' !important;
@@ -210,12 +569,242 @@
     margin-top: 30px;
 }
 
-
 .corPassoHover {
     color: #FF2930 !important;
 }
 
+
 @media all and (max-width:500px) {
+
+
+    .CaixaResultado {
+        max-width: 300px;
+        width: 100%;
+        height: 280px;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .divUf {
+        max-width:300px;
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        height: auto;
+        background-color: transparent !important;
+        padding-top: 0px;
+    }
+
+    .inputUf {
+        max-width: 270px;
+        height: 55px;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: 'Segoe WP SemiLight' !important;
+        background-color: transparent;
+        font-size: 16px;
+    }
+
+    .divCidade {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        height: auto;
+        background-color: transparent !important;
+        padding-top: 7px;
+    }
+
+    .inputCidade {
+        max-width: 270px;
+        height: 55px;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: 'Segoe WP SemiLight' !important;
+        background-color: transparent;
+        font-size: 16px;
+    }
+
+    .divRua {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        height: auto;
+        background-color: transparent !important;
+        padding-top: 7px;
+    }
+
+    .inputRua {
+        max-width: 270px;
+        height: 55px;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: 'Segoe WP SemiLight' !important;
+        background-color: transparent;
+        font-size: 16px;
+        border: 1px solid #FFF;
+    }
+
+    .divNum {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        height: auto;
+        background-color: transparent !important;
+        padding-top: 7px;
+    }
+
+    .inputNum {
+        max-width: 270px;
+        height: 55px;
+        margin: 0 auto 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: center;
+        font-family: 'Segoe WP SemiLight' !important;
+        background-color: transparent;
+        font-size: 16px;
+        border-bottom: 1px solid #FFF !important;
+    }
+
+
+        .inputNum::-webkit-input-placeholder {
+            color: #FFF !important;
+            opacity: 1;
+        }
+
+        .inputNum :-moz-placeholder {
+            color: #FFF !important;
+            opacity: 1.0;
+        }
+
+        .inputNum:-ms-input-placeholder {
+            color: #FFF !important;
+            opacity: 1.0;
+        }
+
+
+    .divComplemento {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 0px !important;
+        margin: 0 auto 0 auto !important;
+        left: 0;
+        right: 0;
+        height: auto;
+        background-color: transparent !important;
+        padding-top: 7px;
+    }
+
+    .inputComplemento {
+        max-width: 270px;
+        height: 55px;
+        margin: 0 auto 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: center;
+        font-family: 'Segoe WP SemiLight' !important;
+        background-color: transparent;
+        font-size: 16px;
+        border-bottom: 1px solid #FFF !important;
+        color: #000 !important;
+    }
+
+        .inputComplemento::-webkit-input-placeholder {
+            color: #FFF !important;
+            opacity: 1;
+        }
+
+        .inputComplemento :-moz-placeholder {
+            color: #FFF !important;
+            opacity: 1.0;
+        }
+
+        .inputComplemento:-ms-input-placeholder {
+            color: #FFF !important;
+            opacity: 1.0;
+        }
+
+
+
+
+
+    .btVoltar {
+        display:none;
+        max-width: 100px;
+        width: 100%;
+        height: 55px;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        background-color: #d1a429;
+        text-align: center;
+        padding: 0 0 0 0;
+        border: none !important;
+        border-radius: 8px;
+        color: #FFF;
+        left: 0;
+        margin: 45px 0px 0px 0px;
+        font-size: 16px;
+        font-family: 'Segoe WP SemiLight' !important;
+    }
+
+        .btVoltar:hover {
+            opacity: 0.7;
+        }
+
+    .btContinuar {
+        max-width: 300px;
+        width: 100%;
+        height: 55px;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        background-color: #2A87E5;
+        text-align: center;
+        padding: 0 0 0 0;
+        border: none !important;
+        border-radius: 8px;
+        color: #FFF;
+        margin: 35px auto 0px 0px !important;
+        left: 0;
+        right: 0;
+        font-size: 16px;
+        font-family: 'Arial' !important;
+    }
+
+        .btContinuar:hover {
+            opacity: 0.7;
+        }
+
+
+
+
+
+
 
     .LogoCentral {
         height: 130px;
@@ -231,7 +820,120 @@
     }
 
 
+    .LogoCentral1 {
+        height: 80px;
+        max-width: 60px;
+        background-image: url(/Content/img/logocentral.png) !important;
+        background-size: 60px 80px;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        margin: 10px auto 0px auto;
+        background-color: transparent;
+        z-index: 99999;
+    }
 
+    .Voltar {
+        color: #FFF !important;
+        font-size: 30px !important;
+        margin: 7px 0 0 7px;
+    }
+
+
+
+    .check {
+        font-size: 18px;
+        color: #2A87E5;
+        float: right !important;
+        width: 18px;
+        height: 18px;
+        margin-top: -8%;
+    }
+
+    .CaixaEmail {
+        max-width: 340px;
+        width: 100%;
+        height: 195px;
+        left: 0;
+        right: 0;
+        margin: 2% auto 0 auto;
+        background-color: transparent;
+        padding-top: 2%;
+        text-align: center;
+    }
+
+    .divEmail {
+        max-width: 300px;
+        width: 100%;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        left: 0;
+        right: 0;
+        height: 55px;
+        margin: 0 auto 0 auto;
+        background-color: transparent !important;
+        border-radius: 8px;
+        padding-top: 7px;
+        color: #000 !important;
+    }
+
+        .divEmail:hover {
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+    .divEmailShadow {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .Email {
+        max-width: 290px;
+        width: 100%;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        border-bottom: 2px solid #FFF !important;
+        border-radius: 0% 0% !important;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        font-size: 16px;
+        font-family: 'Segoe UI';
+        color: #FFF !important;
+        text-align: center;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        font-weight: lighter;
+    }
+
+    .btEmail {
+        max-width: 300px;
+        width: 100%;
+        height: 55px;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        background-color: #2A87E5;
+        text-align: center;
+        padding: 0 0 5px 0;
+        border: none !important;
+        border-radius: 0 0;
+        font-family: 'Segoe UI';
+        color: #FFF;
+        left: 0;
+        right: 0;
+        font-weight: lighter;
+        margin: 15px auto 0 auto;
+        font-size: 16px;
+        border-radius: 187px 187px;
+    }
+
+        .btEmail:hover {
+            opacity: 0.7;
+        }
 
     .CaixaCep {
         max-width: 340px;
@@ -260,6 +962,15 @@
         border-radius: 187px 187px;
         padding-top: 7px;
         color: #000 !important;
+    }
+
+        .divCep:hover {
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+    .divCepShadow {
+        box-shadow: none !important;
     }
 
     .Cep {
@@ -330,6 +1041,103 @@
             cursor: pointer;
         }
 
+    .Frase1 {
+        color: #1c85ea;
+        font-family: 'Segoe UI';
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        font-weight: 400;
+        margin-bottom: 45px;
+        margin-top: 45px;
+    }
+
+    .btRegistro {
+        max-width: 400px;
+        width: 100%;
+        height: 66px;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        background-color: #2A87E5;
+        text-align: center;
+        border: none !important;
+        border-radius: 8px;
+        font-family: 'Segoe UI';
+        color: #FFF;
+        font-weight: lighter;
+        left: 0;
+        margin: 25px auto 0 auto;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+        .btRegistro:hover {
+            opacity: 0.7;
+        }
+
+    .inputRegistro {
+        max-width: 400px;
+        height: auto;
+        width: 100%;
+        outline: none !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid rgb(203,203,203) !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        left: 0;
+        right: 0;
+        font-size: 18px;
+        font-weight: lighter;
+        color: #000 !important;
+        text-align: left;
+        box-shadow: !important;
+        float: left !important;
+        font-weight: lighter !important;
+        border-radius: 0;
+    }
+
+        .inputRegistro::-webkit-input-placeholder {
+            color: rgb(209, 209, 209) !important;
+            opacity: 1;
+        }
+
+        .inputRegistro :-moz-placeholder {
+            color: rgb(209, 209, 209) !important;
+            opacity: 1.0;
+        }
+
+        .inputRegistro:-ms-input-placeholder {
+            color: rgb(209, 209, 209) !important;
+            opacity: 1.0;
+        }
+
+
+    .divRegistro {
+        max-width: 380px;
+        width: 100%;
+        outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+        left: 0;
+        right: 0;
+        height: 66px;
+        margin: 0 auto 15px auto;
+        background-color: transparent !important;
+        color: #000 !important;
+        text-align: left !important;
+        font-weight: lighter !important;
+        padding: 0 !important;
+    }
+
+        .divRegistro:hover {
+            box-shadow: none !important;
+            border: none !important;
+        }
 
 
     ::-webkit-input-placeholder {
@@ -347,22 +1155,5 @@
 
     .formerize-placeholder {
         color: #FFF !important;
-    }
-
-
-    @media all and (min-width:501px) and (max-width:800px) {
-
-        .LogoCentral {
-            height: 120px;
-            max-width: 86px;
-            background-image: url(/Content/img/logocentral.png) !important;
-            background-size: 86px 120px;
-            background-repeat: no-repeat;
-            left: 0;
-            right: 0;
-            margin: -4% auto 0 auto;
-            background-color: transparent;
-            z-index: 99999;
-        }
     }
 }

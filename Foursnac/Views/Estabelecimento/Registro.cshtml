@@ -1,0 +1,132 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Foursnac</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="~/Content/css/main.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="~/Scripts/FuncoesPersonalizadas.js"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body class="landing">
+
+
+    <!-- Page Wrapper -->
+    <div>
+        <div id="page-wrapper">
+            <div class="LogoCentralBarra"></div>
+            <!-- Header -->
+            <header id="header" class="Barra">
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle"></a>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#Passo">Login</a></li>
+                                    <li><a href="#">Cadastre-se</a></li>
+                                    <li><a href="#">Estabelecimento</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
+
+
+            <!-- Banner -->
+
+
+            <section id="Titulo" class="Titulo1">
+                <form id="form" name="form">
+                    <div class="Frase1">Comece seu restaurante online agora mesmo e aumente suas vendas :)</div>
+
+                    <div id="divEmail" class="divRegistro">
+                        <input id="email" onclick="checkEmail" type="text" name="email" value="" onkeypress="" class="inputRegistro" placeholder="email" onblur="this.placeholder='email' " onfocus="this.placeholder='' " />
+                        <div id="checkEmail" class="fa fa-check check NoDisplay"></div>
+                    </div>
+                    <div id="divNome" class="divRegistro">
+                        <input id="nome" type="text" name="nome" value="" onkeypress="" class="inputRegistro" placeholder="nome do seu restaurante" onblur="this.placeholder ='nome do seu restaurante'" onfocus="this.placeholder = '' " />
+                        <div id="checkNome" class="fa fa-check check NoDisplay"></div>
+                    </div>
+                    <div id="divCelular" class="divRegistro">
+                        <input id="celular" onkeypress="return maskCelular(event);" type="text" name="celular" value="" onkeypress="" class="inputRegistro" placeholder="celular" onblur=" this.placeholder='celular' " onfocus=" this.placeholder='' " />
+                        <div id="checkCelular" class="fa fa-check check NoDisplay"></div>
+                    </div>
+                    <div id="divSenha" class="divRegistro">
+                        <input id="senha" type="password" name="senha" value="" onkeypress="" class="inputRegistro" placeholder="senha" onblur="this.placeholder ='senha'" onfocus="this.placeholder = '' " />
+                        <div id="checkSenha" class="fa fa-check check NoDisplay"></div>
+                    </div>
+
+                    <button class="btRegistro"> Criar Restaurante Online</button>
+
+                </form>
+            </section>
+
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
+    <script src="~/Scripts/main.js"></script>
+
+
+</body>
+</html>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script>
+
+    function checarEmail() {
+        if (document.form.email.value == "" || document.forms.email.value.indexOf('@@') == -1 || document.forms.email.value.indexOf('.') == -1) {
+            alert("Por favor, informe um E-MAIL válido!");
+            console.log('swdwdw');
+            return false;
+        }
+    }
+
+    function maskCelular(event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+
+        if (document.form.celular.value.length == 0) {
+            document.form.celular.value = '(' + document.form.celular.value;
+            $('#checkCelular').addClass('NoDisplay');
+        }
+        if (document.form.celular.value.length == 3) {
+            document.form.celular.value = document.form.celular.value + ')';
+        }
+
+        if (document.form.celular.value.length >= 13) {
+            $('#checkCelular').removeClass('NoDisplay');
+            return false;
+        }
+
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+
+        return true;
+    }
+
+</script>

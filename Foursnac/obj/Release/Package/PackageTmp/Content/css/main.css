@@ -1674,7 +1674,6 @@ textarea {
     padding: 0 1em;
     text-decoration: none;
     width: 100%;
-
 }
 
     input[type="text"]:invalid,
@@ -1682,7 +1681,6 @@ textarea {
     input[type="email"]:invalid,
     select:invalid,
     textarea:invalid {
-     
     }
 
     input[type="text"]:focus,
@@ -1690,7 +1688,6 @@ textarea {
     input[type="email"]:focus,
     select:focus,
     textarea:focus {
-      
     }
 
 .select-wrapper {
@@ -1813,27 +1810,28 @@ input[type="radio"] {
     }
 
 ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.5) !important;
+    color: rgb(209, 209, 209) !important;
     opacity: 1.0;
+    font-weight: lighter !important;
 }
 
 :-moz-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(209, 209, 209) !important;
     opacity: 1.0;
 }
 
 ::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(209, 209, 209) !important;
     opacity: 1.0;
 }
 
 :-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(209, 209, 209) !important;
     opacity: 1.0;
 }
 
 .formerize-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(209, 209, 209) !important;
     opacity: 1.0;
 }
 
@@ -2662,7 +2660,6 @@ button,
 
     .wrapper.style1 ::-webkit-input-placeholder {
         color: #a6e0db !important;
-        
     }
 
     .wrapper.style1 :-moz-placeholder {
@@ -3118,8 +3115,8 @@ button,
     top: 0;
     width: 15em;
     z-index: 10002;
-    font-weight:lighter;
-    font-family:'Segoe UI';
+    font-weight: lighter;
+    font-family: 'Segoe UI';
 }
 
     #menu ul {
@@ -3640,7 +3637,7 @@ body.is-mobile #main > header {
 #footer {
     background-color: #FFF !important;
     text-align: center;
-    padding:10px
+    padding: 10px;
 }
 
 
@@ -3651,21 +3648,18 @@ body.is-mobile #main > header {
         display: block;
         line-height: 1.65em;
         margin: 0;
-
     }
 }
 
 @media screen and (max-width: 980px) {
 
     #footer {
-        
     }
 }
 
 @media screen and (max-width: 736px) {
 
     #footer {
-       
     }
 }
 

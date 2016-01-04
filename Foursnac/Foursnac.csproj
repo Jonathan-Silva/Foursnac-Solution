@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EstabelecimentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -193,7 +194,13 @@
     <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.svg" />
     <Content Include="Content\fonts\font-foursnac\style.css" />
+    <Content Include="Content\img\delivery.png" />
+    <Content Include="Content\img\foursnac1.png" />
     <Content Include="Content\img\logocentral.png" />
+    <Content Include="Content\img\pickup .png" />
+    <Content Include="Content\img\pickup1.png" />
+    <Content Include="Content\img\pickup3.png" />
+    <Content Include="Content\img\red.png" />
     <Content Include="Content\img\wallpapper\1.jpg" />
     <Content Include="Content\img\wallpapper\2.jpg" />
     <Content Include="Content\img\wallpapper\3.jpg" />
@@ -201,6 +208,7 @@
     <Content Include="Content\img\wallpapper\5.jpg" />
     <Content Include="Content\img\wallpapper\6.jpg" />
     <Content Include="Content\img\wallpapper\7.jpg" />
+    <Content Include="Content\video\video1.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -248,6 +256,8 @@
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.eot" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.ttf" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.woff" />
+    <Content Include="Content\video\video1.ogv" />
+    <Content Include="Content\video\video1.webm" />
     <None Include="Properties\PublishProfiles\Foursnac.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\FuncoesPersonalizadas.js" />
@@ -302,6 +312,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Estabelecimento\Index.cshtml" />
+    <Content Include="Views\Estabelecimento\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

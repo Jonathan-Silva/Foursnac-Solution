@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?tqklk8');
-	src:url('fonts/icomoon.eot?tqklk8#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?tqklk8') format('truetype'),
-		url('fonts/icomoon.woff?tqklk8') format('woff'),
-		url('fonts/icomoon.svg?tqklk8#icomoon') format('svg');
+	src:	url('fonts/icomoon.eot?m4rjkj');
+	src:	url('fonts/icomoon.eot?m4rjkj#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?m4rjkj') format('truetype'),
+		url('fonts/icomoon.woff?m4rjkj') format('woff'),
+		url('fonts/icomoon.svg?m4rjkj#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
+	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -24,6 +24,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Administreerecebainsights:before {
+	content: "\e999";
+}
+.icon-Cadastre-se:before {
+	content: "\e99a";
+}
+.icon-Customizesuasinformaes:before {
+	content: "\e99b";
+}
+.icon-RecebaPedidos:before {
+	content: "\e99c";
+}
 .icon-iconesestabelecimentos:before {
 	content: "\e998";
 }
