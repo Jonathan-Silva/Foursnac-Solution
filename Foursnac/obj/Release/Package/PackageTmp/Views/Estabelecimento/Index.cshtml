@@ -38,10 +38,9 @@
                         <a href="#menu" class="menuToggle"></a>
                         <div id="menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#Passo">Login</a></li>
-                                <li><a href="#">Cadastre-se</a></li>
-                                <li><a href="#">Estabelecimento</a></li>
+                                <li><a href="/home/index">Home</a></li>
+                                <!--http://app.foursnac.com.br/login.html -->                        
+                                <li><a href="http://localhost:8080/login.html">Login</a></li>
                             </ul>
                         </div>
                     </li>
@@ -56,7 +55,7 @@
         <section id="Titulo" class="Titulo">
 
             <form name="form" id="form">
-                <div class="LogoCentral"></div>
+                <a href="/home/index"><div class="LogoCentral"></div></a> 
 
                 <div id="CaixaEmail" class="CaixaEmail">
 
@@ -64,7 +63,7 @@
                         <input id="email" type="text" name="email" value="" onkeypress="" style="color:#000" class="Email" placeholder="email" onblur="this.placeholder='email' " onfocus="this.placeholder='' " />
                     </div>
 
-                    <button id="btEmail" type="button" name="btEmail" value="" class="btEmail">vender mais</button>
+                    <button id="btEmail" type="button" onclick="Estabelecimento();" name="btEmail" value="" class="btEmail">vender mais</button>
 
                 </div>
 
@@ -144,69 +143,7 @@
 
 
         <!-- Footer -->
-        <footer id="footer">
-
-
-            <div class="container">
-
-                <div class="col-md-12 col-sm-12  col-xs-12">
-                    <div class="row text-center">
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">CIDADES</div>
-                            <div class="FooterTexto">Araçatuba</div>
-                            <div class="FooterTexto">Birigui</div>
-                            <div class="FooterTexto">Bauru</div>
-                            <div class="FooterTexto">São Paulo</div>
-                            <div class="FooterTexto">Guarulhos</div>
-                            <div class="FooterTexto">Campo Grande</div>
-                            <div class="FooterTexto">Brasilha</div>
-
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">COMPANY</div>
-                            <div class="FooterTexto">home</div>
-                            <div class="FooterTexto">contato</div>
-                            <div class="FooterTexto">empregos</div>
-                            <div class="FooterTexto">sobre</div>
-                            <div class="FooterTexto">brand guidelines</div>
-                            <div class="FooterTitulo FooterDiv">LEGAL</div>
-                            <div class="FooterTexto">termos de usuário</div>
-                            <div class="FooterTexto">politica de privaciade</div>
-                            <div class="FooterTexto">copyrights</div>
-
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">APPS</div>
-                            <div class="FooterTexto">IOS</div>
-                            <div class="FooterTexto">Android</div>
-                            <div class="FooterTexto">WindosPhone</div>
-                            <div class="FooterTitulo FooterDiv">SOCIAL</div>
-                            <div class="FooterTexto">facebook</div>
-                            <div class="FooterTexto">twitter</div>
-                            <div class="FooterTexto">blog</div>
-                            <div class="FooterTexto">instagram</div>
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">ESTABELECIMENTOS</div>
-                            <div class="FooterTexto">cadastro</div>
-                            <div class="FooterTexto">login</div>
-                            <div class="FooterTexto">planos</div>
-                            <div class="FooterTexto">dúvidas</div>
-                            <div class="FooterTexto">suporte</div>
-                            <div class="FooterTexto">beneficios</div>
-                            <div class="FooterTitulo FooterDiv">FRANQUIAS</div>
-                            <div class="FooterTexto">dúvidas</div>
-                            <div class="FooterTexto">cadastrar</div>
-                            <div class="FooterTexto">suporte</div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-        </footer>
+      @Html.Partial("_Footer")
 
     </div>
 
@@ -327,7 +264,6 @@
         }
     });
 
-
     var video = document.getElementById("divVideo");
 
     function playPause() {
@@ -341,6 +277,11 @@
         }
     }
 
+    function Estabelecimento() {
+
+        document.location.href = 'http://localhost:8080/foursnac/main.html#Home#' + $('#email').val() + '#';
+
+    }
 
 
 
