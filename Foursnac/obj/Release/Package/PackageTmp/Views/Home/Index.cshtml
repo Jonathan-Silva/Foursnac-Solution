@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -28,16 +27,17 @@
 
         <!-- Header -->
         <header id="header" class="alt">
+            <div id="icoVoltar" onclick="Voltar();" class="fa fa-chevron-circle-left Voltar NoDisplay"></div>
             <nav id="nav">
                 <ul>
                     <li class="special">
                         <a href="#menu" class="menuToggle"></a>
                         <div id="menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#Passo">Login</a></li>
-                                <li><a href="#">Cadastre-se</a></li>
-                                <li><a href="#">Estabelecimento</a></li>
+                                <li><a href="/home/index">Home</a></li>
+                                <li><a href="">Login</a></li>
+                                <li><a href="">Cadastre-se</a></li>
+                                <li><a href="/estabelecimento/index">Estabelecimento</a></li>
                             </ul>
                         </div>
                     </li>
@@ -47,29 +47,77 @@
 
 
         <!-- Banner -->
-        <!-- style="background-image:url(/Content/img/wallpapper/ViewBag.Imagem); -->
+        <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
         <section id="Titulo" class="Titulo">
-            <form name="form" id="form">
-                <div class="LogoCentral"></div>
+            <a href="/home/index"><div class="LogoCentral"></div></a>
+            <div id="CaixaCep" class="CaixaCep">
+                <form name="form" id="form">
 
-                <div id="CaixaCep" class="CaixaCep">
+                    <div id="divCep" class="divCep">
+                        <input id="Cep" type="text" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" />
+                    </div>
+                    <button type="button" name="btCep" value="" id="btCep" class="btcep" onclik="Ir()">pedir comida</button>
 
-                    <div class="divCep">
-                        <input type="text" name="cep" value="" id="cep" onkeypress="return somenteNumeros(event);" style="color:#000" class="Cep" placeholder="digite seu cep" />
+
+
+                </form>
+            </div>
+
+
+            <div id="Logo2" class="LogoCentral1 sNoDisplay"></div>
+            <div id="CaixaResultado" class="CaixaResultado NoDisplay">
+
+                <form name="form" id="form">
+                    <div class="divUf">
+                        <input id="uf" type="text" class="inputUf" value="" />
                     </div>
 
+                    <div class="divCidade">
+                        <input id="cidade" type="text" class="inputCidade" value="" />
+                    </div>
 
-                    <button type="button" name="btCep" value="" id="btcep" class="btcep">pedir comida</button>
+                    <div class="divRua">
+                        <input id="rua" type="text" class="inputRua" value="" />
+                    </div>
+
+                    <div class="divNum">
+                        <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
+                    </div>
+                    <div class="divComplemento">
+                        <input id="num" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                    </div>
+
+                    <button class="btVoltar" onclik="Voltar()">voltar</button>
+                    <button class="btContinuar">pedir comida</button>
+
+                </form>
+            </div>
 
 
-
+            <div id="CaixaTipo" class="CaixaTipo NoDisplay">
+                <div class="divDeliveryCor">
+                    <div id="divDelivery" class="divDelivery">
+                        <div class="img-Delivery"></div>
+                        <div>Delivery</div>
+                    </div>
                 </div>
 
-                <div><a href="http://www.google.com" class="NaoSeiCep">Não sei meu cep </a></div>
+                <div class="divPickupCor">
+                    <div id="divPickup" class="divPickup">
+                        <div class="img-Pickup"></div>
+                        <div>Pick-up</div>
+                    </div>
+                </div>
+            </div>
 
 
-            </form>
+
+
+
+
+            <div id="NaoSei"><a href="http://www.google.com" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
+
 
 
         </section>
@@ -86,8 +134,8 @@
                                 <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo1"></i>
                                 <i class="icon-location74" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
                             </span>
-                            <div><b>1.</b><span>Localize</span></div>
-                            <div>facilmente</div>
+                            <div><b>1.</b><span class="TextoPasso">Localize</span></div>
+                            <div class="TextoPasso">facilmente</div>
                         </div>
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
@@ -96,8 +144,8 @@
                                 <i class="icon-iconesestabelecimentos" style="position:absolute; margin:30px 15PX 0 -25PX; color:#FFF; font-size:50px; font-weight:500">  </i>
 
                             </span>
-                            <div><b>2.</b><span>Selecione um</span></div>
-                            <div>estabelecimento</div>
+                            <div><b>2.</b><span class="TextoPasso">Selecione um</span></div>
+                            <div class="TextoPasso">estabelecimento</div>
                         </div>
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
@@ -105,8 +153,8 @@
                                 <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo3"></i>
                                 <i class="icon-pizza2" style="position:absolute; margin:35px 15PX 0 -16PX; color:#FFF; font-size:40px;">  </i>
                             </span>
-                            <div><b>3.</b><span>Escolha sua</span></div>
-                            <div>comida</div>
+                            <div><b>3.</b><span class="TextoPasso">Escolha sua</span></div>
+                            <div class="TextoPasso">comida</div>
                         </div>
 
 
@@ -115,8 +163,8 @@
                                 <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo4"></i>
                                 <i class="icon-money-card4" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
                             </span>
-                            <div><b>4.</b><span>Defina como</span></div>
-                            <div>pagar</div>
+                            <div><b>4.</b><span class="TextoPasso">Defina como</span></div>
+                            <div class="TextoPasso">pagar</div>
                         </div>
 
                     </div>
@@ -124,75 +172,19 @@
 
 
             </div>
-     
+
         </section>
 
         <!-- Footer -->
-        <footer id="footer">
-
-
-            <div class="container">
-
-                <div class="col-md-12 col-sm-12  col-xs-12">
-                    <div class="row text-center">
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">CIDADES</div>
-                            <div class="FooterTexto">Araçatuba</div>
-                            <div class="FooterTexto">Birigui</div>
-                            <div class="FooterTexto">Bauru</div>
-                            <div class="FooterTexto">São Paulo</div>
-                            <div class="FooterTexto">Guarulhos</div>
-                            <div class="FooterTexto">Campo Grande</div>
-                            <div class="FooterTexto">Brasilha</div>
-
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">COMPANY</div>
-                            <div class="FooterTexto">home</div>
-                            <div class="FooterTexto">contato</div>
-                            <div class="FooterTexto">empregos</div>
-                            <div class="FooterTexto">sobre</div>
-                            <div class="FooterTexto">brand guidelines</div>
-                            <div class="FooterTitulo FooterDiv">LEGAL</div>
-                            <div class="FooterTexto">termos de usuário</div>
-                            <div class="FooterTexto">politica de privaciade</div>
-                            <div class="FooterTexto">copyrights</div>
-
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">APPS</div>
-                            <div class="FooterTexto">IOS</div>
-                            <div class="FooterTexto">Android</div>
-                            <div class="FooterTexto">WindosPhone</div>
-                            <div class="FooterTitulo FooterDiv">SOCIAL</div>
-                            <div class="FooterTexto">facebook</div>
-                            <div class="FooterTexto">twitter</div>
-                            <div class="FooterTexto">blog</div>
-                            <div class="FooterTexto">instagram</div>
-                        </div>
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12">
-                            <div class="FooterTitulo">ESTABELECIMENTOS</div>
-                            <div class="FooterTexto">cadastro</div>
-                            <div class="FooterTexto">login</div>
-                            <div class="FooterTexto">planos</div>
-                            <div class="FooterTexto">dúvidas</div>
-                            <div class="FooterTexto">suporte</div>
-                            <div class="FooterTexto">beneficios</div>
-                            <div class="FooterTitulo FooterDiv">FRANQUIAS</div>
-                            <div class="FooterTexto">dúvidas</div>
-                            <div class="FooterTexto">cadastrar</div>
-                            <div class="FooterTexto">suporte</div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-        </footer>
+        @Html.Partial("_Footer")
 
     </div>
+
+
+
+
+
+
 
     <!-- Scripts -->
     <script src="~/Scripts/jquery.min.js"></script>
@@ -258,7 +250,6 @@
 
     });
 
-
     $(window).width(function () {
 
         var x = screen.width;
@@ -309,23 +300,31 @@
             $('#divCirculo4').addClass('col-sm-6');
             $('#divCirculo4').addClass('col-xs-6');
         }
+
+
     });
 
-
-    function maskcep() {
-
-    }
+    $('#btCep').click(function () {
+        BuscarEndereco();
+    });
 
     function somenteNumeros(event) {
 
-
         var charCode = (event.which) ? event.which : event.keyCode;
+        var cep = $('#Cep').val();
 
-        if (document.form.cep.value.length == 5) {
-            document.form.cep.value += '-';
+        if (cep.length == 5) {
+            cep += '-';
         }
 
-        if (document.form.cep.value.length >= 9) {
+        $('#Cep').val(cep);
+
+        if (cep.length >= 9) {
+
+            if (charCode == 13) {
+                BuscarEndereco();
+            }
+
             return false;
         }
 
@@ -336,6 +335,54 @@
         return true;
     }
 
+    function Voltar() {
+
+        $('#CaixaCep').removeClass('NoDisplay');
+        $('#CaixaResultado').addClass('NoDisplay');
+        $('#NaoSei').removeClass('NoDisplay');
+        $('#Logo1').removeClass('NoDisplay');
+        $('#Logo2').addClass('NoDisplay');
+        $('#icoVoltar').addClass('NoDisplay');
+        $('#Cep').focus();
+        $('#footer').removeClass('NoDisplay');
+        $('#Passo').removeClass('NoDisplay');
+    }
+
+    function Ir() {
+        $('#CaixaCep').addClass('NoDisplay');
+        $('#CaixaResultado').removeClass('NoDisplay');
+        $('#NaoSei').addClass('NoDisplay');
+        $('#Logo1').addClass('NoDisplay');
+        $('#Logo2').removeClass('NoDisplay');
+        $('#icoVoltar').removeClass('NoDisplay');
+        $('#num').focus();
+        $('#footer').addClass('NoDisplay');
+        $('#Passo').addClass('NoDisplay');
+    }
+
+    function BuscarEndereco() {
+
+        var cep = $('#Cep').val().replace("-", "");;
+
+        $.ajax({
+            url: 'http://api.postmon.com.br/v1/cep/' + cep,
+            method: 'GET',
+            success: function (data) {
+                console.log(data);
+                $('#uf').val(data.estado);
+                $('#cidade').val(data.cidade);
+                $('#rua').val(data.logradouro);
+                Ir();
+            },
+            failure: function () { alert('Falha de comunição ou cep inválido'); }
+        });
+
+    }
+
+    function Erro() {
+
+
+    }
 
 
 

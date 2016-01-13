@@ -1,0 +1,288 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Foursnac</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="//vjs.zencdn.net/4.9.0/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.9.0/video.js"></script>
+
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="~/Content/css/main.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="~/Scripts/FuncoesPersonalizadas.js"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body class="landing">
+
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="/home/index">Home</a></li>
+                                <!--http://app.foursnac.com.br/login.html -->                        
+                                <li><a href="http://localhost:8080/login.html">Login</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Banner -->
+        <!-- style="background-image:url(/Content/img/wallpapper/ViewBag.Imagem); -->
+
+        <section id="Titulo" class="Titulo">
+
+            <form name="form" id="form">
+                <a href="/home/index"><div class="LogoCentral"></div></a> 
+
+                <div id="CaixaEmail" class="CaixaEmail">
+
+                    <div id="divEmail" class="divEmail">
+                        <input id="email" type="text" name="email" value="" onkeypress="" style="color:#000" class="Email" placeholder="email" onblur="this.placeholder='email' " onfocus="this.placeholder='' " />
+                    </div>
+
+                    <button id="btEmail" type="button" onclick="Estabelecimento();" name="btEmail" value="" class="btEmail">vender mais</button>
+
+                </div>
+
+            </form>
+        </section>
+
+        <!--Passo a passo -->
+        <section id="Passo" class="Passo">
+
+            <div class="container">
+
+                <div class="col-md-12 col-sm-12  col-xs-12">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo1">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo1"></i>
+                                <i class="icon-Cadastre-se" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
+                            </span>
+                            <div><b>1.</b><span class="TextoPasso">Cadastre-se na</span></div>
+                            <div class="TextoPasso">plataforma.</div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo2" mou></i>
+                                <i class="icon-Customizesuasinformaes" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px; font-weight:500">  </i>
+
+                            </span>
+                            <div><b>2.</b><span class="TextoPasso">Configure suas</span></div>
+                            <div class="TextoPasso">informações.</div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo3"></i>
+                                <i class="icon-RecebaPedidos" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
+                            </span>
+                            <div><b>3.</b><span class="TextoPasso">Receba mais</span></div>
+                            <div class="TextoPasso">pedidos.</div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo4">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo4"></i>
+                                <i class="icon-Administreerecebainsights" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
+                            </span>
+                            <div><b>4.</b><span class="TextoPasso">Administre seu</span></div>
+                            <div class="TextoPasso">negocio.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!--video-->
+        <section id="meuvideo" style="text-align:center;">
+
+            <video id="divVideo" preload="auto" style="width:100%; height:auto; z-index:99999; background-color:#FF2930;" poster="/Content/img/red.png">
+                <source src="~/Content/video/video1.mp4" media="screen and (min-width:800px)">
+                <source src="~/Content/video/video1.ogv" media="screen and (min-width:800px)">
+                <source src="~/Content/video/video1.webm" media="screen and (min-width:800px)">
+                <source src="~/Content/video/video1.mp4" media="screen and (max-width:799px)">
+                <source src="~/Content/video/video1.ogv" media="screen and (max-width:799px)">
+                <source src="~/Content/video/video1.webm" media="screen and (max-width:799px)">
+
+            </video>
+            <div id="btPlay" class="fa fa-play-circle btPlay" onclick="playPause()"></div>
+
+        </section>
+
+
+
+
+        <!-- Footer -->
+      @Html.Partial("_Footer")
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
+    <script src="~/Scripts/main.js"></script>
+
+
+</body>
+</html>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script>
+    $('#Passo1').mouseenter(function () {
+
+        $('#Passo1').addClass('corPassoHover');
+
+    });
+
+    $('#Passo1').mouseleave(function () {
+
+        $('#Passo1').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo2').mouseenter(function () {
+
+        $('#Passo2').addClass('corPassoHover');
+
+    });
+
+    $('#Passo2').mouseleave(function () {
+
+        $('#Passo2').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo3').mouseenter(function () {
+
+        $('#Passo3').addClass('corPassoHover');
+
+    });
+
+    $('#Passo3').mouseleave(function () {
+
+        $('#Passo3').removeClass('corPassoHover');
+
+    });
+
+    $('#Passo4').mouseenter(function () {
+
+        $('#Passo4').addClass('corPassoHover');
+
+    });
+
+    $('#Passo4').mouseleave(function () {
+
+        $('#Passo4').removeClass('corPassoHover');
+
+    });
+
+
+    $(window).width(function () {
+
+        var x = screen.width;
+
+        if (x < 700) {
+
+            $('#divCirculo1').removeClass('col-md-3');
+            $('#divCirculo1').removeClass('col-sm-3');
+            $('#divCirculo1').removeClass('col-sm-12');
+            $('#divCirculo1').removeClass('col-xs-12');
+
+            $('#divCirculo1').addClass('col-md-offset-3');
+            $('#divCirculo1').addClass('col-md-3');
+            $('#divCirculo1').addClass('col-sm-3');
+            $('#divCirculo1').addClass('col-sm-6');
+            $('#divCirculo1').addClass('col-xs-6');
+
+
+            $('#divCirculo2').removeClass('col-md-3');
+            $('#divCirculo2').removeClass('col-sm-3');
+            $('#divCirculo2').removeClass('col-sm-12');
+            $('#divCirculo2').removeClass('col-xs-12');
+
+            $('#divCirculo2').addClass('col-md-3');
+            $('#divCirculo2').addClass('col-sm-3');
+            $('#divCirculo2').addClass('col-sm-6');
+            $('#divCirculo2').addClass('col-xs-6');
+
+            $('#divCirculo3').removeClass('col-md-3');
+            $('#divCirculo3').removeClass('col-sm-3');
+            $('#divCirculo3').removeClass('col-sm-12');
+            $('#divCirculo3').removeClass('col-xs-12');
+
+            $('#divCirculo3').addClass('col-md-offset-3');
+            $('#divCirculo3').addClass('col-md-3');
+            $('#divCirculo3').addClass('col-sm-3');
+            $('#divCirculo3').addClass('col-sm-6');
+            $('#divCirculo3').addClass('col-xs-6');
+
+
+            $('#divCirculo4').removeClass('col-md-3');
+            $('#divCirculo4').removeClass('col-sm-3');
+            $('#divCirculo4').removeClass('col-sm-12');
+            $('#divCirculo4').removeClass('col-xs-12');
+
+            $('#divCirculo4').addClass('col-md-3');
+            $('#divCirculo4').addClass('col-sm-3');
+            $('#divCirculo4').addClass('col-sm-6');
+            $('#divCirculo4').addClass('col-xs-6');
+        }
+    });
+
+    var video = document.getElementById("divVideo");
+
+    function playPause() {
+        if (video.paused) {
+            video.play();
+            $('#btPlay').addClass('btPlayTrnasparent');
+        }
+        else {
+            video.pause();
+            $('#btPlay').removeClass('btPlayTrnasparent');
+        }
+    }
+
+    function Estabelecimento() {
+
+        document.location.href = 'http://localhost:8080/foursnac/main.html#Home#' + $('#email').val() + '#';
+
+    }
+
+
+
+</script>
