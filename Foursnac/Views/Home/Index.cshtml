@@ -68,19 +68,23 @@
             <div id="Logo2" class="LogoCentral1 sNoDisplay"></div>
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
+<<<<<<< HEAD
                 
                     <div class="divUf">
                         <input id="uf" type="text" class="inputUf" value="" />
                     </div>
+=======
+>>>>>>> upstream/master
 
-                    <div class="divCidade">
-                        <input id="cidade" type="text" class="inputCidade" value="" />
-                    </div>
+                <div class="divUf">
+                    <input id="uf" type="text" class="inputUf" value="" />
+                </div>
 
-                    <div class="divRua">
-                        <input id="rua" type="text" class="inputRua" value="" />
-                    </div>
+                <div class="divCidade">
+                    <input id="cidade" type="text" class="inputCidade" value="" />
+                </div>
 
+<<<<<<< HEAD
                     <div class="divNum">
                         <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
                     </div>
@@ -92,6 +96,23 @@
                     <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
 
                
+=======
+                <div class="divRua">
+                    <input id="rua" type="text" class="inputRua" value="" />
+                </div>
+
+                <div class="divNum">
+                    <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
+                </div>
+                <div class="divComplemento">
+                    <input id="complemento" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                </div>
+
+                <button class="btVoltar" onclik="Voltar()">voltar</button>
+                <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
+
+
+>>>>>>> upstream/master
             </div>
 
 
@@ -386,6 +407,7 @@
             $('#footer').addClass('NoDisplay');
             $('#Passo').addClass('NoDisplay');
         }
+<<<<<<< HEAD
     }
 
     function GoToTipo() {
@@ -393,6 +415,15 @@
     }
 
     
+=======
+    }
+
+    function GoToTipo() {
+        Ir('tipo');
+    }
+
+
+>>>>>>> upstream/master
 
     function BuscarEndereco() {
 
