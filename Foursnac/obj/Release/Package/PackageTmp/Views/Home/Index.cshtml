@@ -35,7 +35,7 @@
                         <div id="menu">
                             <ul>
                                 <li><a href="/home/index">Home</a></li>
-                                <li><a href="">Login</a></li>
+                                <li><a href="#" id="aLogin">Login</a></li>
                                 <li><a href="">Cadastre-se</a></li>
                                 <li><a href="/estabelecimento/index">Estabelecimento</a></li>
                             </ul>
@@ -57,7 +57,7 @@
                     <div id="divCep" class="divCep">
                         <input id="Cep" type="text" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" />
                     </div>
-                    <button type="button" name="btCep" value="" id="btCep" class="btcep" onclik="Ir()">pedir comida</button>
+                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep" onclik="Ir('tipo')">pedir comida</button>
 
 
 
@@ -68,7 +68,7 @@
             <div id="Logo2" class="LogoCentral1 sNoDisplay"></div>
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
-                <form name="form" id="form">
+                
                     <div class="divUf">
                         <input id="uf" type="text" class="inputUf" value="" />
                     </div>
@@ -85,25 +85,25 @@
                         <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
                     </div>
                     <div class="divComplemento">
-                        <input id="num" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                        <input id="complemento" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
                     </div>
 
                     <button class="btVoltar" onclik="Voltar()">voltar</button>
-                    <button class="btContinuar">pedir comida</button>
+                    <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
 
-                </form>
+               
             </div>
 
 
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
-                <div class="divDeliveryCor">
+                <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
                     <div id="divDelivery" class="divDelivery">
                         <div class="img-Delivery"></div>
                         <div>Delivery</div>
                     </div>
                 </div>
 
-                <div class="divPickupCor">
+                <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
                     <div id="divPickup" class="divPickup">
                         <div class="img-Pickup"></div>
                         <div>Pick-up</div>
@@ -180,12 +180,6 @@
 
     </div>
 
-
-
-
-
-
-
     <!-- Scripts -->
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/jquery.scrollex.min.js"></script>
@@ -202,6 +196,34 @@
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 
 <script>
+
+    $(document).ready(function () {
+        $('.tipo').click(function (event) {
+            event.preventDefault();
+            var cep = $('#Cep').val();
+            var tipo = $(this).attr('id');
+            var numero = $("#num").val();
+            var complemento = $("#complemento").val();
+
+            var destino = '';
+            var url = document.URL;
+
+            if (url.lastIndexOf('localhost') > -1) {
+                destino = 'http://localhost:8080';
+            } else {
+                destino = 'http://app.foursnac.com';
+            }
+
+            document.location.href = destino + '/foursnac/pedidos/main.html#PedidosMain#' + cep + "#" + numero + "#" + complemento + "#" + tipo;
+        });
+
+        $('#aLogin').click(function (ev) {
+            event.preventDefault();
+
+        });
+
+    });
+
     $('#Passo1').mouseenter(function () {
 
         $('#Passo1').addClass('corPassoHover');
@@ -348,17 +370,29 @@
         $('#Passo').removeClass('NoDisplay');
     }
 
-    function Ir() {
-        $('#CaixaCep').addClass('NoDisplay');
-        $('#CaixaResultado').removeClass('NoDisplay');
-        $('#NaoSei').addClass('NoDisplay');
-        $('#Logo1').addClass('NoDisplay');
-        $('#Logo2').removeClass('NoDisplay');
-        $('#icoVoltar').removeClass('NoDisplay');
-        $('#num').focus();
-        $('#footer').addClass('NoDisplay');
-        $('#Passo').addClass('NoDisplay');
+    function Ir(tipo) {
+        if (tipo == 'tipo') {
+            console.log('tipo');
+            $('#CaixaTipo').removeClass('NoDisplay');
+            $('#CaixaResultado').addClass('NoDisplay');
+        } else {
+            $('#CaixaCep').addClass('NoDisplay');
+            $('#CaixaResultado').removeClass('NoDisplay');
+            $('#NaoSei').addClass('NoDisplay');
+            $('#Logo1').addClass('NoDisplay');
+            $('#Logo2').removeClass('NoDisplay');
+            $('#icoVoltar').removeClass('NoDisplay');
+            $('#num').focus();
+            $('#footer').addClass('NoDisplay');
+            $('#Passo').addClass('NoDisplay');
+        }
     }
+
+    function GoToTipo() {
+        Ir('tipo');
+    }
+
+    
 
     function BuscarEndereco() {
 
@@ -372,7 +406,7 @@
                 $('#uf').val(data.estado);
                 $('#cidade').val(data.cidade);
                 $('#rua').val(data.logradouro);
-                Ir();
+                Ir('pesquisa');
             },
             failure: function () { alert('Falha de comunição ou cep inválido'); }
         });

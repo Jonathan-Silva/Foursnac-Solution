@@ -1222,4 +1222,8 @@
     .formerize-placeholder {
         color: #FFF !important;
     }
+
+    .ulSideMenu li{
+        cursor:pointer;
+    }
 }

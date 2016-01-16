@@ -37,10 +37,9 @@
                     <li class="special">
                         <a href="#menu" class="menuToggle"></a>
                         <div id="menu">
-                            <ul>
-                                <li><a href="/home/index">Home</a></li>
-                                <!--http://app.foursnac.com.br/login.html -->                        
-                                <li><a href="http://localhost:8080/login.html">Login</a></li>
+                            <ul id="ulSideMenu">
+                                <li><a href="/home/index">Home</a></li>                       
+                                <li><a href="#" id="aLogin">Login</a></li>
                             </ul>
                         </div>
                     </li>
@@ -163,6 +162,24 @@
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 
 <script>
+
+    $(document).ready(function () {
+        $('#aLogin').click(function (event) {
+            event.preventDefault();
+            var dest = '';
+            var url = document.URL;
+
+            if (url.lastIndexOf('localhost') > -1) {
+                dest = 'http://localhost:8080';
+            } else {
+                dest = 'http://app.foursnac.com';
+            }
+
+            window.location = dest + '/login.html';
+
+        });
+    });
+
     $('#Passo1').mouseenter(function () {
 
         $('#Passo1').addClass('corPassoHover');
@@ -278,11 +295,16 @@
     }
 
     function Estabelecimento() {
+        var url = document.URL;
+        var email = $('#email').val() + '#';
+        
+        if (url.lastIndexOf('localhost') > -1) {
+            document.location.href = 'http://localhost:8080/foursnac/main.html#Home#' + email;
+        } else {
+            document.location.href = 'http://app.foursnac.com.br/foursnac/main.html#Home#' + email;
+        }
 
-        document.location.href = 'http://localhost:8080/foursnac/main.html#Home#' + $('#email').val() + '#';
+        //document.location.href = document.URL + '/foursnac/main.html#Home#' + $('#email').val() + '#';
 
     }
-
-
-
 </script>
