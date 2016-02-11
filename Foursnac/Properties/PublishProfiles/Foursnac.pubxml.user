@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:06</publishTime>
     </File>
     <File Include="bin/Foursnac.dll">
-      <publishTime>01/05/2016 13:40:26</publishTime>
+      <publishTime>01/16/2016 19:18:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>12/15/2015 20:22:17</publishTime>
@@ -280,7 +280,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/18/2015 23:17:08</publishTime>
     </File>
     <File Include="Content/img/logocentral.png">
-      <publishTime>12/15/2015 21:54:00</publishTime>
+      <publishTime>01/06/2016 15:22:18</publishTime>
     </File>
     <File Include="Content/img/pickup .png">
       <publishTime>12/23/2015 17:31:44</publishTime>
@@ -463,7 +463,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:02</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Index.cshtml">
-      <publishTime>01/05/2016 10:28:49</publishTime>
+      <publishTime>01/14/2016 11:07:23</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Registro.cshtml">
       <publishTime>01/05/2016 11:43:27</publishTime>
@@ -475,7 +475,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:21:18</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/05/2016 10:29:47</publishTime>
+      <publishTime>01/14/2016 10:59:37</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>12/15/2015 20:22:03</publishTime>
