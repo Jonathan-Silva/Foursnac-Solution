@@ -50,7 +50,8 @@
         <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
         <section id="Titulo" class="Titulo">
-            <a href="/home/index"><div class="LogoCentral"></div></a>
+            <a  href="/home/index"><div class="LogoCentral"></div></a>
+            <!--Busca Cep-->
             <div id="CaixaCep" class="CaixaCep">
                 <form name="form" id="form">
 
@@ -64,8 +65,9 @@
                 </form>
             </div>
 
+            <!-- Resultado Endereço -->
+            <div id="Logo2" class="LogoCentral1 NoDisplay"></div>
 
-            <div id="Logo2" class="LogoCentral1 sNoDisplay"></div>
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
 
@@ -94,26 +96,23 @@
 
             </div>
 
+            <!--Seleciona o tipo Delivery/Pickup-->
 
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
                 <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
-                    <div id="divDelivery" class="divDelivery">
+            
                         <div class="img-Delivery"></div>
-                        <div>Delivery</div>
-                    </div>
+                        <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
+                    
                 </div>
 
                 <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
-                    <div id="divPickup" class="divPickup">
+                    
                         <div class="img-Pickup"></div>
-                        <div>Pick-up</div>
-                    </div>
+                        <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
+                  
                 </div>
             </div>
-
-
-
-
 
 
             <div id="NaoSei"><a href="http://www.google.com" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
@@ -375,6 +374,7 @@
             console.log('tipo');
             $('#CaixaTipo').removeClass('NoDisplay');
             $('#CaixaResultado').addClass('NoDisplay');
+            $('.LogoCentral').addClass('NoDisplay');
         } else {
             $('#CaixaCep').addClass('NoDisplay');
             $('#CaixaResultado').removeClass('NoDisplay');
