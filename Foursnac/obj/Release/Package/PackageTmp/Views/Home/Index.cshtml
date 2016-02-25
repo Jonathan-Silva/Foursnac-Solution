@@ -56,9 +56,9 @@
                 <form name="form" id="form">
 
                     <div id="divCep" class="divCep">
-                        <input id="Cep" type="text" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" />
+                        <input id="Cep" type="text" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off" />
                     </div>
-                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep" onclik="Ir('tipo')">pedir comida</button>
+                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep" >pedir comida</button>
 
 
 
@@ -358,29 +358,32 @@
 
     function Voltar() {
 
-        $('#CaixaCep').removeClass('NoDisplay');
-        $('#CaixaResultado').addClass('NoDisplay');
-        $('#NaoSei').removeClass('NoDisplay');
-        $('#Logo1').removeClass('NoDisplay');
-        $('#Logo2').addClass('NoDisplay');
-        $('#icoVoltar').addClass('NoDisplay');
-        $('#Cep').focus();
         $('#footer').removeClass('NoDisplay');
         $('#Passo').removeClass('NoDisplay');
+        $('#CaixaCep').removeClass('NoDisplay');
+        $('#NaoSei').removeClass('NoDisplay');
+        $('.LogoCentral').removeClass('NoDisplay');
+
+        $('#CaixaResultado').addClass('NoDisplay'); 
+        $('#CaixaTipo').addClass('NoDisplay');
+        $('#icoVoltar').addClass('NoDisplay');
+        $('#Cep').focus();
+      
     }
 
     function Ir(tipo) {
         if (tipo == 'tipo') {
-            console.log('tipo');
             $('#CaixaTipo').removeClass('NoDisplay');
             $('#CaixaResultado').addClass('NoDisplay');
             $('.LogoCentral').addClass('NoDisplay');
+            $('.LogoCentral1').addClass('NoDisplay');
         } else {
             $('#CaixaCep').addClass('NoDisplay');
             $('#CaixaResultado').removeClass('NoDisplay');
             $('#NaoSei').addClass('NoDisplay');
             $('#Logo1').addClass('NoDisplay');
-            $('#Logo2').removeClass('NoDisplay');
+            $('.LogoCentral').addClass('NoDisplay');
+            $('.LogoCentral1').removeClass('NoDisplay');
             $('#icoVoltar').removeClass('NoDisplay');
             $('#num').focus();
             $('#footer').addClass('NoDisplay');

@@ -9,6 +9,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="//v2.zopim.com/?3hCSZlIi04fStrYCFoyIkBr5QCysyWDQ";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
+
     <link href="//vjs.zencdn.net/4.9.0/video-js.css" rel="stylesheet">
     <script src="//vjs.zencdn.net/4.9.0/video.js"></script>
 
@@ -124,18 +135,18 @@
 
         <!--video-->
         <section id="meuvideo" style="text-align:center;">
+            <div style="width:100%; height:auto;">
+                <video onclick="playPause()" id="divVideo" preload="auto" style="width:100%; height:auto; z-index:99999; background-color:#FF2930;" poster="/Content/img/red.png">
+                    <source src="~/Content/video/video1.mp4" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.ogv" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.webm" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.mp4" media="screen and (max-width:799px)">
+                    <source src="~/Content/video/video1.ogv" media="screen and (max-width:799px)">
+                    <source src="~/Content/video/video1.webm" media="screen and (max-width:799px)">
 
-            <video id="divVideo" preload="auto" style="width:100%; height:auto; z-index:99999; background-color:#FF2930;" poster="/Content/img/red.png">
-                <source src="~/Content/video/video1.mp4" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.ogv" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.webm" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.mp4" media="screen and (max-width:799px)">
-                <source src="~/Content/video/video1.ogv" media="screen and (max-width:799px)">
-                <source src="~/Content/video/video1.webm" media="screen and (max-width:799px)">
-
-            </video>
-            <div id="btPlay" class="fa fa-play-circle btPlay" onclick="playPause()"></div>
-
+                </video>
+                <div id="btPlay" class="fa fa-play-circle btPlay" onclick="playPause()"></div>
+            </div>
         </section>
 
 

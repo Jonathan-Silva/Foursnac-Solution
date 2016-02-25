@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:06</publishTime>
     </File>
     <File Include="bin/Foursnac.dll">
-      <publishTime>02/15/2016 10:58:47</publishTime>
+      <publishTime>02/24/2016 16:30:43</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>12/15/2015 20:22:17</publishTime>
@@ -130,7 +130,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:21:54</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css">
-      <publishTime>12/16/2015 12:07:09</publishTime>
+      <publishTime>02/25/2016 10:57:05</publishTime>
     </File>
     <File Include="Content/css/font-awesome.min.css">
       <publishTime>12/15/2015 20:34:34</publishTime>
@@ -154,7 +154,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/21/2015 15:46:22</publishTime>
     </File>
     <File Include="Content/css/Site.css">
-      <publishTime>02/11/2016 11:57:14</publishTime>
+      <publishTime>02/25/2016 11:36:01</publishTime>
     </File>
     <File Include="Content/fonts/font-awesome/css/font-awesome.css">
       <publishTime>12/16/2015 14:09:02</publishTime>
@@ -463,7 +463,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:02</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Index.cshtml">
-      <publishTime>01/14/2016 11:07:23</publishTime>
+      <publishTime>02/15/2016 18:19:07</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Registro.cshtml">
       <publishTime>01/05/2016 11:43:27</publishTime>
@@ -475,7 +475,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:21:18</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/11/2016 20:13:10</publishTime>
+      <publishTime>02/25/2016 11:26:07</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>12/15/2015 20:22:03</publishTime>
@@ -517,7 +517,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:21:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/18/2015 09:09:10</publishTime>
+      <publishTime>02/24/2016 17:00:39</publishTime>
     </File>
   </ItemGroup>
 </Project>
