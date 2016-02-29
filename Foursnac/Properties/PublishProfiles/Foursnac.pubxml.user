@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:06</publishTime>
     </File>
     <File Include="bin/Foursnac.dll">
-      <publishTime>02/24/2016 16:30:43</publishTime>
+      <publishTime>02/29/2016 10:42:53</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>12/15/2015 20:22:17</publishTime>
@@ -153,8 +153,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/css/main.css">
       <publishTime>12/21/2015 15:46:22</publishTime>
     </File>
+    <File Include="Content/css/main666.css">
+      <publishTime>12/21/2015 15:46:22</publishTime>
+    </File>
     <File Include="Content/css/Site.css">
-      <publishTime>02/25/2016 11:36:01</publishTime>
+      <publishTime>02/26/2016 16:48:50</publishTime>
     </File>
     <File Include="Content/fonts/font-awesome/css/font-awesome.css">
       <publishTime>12/16/2015 14:09:02</publishTime>
@@ -279,6 +282,87 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/foursnac1.png">
       <publishTime>12/18/2015 23:17:08</publishTime>
     </File>
+    <File Include="Content/img/ico/android-icon-144x144.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/android-icon-192x192.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/android-icon-36x36.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/android-icon-48x48.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/android-icon-72x72.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/android-icon-96x96.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-114x114.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-120x120.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-144x144.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-152x152.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-180x180.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-57x57.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-60x60.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-72x72.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-76x76.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon-precomposed.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/apple-icon.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/browserconfig.xml">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/favicon-16x16.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/favicon-32x32.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/favicon-96x96.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/favicon.ico">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/manifest.json">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/ms-icon-144x144.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/ms-icon-150x150.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/ms-icon-310x310.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
+    <File Include="Content/img/ico/ms-icon-70x70.png">
+      <publishTime>02/29/2016 10:31:30</publishTime>
+    </File>
     <File Include="Content/img/logocentral.png">
       <publishTime>01/06/2016 15:22:18</publishTime>
     </File>
@@ -372,6 +456,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>12/15/2015 20:21:32</publishTime>
     </File>
+    <File Include="Scripts/funcoes-Estabemecimento.js">
+      <publishTime>02/29/2016 10:38:21</publishTime>
+    </File>
+    <File Include="Scripts/funcoes-Home.js">
+      <publishTime>02/29/2016 10:23:59</publishTime>
+    </File>
+    <File Include="Scripts/funcoes-Index.js">
+      <publishTime>02/26/2016 17:03:27</publishTime>
+    </File>
     <File Include="Scripts/FuncoesPersonalizadas.js">
       <publishTime>12/18/2015 13:22:14</publishTime>
     </File>
@@ -424,7 +517,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:37:47</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/16/2015 14:43:10</publishTime>
+      <publishTime>02/29/2016 10:37:44</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>12/15/2015 20:22:02</publishTime>
@@ -463,7 +556,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:22:02</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Index.cshtml">
-      <publishTime>02/15/2016 18:19:07</publishTime>
+      <publishTime>02/29/2016 10:50:03</publishTime>
     </File>
     <File Include="Views/Estabelecimento/Registro.cshtml">
       <publishTime>01/05/2016 11:43:27</publishTime>
@@ -475,7 +568,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 20:21:18</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/25/2016 11:26:07</publishTime>
+      <publishTime>02/29/2016 10:46:25</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>12/15/2015 20:22:03</publishTime>
@@ -505,7 +598,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2016 10:22:32</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/18/2015 15:40:02</publishTime>
+      <publishTime>02/26/2016 14:08:17</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>12/15/2015 20:22:03</publishTime>
