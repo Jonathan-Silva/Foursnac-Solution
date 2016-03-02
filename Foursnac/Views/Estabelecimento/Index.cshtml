@@ -5,23 +5,47 @@
 
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF2930">
+
     <title>Foursnac</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/ico/favicon-16x16.png">
+    <link rel="manifest" href="~/Content/img/ico/manifest.json">
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="//v2.zopim.com/?3hCSZlIi04fStrYCFoyIkBr5QCysyWDQ";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
 
     <link href="//vjs.zencdn.net/4.9.0/video-js.css" rel="stylesheet">
     <script src="//vjs.zencdn.net/4.9.0/video.js"></script>
 
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="~/Content/css/main.css" />
     <link rel="stylesheet" href="~/Content/css/Site.css" />
     <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
     <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
     <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="~/Scripts/FuncoesPersonalizadas.js"></script>
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 
 <body class="landing">
@@ -38,11 +62,7 @@
                         <a href="#menu" class="menuToggle"></a>
                         <div id="menu">
                             <ul id="ulSideMenu">
-<<<<<<< HEAD
-                                <li><a href="/home/index">Home</a></li>                       
-=======
                                 <li><a href="/home/index">Home</a></li>
->>>>>>> upstream/master
                                 <li><a href="#" id="aLogin">Login</a></li>
                             </ul>
                         </div>
@@ -128,18 +148,18 @@
 
         <!--video-->
         <section id="meuvideo" style="text-align:center;">
+            <div style="width:100%; height:auto;">
+                <video onclick="playPause()" id="divVideo" preload="auto" style="width:100%; height:auto; z-index:99999; background-color:#FF2930;" poster="/Content/img/red.png">
+                    <source src="~/Content/video/video1.mp4" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.ogv" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.webm" media="screen and (min-width:800px)">
+                    <source src="~/Content/video/video1.mp4" media="screen and (max-width:799px)">
+                    <source src="~/Content/video/video1.ogv" media="screen and (max-width:799px)">
+                    <source src="~/Content/video/video1.webm" media="screen and (max-width:799px)">
 
-            <video id="divVideo" preload="auto" style="width:100%; height:auto; z-index:99999; background-color:#FF2930;" poster="/Content/img/red.png">
-                <source src="~/Content/video/video1.mp4" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.ogv" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.webm" media="screen and (min-width:800px)">
-                <source src="~/Content/video/video1.mp4" media="screen and (max-width:799px)">
-                <source src="~/Content/video/video1.ogv" media="screen and (max-width:799px)">
-                <source src="~/Content/video/video1.webm" media="screen and (max-width:799px)">
-
-            </video>
-            <div id="btPlay" class="fa fa-play-circle btPlay" onclick="playPause()"></div>
-
+                </video>
+                <div id="btPlay" class="fa fa-play-circle btPlay" onclick="playPause()"></div>
+            </div>
         </section>
 
 
@@ -158,161 +178,13 @@
     <script src="~/Scripts/util.js"></script>
     <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
     <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="~/Scripts/funcoes-Estabemecimento.js"></script>
 
 
 </body>
 </html>
 
-<script src="~/Scripts/jquery-1.10.2.js"></script>
-
-<script>
-
-    $(document).ready(function () {
-        $('#aLogin').click(function (event) {
-            event.preventDefault();
-            var dest = '';
-            var url = document.URL;
-
-            if (url.lastIndexOf('localhost') > -1) {
-                dest = 'http://localhost:8080';
-            } else {
-                dest = 'http://app.foursnac.com';
-            }
-
-            window.location = dest + '/login.html';
-
-        });
-    });
-
-    $('#Passo1').mouseenter(function () {
-
-        $('#Passo1').addClass('corPassoHover');
-
-    });
-
-    $('#Passo1').mouseleave(function () {
-
-        $('#Passo1').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo2').mouseenter(function () {
-
-        $('#Passo2').addClass('corPassoHover');
-
-    });
-
-    $('#Passo2').mouseleave(function () {
-
-        $('#Passo2').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo3').mouseenter(function () {
-
-        $('#Passo3').addClass('corPassoHover');
-
-    });
-
-    $('#Passo3').mouseleave(function () {
-
-        $('#Passo3').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo4').mouseenter(function () {
-
-        $('#Passo4').addClass('corPassoHover');
-
-    });
-
-    $('#Passo4').mouseleave(function () {
-
-        $('#Passo4').removeClass('corPassoHover');
-
-    });
 
 
-    $(window).width(function () {
-
-        var x = screen.width;
-
-        if (x < 700) {
-
-            $('#divCirculo1').removeClass('col-md-3');
-            $('#divCirculo1').removeClass('col-sm-3');
-            $('#divCirculo1').removeClass('col-sm-12');
-            $('#divCirculo1').removeClass('col-xs-12');
-
-            $('#divCirculo1').addClass('col-md-offset-3');
-            $('#divCirculo1').addClass('col-md-3');
-            $('#divCirculo1').addClass('col-sm-3');
-            $('#divCirculo1').addClass('col-sm-6');
-            $('#divCirculo1').addClass('col-xs-6');
-
-
-            $('#divCirculo2').removeClass('col-md-3');
-            $('#divCirculo2').removeClass('col-sm-3');
-            $('#divCirculo2').removeClass('col-sm-12');
-            $('#divCirculo2').removeClass('col-xs-12');
-
-            $('#divCirculo2').addClass('col-md-3');
-            $('#divCirculo2').addClass('col-sm-3');
-            $('#divCirculo2').addClass('col-sm-6');
-            $('#divCirculo2').addClass('col-xs-6');
-
-            $('#divCirculo3').removeClass('col-md-3');
-            $('#divCirculo3').removeClass('col-sm-3');
-            $('#divCirculo3').removeClass('col-sm-12');
-            $('#divCirculo3').removeClass('col-xs-12');
-
-            $('#divCirculo3').addClass('col-md-offset-3');
-            $('#divCirculo3').addClass('col-md-3');
-            $('#divCirculo3').addClass('col-sm-3');
-            $('#divCirculo3').addClass('col-sm-6');
-            $('#divCirculo3').addClass('col-xs-6');
-
-
-            $('#divCirculo4').removeClass('col-md-3');
-            $('#divCirculo4').removeClass('col-sm-3');
-            $('#divCirculo4').removeClass('col-sm-12');
-            $('#divCirculo4').removeClass('col-xs-12');
-
-            $('#divCirculo4').addClass('col-md-3');
-            $('#divCirculo4').addClass('col-sm-3');
-            $('#divCirculo4').addClass('col-sm-6');
-            $('#divCirculo4').addClass('col-xs-6');
-        }
-    });
-
-    var video = document.getElementById("divVideo");
-
-    function playPause() {
-        if (video.paused) {
-            video.play();
-            $('#btPlay').addClass('btPlayTrnasparent');
-        }
-        else {
-            video.pause();
-            $('#btPlay').removeClass('btPlayTrnasparent');
-        }
-    }
-
-    function Estabelecimento() {
-        var url = document.URL;
-        var email = $('#email').val() + '#';
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> upstream/master
-        if (url.lastIndexOf('localhost') > -1) {
-            document.location.href = 'http://localhost:8080/foursnac/main.html#Home#' + email;
-        } else {
-            document.location.href = 'http://app.foursnac.com.br/foursnac/main.html#Home#' + email;
-        }
-
-        //document.location.href = document.URL + '/foursnac/main.html#Home#' + $('#email').val() + '#';
-
-    }
-</script>

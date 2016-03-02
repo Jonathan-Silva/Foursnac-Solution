@@ -27,11 +27,23 @@
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    margin: -4% auto 0 auto;
+    margin: 2% auto 0 auto;
     background-color: transparent;
     z-index: 99999;
 }
 
+    .LogoCentral1 {
+    height: 161px;
+    max-width: 123px;
+    background-image: url(/Content/img/logocentral.png) !important;
+    background-size: 123px 161px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: 2% auto 0 auto;
+    background-color: transparent;
+    z-index: 99999;
+    }
 .LogoCentralBarra {
     height: 40px;
     max-width: 28px;
@@ -48,7 +60,7 @@
 }
 
 .Titulo {
-    padding: 7% 0 0 0;
+    padding: 45px 0 18% 0;
     width: 100%;
     height: 100% !important;
     background-color: #FF2930;
@@ -81,24 +93,26 @@
 }
 
 .btPlay {
-    width: 100%;
-    height: 55px;
+    width: 10%;
+    height: 14%;
     margin-right: auto;
     margin-left: auto;
     left: 0;
     right: 0;
-    margin-top: -35%;
+    margin-top: -32%;
     font-size: 8em !important;
-    position: absolute;
+    position: relative;
     color: #fff;
+    cursor: pointer;
+    z-index: 999999;
 }
 
     .btPlay:hover {
-        color: #FF2930;
+        color: #FCEE21;
     }
 
 .btPlayTrnasparent {
-    color: transparent;
+    display: none !important;
 }
 
 .Passo {
@@ -122,6 +136,7 @@
     text-align: center;
 }
 
+
 .divUf {
     max-width: 100px;
     width: 100%;
@@ -141,7 +156,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
     background-color: transparent !important;
     color: #FFF !important;
     letter-spacing: 0px;
@@ -166,7 +181,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
     background-color: transparent !important;
     color: #FFF !important;
     letter-spacing: 0px;
@@ -191,7 +206,7 @@
     left: 0;
     font-size: 16px;
     right: 0;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
     background-color: transparent !important;
     color: #FFF !important;
     text-align: center !important;
@@ -212,12 +227,15 @@
 
 .inputNum {
     max-width: 80px;
-    height: 55px;
+    height: 40px;
     margin: 0 auto 0 auto !important;
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
+    outline: none;
+    border: none;
+    font-size: 12px;
 }
 
 .divComplemento {
@@ -239,7 +257,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
 }
 
 .btVoltar {
@@ -258,7 +276,7 @@
     margin: 10px 0px 0px 25px;
     font-size: 16px;
     float: left;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
 }
 
     .btVoltar:hover {
@@ -281,7 +299,7 @@
     margin: 10px 10px 0px 10px;
     font-size: 16px;
     float: left;
-    font-family: 'Segoe WP SemiLight' !important;
+    font-family: 'Segoe UI' !important;
 }
 
     .btContinuar:hover {
@@ -300,6 +318,23 @@
     text-align: center;
 }
 
+.CaixaCepAmarelo{
+    max-width: 340px;
+    width: 100%;
+    height: 175px;
+    left: 0;
+    right: 0;
+    margin: 2% auto 0 auto;
+    background-color: yellow;
+    padding-top: 60px;
+    text-align: center;
+    border-radius: 15px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
 .divCep {
     max-width: 280px;
     width: 100%;
@@ -310,7 +345,7 @@
     margin: 0 auto 0 auto;
     background-color: #FFF !important;
     border-radius: 187px 187px;
-    padding-top: 7px;
+    padding-top: 14px;
     color: #000 !important;
     transition: 1s;
 }
@@ -576,15 +611,15 @@
 
 
 .CaixaTipo {
-    max-width: 540px;
     width: 100%;
-    height: 300px;
+    height: 100%;
     left: 0;
     right: 0;
-    margin: 2% auto 0 auto;
+    margin: 0 auto 0 auto;
     background-color: rgba(255,255,255,1);
     padding: 0px;
     text-align: center;
+    position:absolute;
 }
 
 .divDelivery {
@@ -603,42 +638,149 @@
 
 .img-Pickup {
     background-image: url('/Content/img/pickup .png');
-    background-repeat: no-repeat;
-    background-size: 100px 80px;
-    max-width: 100px;
-    width: 100%;
-    height: 80px;
+     background-repeat: no-repeat;
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-Delivery {
     background-image: url('/Content/img/delivery.png');
     background-repeat: no-repeat;
-    background-size: 120px 80px;
-    max-height: 120px;
-    width: 100%;
-    height: 80px;
+    background-size: 140px 120px;
+    width: 140px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.TextoDelyvery{
+    margin-top: 4% !important;
+    background-color: #FF2930;
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px;
+    color: #FFF;
+    font-weight:lighter !important;
+    font-family:'Segoe UI';
+}
+.TextoPickup{
+    margin-top: 4% !important;
+    background-color: #2A87E5;
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px;
+    color: #FFF;
+    font-weight:lighter !important;
+    font-family:'Segoe UI';
+}
 .divPickupCor {
-    max-width: 270px;
-    width: 100%;
-    height: 300px;
-    background-color: #FFF;
-    float: right;
-    padding-top: 90px;
+     width: 50%;
+    height: 100%;
+    background-color: rgba(233,233,243,1);
+    float: left;
+    padding-top: 12%;
 }
 
 .divDeliveryCor {
-    max-width: 270px;
-    width: 100%;
-    height: 300px;
-    background-color: rgba(233,233,243,1);
-    float: left;
-    padding-top: 90px;
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    float: right;
+    padding-top: 12%;
 }
 
 @media all and (max-width:500px) {
 
+    .CaixaTipo {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto 0 auto;
+        background-color: rgba(255,255,255,1);
+        padding: 0px;
+        text-align: center; 
+    }
+
+    .divDelivery {
+        margin: 0 auto 0 auto;
+        left: 0;
+        max-width: 120px;
+        width: 100%;
+    }
+
+    .divPickup {
+        margin: 0 auto 0 auto;
+        left: 0;
+        max-width: 120px;
+        width: 100%;
+    }
+
+    .img-Pickup {
+        background-image: url('/Content/img/pickup .png');
+        background-repeat: no-repeat;
+        background-size: 128px 120px;
+        width: 128px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-Delivery {
+        background-image: url('/Content/img/delivery.png');
+        background-repeat: no-repeat;
+        background-size: 128px 120px;
+        width: 128px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .TextoDelyvery {
+        margin-top: 10% !important;
+        background-color: #FF2930;
+        width: 82%;
+        margin: auto auto 10px auto;
+        border-radius: 8px;
+        padding: 20px;
+        color: #FFF;
+        font-weight: lighter !important;
+        font-family: 'Segoe UI';
+        font-size: 16px;
+    }
+
+    .TextoPickup {
+        margin-top: 10% !important;
+        background-color: #2A87E5;
+        width: 82%;
+        margin: auto auto 10px auto;
+        margin: auto;
+        border-radius: 8px;
+        padding: 20px;
+        color: #FFF;
+        font-weight: lighter !important;
+        font-family: 'Segoe UI';
+        font-size: 16px;
+    }
+
+    .divPickupCor {
+        width: 100%;
+        height: 50%;
+        background-color: rgba(233,233,243,1);
+        padding-top: 5%;
+    }
+
+    .divDeliveryCor {
+        width: 100%;
+        height: 46%;
+        background-color: #FFF;
+        padding-top: 5%;
+    }
 
     .CaixaResultado {
         max-width: 300px;
@@ -670,7 +812,7 @@
         left: 0;
         right: 0;
         text-align: center;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
         border-bottom: 1px solid #FFF !important;
@@ -696,7 +838,7 @@
         left: 0;
         right: 0;
         text-align: center;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
         border-bottom: 1px solid #FFF !important;
@@ -722,7 +864,7 @@
         left: 0;
         right: 0;
         text-align: center;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
         border-bottom: 1px solid #FFF !important;
@@ -743,16 +885,19 @@
 
     .inputNum {
         max-width: 270px;
+        width:100%;
         height: 55px;
         margin: 0 auto 0 auto !important;
         left: 0 !important;
         right: 0 !important;
         text-align: center;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
+        border:none;
         border-bottom: 1px solid #FFF !important;
         color: #FFF !important;
+        outline:none;
     }
 
 
@@ -787,16 +932,18 @@
 
     .inputComplemento {
         max-width: 270px;
+        width:100%;
         height: 55px;
         margin: 0 auto 0 auto !important;
         left: 0 !important;
         right: 0 !important;
         text-align: center;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
+        border:none;
         border-bottom: 1px solid #FFF !important;
-        color: #000 !important;
+        color: #FFF !important;
     }
 
         .inputComplemento::-webkit-input-placeholder {
@@ -813,9 +960,6 @@
             color: #FFF !important;
             opacity: 1.0;
         }
-
-
-
 
 
     .btVoltar {
@@ -835,7 +979,7 @@
         left: 0;
         margin: 45px 0px 0px 0px;
         font-size: 16px;
-        font-family: 'Segoe WP SemiLight' !important;
+        font-family: 'Segoe UI' !important;
     }
 
         .btVoltar:hover {
@@ -855,22 +999,16 @@
         border: none !important;
         border-radius: 8px;
         color: #FFF;
-        margin: 35px auto 0px 0px !important;
+        margin: 15px auto 0px 0px !important;
         left: 0;
         right: 0;
         font-size: 16px;
-        font-family: 'Arial' !important;
+        font-family: 'Segoe UI' !important;
     }
 
         .btContinuar:hover {
             opacity: 0.7;
         }
-
-
-
-
-
-
 
     .LogoCentral {
         height: 130px;
@@ -1223,7 +1361,42 @@
         color: #FFF !important;
     }
 
-    .ulSideMenu li{
-        cursor:pointer;
+    .btPlay {
+    width: 100px;
+    height: 8%;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    margin-top: -46%;
+    font-size: 8em !important;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999999;
+}
+        .btPlay:hover {
+        color: #FCEE21;
+    }
+
+    .Titulo {
+    padding: 45px 0 0 0;
+    width: 100%;
+    height: 100% !important;
+    background-color: #FF2930;
+    z-index: 99;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+}
+
+    .Subir{
+        margin-top:-50px;
+    }
+   .Subir1{
+        margin-top:-150px;
+    }
+   .Subir2{
+        margin-top:-210px;
     }
 }

@@ -1,22 +1,43 @@
-﻿@{
+﻿<!DOCTYPE html>
+@{
     Layout = null;
 }
 
 <html>
 <head>
+
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF2930">
+
     <title>Foursnac</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
+
     <link rel="stylesheet" href="~/Content/css/main.css" />
-    <link rel="stylesheet" href="~/Content/css/Site.css" />
-    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.css" >
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" >
+    
     <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
     <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="~/Scripts/FuncoesPersonalizadas.js"></script>
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/ico/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="manifest" href="~/Content/img/ico/manifest.json">
+
 </head>
 
 <body class="landing">
@@ -50,91 +71,72 @@
         <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
         <section id="Titulo" class="Titulo">
-            <a href="/home/index"><div class="LogoCentral"></div></a>
+            <a  href="/home/index"><div class="LogoCentral"></div></a>
+            
+            <!--Busca Cep-->
             <div id="CaixaCep" class="CaixaCep">
+
                 <form name="form" id="form">
 
                     <div id="divCep" class="divCep">
-                        <input id="Cep" type="text" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" />
+                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off"/>
                     </div>
-                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep" onclik="Ir('tipo')">pedir comida</button>
-
+                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>
+                    @*<button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>*@
 
 
                 </form>
-            </div>
+            </div> 
 
+            <!-- Resultado Endereço -->
+            <div id="Logo2" class="LogoCentral1 NoDisplay"></div>
 
-            <div id="Logo2" class="LogoCentral1 sNoDisplay"></div>
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
-<<<<<<< HEAD
-                
-                    <div class="divUf">
-                        <input id="uf" type="text" class="inputUf" value="" />
-                    </div>
-=======
->>>>>>> upstream/master
 
                 <div class="divUf">
-                    <input id="uf" type="text" class="inputUf" value="" />
+                    <input id="uf"  readonly="true" type="text" class="inputUf" value="" />
                 </div>
 
                 <div class="divCidade">
-                    <input id="cidade" type="text" class="inputCidade" value="" />
+                    <input id="cidade"  readonly="true" type="text" class="inputCidade" value="" />
                 </div>
 
-<<<<<<< HEAD
-                    <div class="divNum">
-                        <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
-                    </div>
-                    <div class="divComplemento">
-                        <input id="complemento" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
-                    </div>
-
-                    <button class="btVoltar" onclik="Voltar()">voltar</button>
-                    <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
-
-               
-=======
                 <div class="divRua">
-                    <input id="rua" type="text" class="inputRua" value="" />
+                    <input id="rua"  readonly="true" type="text" class="inputRua" value="" />
                 </div>
 
                 <div class="divNum">
-                    <input id="num" type="text" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
+                    <input id="num" type="tel"  class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
                 </div>
+
                 <div class="divComplemento">
-                    <input id="complemento" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                    <input id="complemento"  type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
                 </div>
 
                 <button class="btVoltar" onclik="Voltar()">voltar</button>
                 <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
 
 
->>>>>>> upstream/master
             </div>
 
+            <!--Seleciona o tipo Delivery/Pickup-->
 
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
                 <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
-                    <div id="divDelivery" class="divDelivery">
+
                         <div class="img-Delivery"></div>
-                        <div>Delivery</div>
-                    </div>
+                        <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
+
                 </div>
 
                 <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
-                    <div id="divPickup" class="divPickup">
+
                         <div class="img-Pickup"></div>
-                        <div>Pick-up</div>
-                    </div>
+                        <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
+
                 </div>
             </div>
-
-
-
-
 
 
             <div id="NaoSei"><a href="http://www.google.com" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
@@ -202,253 +204,19 @@
     </div>
 
     <!-- Scripts -->
+    
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/jquery.scrollex.min.js"></script>
     <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    
     <script src="~/Scripts/skel.min.js"></script>
     <script src="~/Scripts/util.js"></script>
     <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
     <script src="~/Scripts/main.js"></script>
-
-
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/funcoes-Home.js"></script>
 </body>
 </html>
 
-<script src="~/Scripts/jquery-1.10.2.js"></script>
 
-<script>
 
-    $(document).ready(function () {
-        $('.tipo').click(function (event) {
-            event.preventDefault();
-            var cep = $('#Cep').val();
-            var tipo = $(this).attr('id');
-            var numero = $("#num").val();
-            var complemento = $("#complemento").val();
-
-            var destino = '';
-            var url = document.URL;
-
-            if (url.lastIndexOf('localhost') > -1) {
-                destino = 'http://localhost:8080';
-            } else {
-                destino = 'http://app.foursnac.com';
-            }
-
-            document.location.href = destino + '/foursnac/pedidos/main.html#PedidosMain#' + cep + "#" + numero + "#" + complemento + "#" + tipo;
-        });
-
-        $('#aLogin').click(function (ev) {
-            event.preventDefault();
-
-        });
-
-    });
-
-    $('#Passo1').mouseenter(function () {
-
-        $('#Passo1').addClass('corPassoHover');
-
-    });
-
-    $('#Passo1').mouseleave(function () {
-
-        $('#Passo1').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo2').mouseenter(function () {
-
-        $('#Passo2').addClass('corPassoHover');
-
-    });
-
-    $('#Passo2').mouseleave(function () {
-
-        $('#Passo2').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo3').mouseenter(function () {
-
-        $('#Passo3').addClass('corPassoHover');
-
-    });
-
-    $('#Passo3').mouseleave(function () {
-
-        $('#Passo3').removeClass('corPassoHover');
-
-    });
-
-    $('#Passo4').mouseenter(function () {
-
-        $('#Passo4').addClass('corPassoHover');
-
-    });
-
-    $('#Passo4').mouseleave(function () {
-
-        $('#Passo4').removeClass('corPassoHover');
-
-    });
-
-    $(window).width(function () {
-
-        var x = screen.width;
-
-        if (x < 700) {
-
-            $('#divCirculo1').removeClass('col-md-3');
-            $('#divCirculo1').removeClass('col-sm-3');
-            $('#divCirculo1').removeClass('col-sm-12');
-            $('#divCirculo1').removeClass('col-xs-12');
-
-            $('#divCirculo1').addClass('col-md-offset-3');
-            $('#divCirculo1').addClass('col-md-3');
-            $('#divCirculo1').addClass('col-sm-3');
-            $('#divCirculo1').addClass('col-sm-6');
-            $('#divCirculo1').addClass('col-xs-6');
-
-
-            $('#divCirculo2').removeClass('col-md-3');
-            $('#divCirculo2').removeClass('col-sm-3');
-            $('#divCirculo2').removeClass('col-sm-12');
-            $('#divCirculo2').removeClass('col-xs-12');
-
-            $('#divCirculo2').addClass('col-md-3');
-            $('#divCirculo2').addClass('col-sm-3');
-            $('#divCirculo2').addClass('col-sm-6');
-            $('#divCirculo2').addClass('col-xs-6');
-
-            $('#divCirculo3').removeClass('col-md-3');
-            $('#divCirculo3').removeClass('col-sm-3');
-            $('#divCirculo3').removeClass('col-sm-12');
-            $('#divCirculo3').removeClass('col-xs-12');
-
-            $('#divCirculo3').addClass('col-md-offset-3');
-            $('#divCirculo3').addClass('col-md-3');
-            $('#divCirculo3').addClass('col-sm-3');
-            $('#divCirculo3').addClass('col-sm-6');
-            $('#divCirculo3').addClass('col-xs-6');
-
-
-            $('#divCirculo4').removeClass('col-md-3');
-            $('#divCirculo4').removeClass('col-sm-3');
-            $('#divCirculo4').removeClass('col-sm-12');
-            $('#divCirculo4').removeClass('col-xs-12');
-
-            $('#divCirculo4').addClass('col-md-3');
-            $('#divCirculo4').addClass('col-sm-3');
-            $('#divCirculo4').addClass('col-sm-6');
-            $('#divCirculo4').addClass('col-xs-6');
-        }
-
-
-    });
-
-    $('#btCep').click(function () {
-        BuscarEndereco();
-    });
-
-    function somenteNumeros(event) {
-
-        var charCode = (event.which) ? event.which : event.keyCode;
-        var cep = $('#Cep').val();
-
-        if (cep.length == 5) {
-            cep += '-';
-        }
-
-        $('#Cep').val(cep);
-
-        if (cep.length >= 9) {
-
-            if (charCode == 13) {
-                BuscarEndereco();
-            }
-
-            return false;
-        }
-
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-            return false;
-        }
-
-        return true;
-    }
-
-    function Voltar() {
-
-        $('#CaixaCep').removeClass('NoDisplay');
-        $('#CaixaResultado').addClass('NoDisplay');
-        $('#NaoSei').removeClass('NoDisplay');
-        $('#Logo1').removeClass('NoDisplay');
-        $('#Logo2').addClass('NoDisplay');
-        $('#icoVoltar').addClass('NoDisplay');
-        $('#Cep').focus();
-        $('#footer').removeClass('NoDisplay');
-        $('#Passo').removeClass('NoDisplay');
-    }
-
-    function Ir(tipo) {
-        if (tipo == 'tipo') {
-            console.log('tipo');
-            $('#CaixaTipo').removeClass('NoDisplay');
-            $('#CaixaResultado').addClass('NoDisplay');
-        } else {
-            $('#CaixaCep').addClass('NoDisplay');
-            $('#CaixaResultado').removeClass('NoDisplay');
-            $('#NaoSei').addClass('NoDisplay');
-            $('#Logo1').addClass('NoDisplay');
-            $('#Logo2').removeClass('NoDisplay');
-            $('#icoVoltar').removeClass('NoDisplay');
-            $('#num').focus();
-            $('#footer').addClass('NoDisplay');
-            $('#Passo').addClass('NoDisplay');
-        }
-<<<<<<< HEAD
-    }
-
-    function GoToTipo() {
-        Ir('tipo');
-    }
-
-    
-=======
-    }
-
-    function GoToTipo() {
-        Ir('tipo');
-    }
-
-
->>>>>>> upstream/master
-
-    function BuscarEndereco() {
-
-        var cep = $('#Cep').val().replace("-", "");;
-
-        $.ajax({
-            url: 'http://api.postmon.com.br/v1/cep/' + cep,
-            method: 'GET',
-            success: function (data) {
-                console.log(data);
-                $('#uf').val(data.estado);
-                $('#cidade').val(data.cidade);
-                $('#rua').val(data.logradouro);
-                Ir('pesquisa');
-            },
-            failure: function () { alert('Falha de comunição ou cep inválido'); }
-        });
-
-    }
-
-    function Erro() {
-
-
-    }
-
-
-
-</script>

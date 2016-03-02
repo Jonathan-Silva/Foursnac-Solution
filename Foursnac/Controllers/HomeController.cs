@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Foursnac.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,25 @@ namespace Foursnac.Controllers
             ViewBag.Imagem = numeroImagem.Next(7).ToString() + ".jpg";
         
             return View();
+        }
+
+        public ActionResult IndexEstabelecimento(string pagina)
+        {
+            try
+            {
+                wsSonicBliss.wsSBSoapClient ws = new wsSonicBliss.wsSBSoapClient();
+
+                if (ws.ConfirmaUrlEstabelecimento(Authenticator.WEB_KEY, pagina))
+                {
+                    return Redirect("http://localhost:8080/foursnac/pedidos/main.html#PedidosMain#Delivery#" + pagina);
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            
+            return View("Index");
         }
 
         public ActionResult About()
