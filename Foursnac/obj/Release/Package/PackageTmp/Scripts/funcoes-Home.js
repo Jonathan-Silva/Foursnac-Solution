@@ -1,6 +1,47 @@
 ﻿
 
 $(document).ready(function () {
+<<<<<<< HEAD
+=======
+    
+    /*var body = $('body');
+    var $window = $(window);
+
+    body.addClass('is-loading');
+
+    $window.on('load', function () {
+        window.setTimeout(function () {
+            body.removeClass('is-loading');
+        }, 100);
+    });
+
+    $('#menu').append($('<a/>').attr('href', '#menu').addClass('close'));
+    $('#menu').appendTo(body);
+    $('#menu').panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: 'right',
+        target: body,
+        visibleClass: 'is-menu-visible'
+    });
+    $('#menu')
+        .append('<a href="#menu" class="close"></a>')
+        .appendTo($body)
+        .panel({
+            delay: 500,
+            hideOnClick: true,
+            hideOnSwipe: true,
+            resetScroll: true,
+            resetForms: true,
+            side: 'right',
+            target: $body,
+            visibleClass: 'is-menu-visible'
+        });*/
+
+>>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
     $('.tipo').click(function (event) {
         event.preventDefault();
         var cep = $('#Cep').val();
@@ -133,6 +174,13 @@ $(window).width(function () {
 
 });
 
+<<<<<<< HEAD
+=======
+$('#btCepDontPush').click(function () {
+    alert('Aguarde, dentro de poucos dias...');
+});
+
+>>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
 $('#btCep').click(function () {
     BuscarEndereco();
 });
@@ -151,7 +199,11 @@ function somenteNumeros(event) {
     if (cep.length >= 9) {
 
         if (charCode == 13) {
+<<<<<<< HEAD
             BuscarEndereco();
+=======
+            //BuscarEndereco();
+>>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
         }
 
         return false;

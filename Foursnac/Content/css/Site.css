@@ -318,6 +318,23 @@
     text-align: center;
 }
 
+.CaixaCepAmarelo{
+    max-width: 340px;
+    width: 100%;
+    height: 175px;
+    left: 0;
+    right: 0;
+    margin: 2% auto 0 auto;
+    background-color: yellow;
+    padding-top: 60px;
+    text-align: center;
+    border-radius: 15px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
 .divCep {
     max-width: 280px;
     width: 100%;
