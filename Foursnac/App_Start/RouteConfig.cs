@@ -14,6 +14,11 @@ namespace Foursnac
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "estabelecimento",
+                "{pagina}",
+                new { controller = "Home", action = "IndexEstabelecimento" });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

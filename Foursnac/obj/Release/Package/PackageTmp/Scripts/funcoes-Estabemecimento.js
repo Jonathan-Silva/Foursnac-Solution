@@ -1,5 +1,11 @@
 ﻿
 $(document).ready(function () {
+<<<<<<< HEAD
+=======
+
+    
+
+>>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
     $('#aLogin').click(function (event) {
         event.preventDefault();
         var dest = '';
