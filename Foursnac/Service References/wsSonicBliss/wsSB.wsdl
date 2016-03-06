@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://sonicbliss.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://sonicbliss.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://sonicbliss.com.br">
       <s:element name="getPedidos">
         <s:complexType>
           <s:sequence>
@@ -487,6 +487,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="CreateUsuarioWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JsonUsuarioWeb" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUsuarioWebResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="JSONStringify">
         <s:complexType>
           <s:sequence>
@@ -638,6 +648,12 @@
   </wsdl:message>
   <wsdl:message name="FinalizaToDoSoapOut">
     <wsdl:part name="parameters" element="tns:FinalizaToDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUsuarioWeb" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUsuarioWebResponse" />
   </wsdl:message>
   <wsdl:message name="JSONStringifySoapIn">
     <wsdl:part name="parameters" element="tns:JSONStringify" />
@@ -797,6 +813,10 @@
   <wsdl:message name="FinalizaToDoHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebHttpGetIn">
+    <wsdl:part name="JsonUsuarioWeb" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebHttpGetOut" />
   <wsdl:message name="getPedidosHttpPostIn">
     <wsdl:part name="ID_ESTABELECIMENTO" type="s:string" />
   </wsdl:message>
@@ -949,6 +969,10 @@
   <wsdl:message name="FinalizaToDoHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebHttpPostIn">
+    <wsdl:part name="JsonUsuarioWeb" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsuarioWebHttpPostOut" />
   <wsdl:portType name="wsSBSoap">
     <wsdl:operation name="getPedidos">
       <wsdl:input message="tns:getPedidosSoapIn" />
@@ -1033,6 +1057,10 @@
     <wsdl:operation name="FinalizaToDo">
       <wsdl:input message="tns:FinalizaToDoSoapIn" />
       <wsdl:output message="tns:FinalizaToDoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <wsdl:input message="tns:CreateUsuarioWebSoapIn" />
+      <wsdl:output message="tns:CreateUsuarioWebSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="JSONStringify">
       <wsdl:input message="tns:JSONStringifySoapIn" />
@@ -1120,6 +1148,10 @@
       <wsdl:input message="tns:FinalizaToDoHttpGetIn" />
       <wsdl:output message="tns:FinalizaToDoHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <wsdl:input message="tns:CreateUsuarioWebHttpGetIn" />
+      <wsdl:output message="tns:CreateUsuarioWebHttpGetOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="wsSBHttpPost">
     <wsdl:operation name="getPedidos">
@@ -1202,11 +1234,15 @@
       <wsdl:input message="tns:FinalizaToDoHttpPostIn" />
       <wsdl:output message="tns:FinalizaToDoHttpPostOut" />
     </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <wsdl:input message="tns:CreateUsuarioWebHttpPostIn" />
+      <wsdl:output message="tns:CreateUsuarioWebHttpPostOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsSBSoap" type="tns:wsSBSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getPedidos">
-      <soap:operation soapAction="http://tempuri.org/getPedidos" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getPedidos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1215,7 +1251,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPedido">
-      <soap:operation soapAction="http://tempuri.org/getPedido" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getPedido" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1224,7 +1260,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SomethingTodo">
-      <soap:operation soapAction="http://tempuri.org/SomethingTodo" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/SomethingTodo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1233,7 +1269,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDadosEstabelecimento">
-      <soap:operation soapAction="http://tempuri.org/getDadosEstabelecimento" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getDadosEstabelecimento" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1242,7 +1278,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDadosEstabelecimentoByCNPJ">
-      <soap:operation soapAction="http://tempuri.org/getDadosEstabelecimentoByCNPJ" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getDadosEstabelecimentoByCNPJ" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1251,7 +1287,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getInfos">
-      <soap:operation soapAction="http://tempuri.org/getInfos" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getInfos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1260,7 +1296,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getItensPedido">
-      <soap:operation soapAction="http://tempuri.org/getItensPedido" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getItensPedido" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1269,7 +1305,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getItensAdicioanis">
-      <soap:operation soapAction="http://tempuri.org/getItensAdicioanis" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getItensAdicioanis" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1278,7 +1314,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DadosCliente">
-      <soap:operation soapAction="http://tempuri.org/DadosCliente" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/DadosCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1287,7 +1323,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="LoadParameter">
-      <soap:operation soapAction="http://tempuri.org/LoadParameter" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/LoadParameter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1296,7 +1332,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetMaquinaImpressao">
-      <soap:operation soapAction="http://tempuri.org/SetMaquinaImpressao" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/SetMaquinaImpressao" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1305,7 +1341,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TimeClear">
-      <soap:operation soapAction="http://tempuri.org/TimeClear" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/TimeClear" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1314,7 +1350,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SalvarParametro">
-      <soap:operation soapAction="http://tempuri.org/SalvarParametro" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/SalvarParametro" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1323,7 +1359,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEnderecoUsuarioweb">
-      <soap:operation soapAction="http://tempuri.org/getEnderecoUsuarioweb" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/getEnderecoUsuarioweb" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1332,7 +1368,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="listarFaturamento">
-      <soap:operation soapAction="http://tempuri.org/listarFaturamento" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/listarFaturamento" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1341,7 +1377,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ListarEstabelecimentos">
-      <soap:operation soapAction="http://tempuri.org/ListarEstabelecimentos" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/ListarEstabelecimentos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1350,7 +1386,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarCep">
-      <soap:operation soapAction="http://tempuri.org/ConsultarCep" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/ConsultarCep" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1359,7 +1395,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConfirmaUrlEstabelecimento">
-      <soap:operation soapAction="http://tempuri.org/ConfirmaUrlEstabelecimento" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/ConfirmaUrlEstabelecimento" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1368,7 +1404,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EnviarEmail">
-      <soap:operation soapAction="http://tempuri.org/EnviarEmail" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/EnviarEmail" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1377,7 +1413,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EnviarEmailPadrao">
-      <soap:operation soapAction="http://tempuri.org/EnviarEmailPadrao" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/EnviarEmailPadrao" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1386,7 +1422,16 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FinalizaToDo">
-      <soap:operation soapAction="http://tempuri.org/FinalizaToDo" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/FinalizaToDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <soap:operation soapAction="http://sonicbliss.com.br/CreateUsuarioWeb" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1395,7 +1440,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="JSONStringify">
-      <soap:operation soapAction="http://tempuri.org/JSONStringify" style="document" />
+      <soap:operation soapAction="http://sonicbliss.com.br/JSONStringify" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1407,7 +1452,7 @@
   <wsdl:binding name="wsSBSoap12" type="tns:wsSBSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getPedidos">
-      <soap12:operation soapAction="http://tempuri.org/getPedidos" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getPedidos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1416,7 +1461,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPedido">
-      <soap12:operation soapAction="http://tempuri.org/getPedido" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getPedido" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1425,7 +1470,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SomethingTodo">
-      <soap12:operation soapAction="http://tempuri.org/SomethingTodo" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/SomethingTodo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1434,7 +1479,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDadosEstabelecimento">
-      <soap12:operation soapAction="http://tempuri.org/getDadosEstabelecimento" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getDadosEstabelecimento" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1443,7 +1488,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDadosEstabelecimentoByCNPJ">
-      <soap12:operation soapAction="http://tempuri.org/getDadosEstabelecimentoByCNPJ" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getDadosEstabelecimentoByCNPJ" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1452,7 +1497,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getInfos">
-      <soap12:operation soapAction="http://tempuri.org/getInfos" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getInfos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1461,7 +1506,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getItensPedido">
-      <soap12:operation soapAction="http://tempuri.org/getItensPedido" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getItensPedido" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1470,7 +1515,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getItensAdicioanis">
-      <soap12:operation soapAction="http://tempuri.org/getItensAdicioanis" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getItensAdicioanis" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1479,7 +1524,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DadosCliente">
-      <soap12:operation soapAction="http://tempuri.org/DadosCliente" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/DadosCliente" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1488,7 +1533,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="LoadParameter">
-      <soap12:operation soapAction="http://tempuri.org/LoadParameter" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/LoadParameter" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1497,7 +1542,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetMaquinaImpressao">
-      <soap12:operation soapAction="http://tempuri.org/SetMaquinaImpressao" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/SetMaquinaImpressao" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1506,7 +1551,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TimeClear">
-      <soap12:operation soapAction="http://tempuri.org/TimeClear" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/TimeClear" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1515,7 +1560,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SalvarParametro">
-      <soap12:operation soapAction="http://tempuri.org/SalvarParametro" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/SalvarParametro" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1524,7 +1569,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEnderecoUsuarioweb">
-      <soap12:operation soapAction="http://tempuri.org/getEnderecoUsuarioweb" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/getEnderecoUsuarioweb" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1533,7 +1578,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="listarFaturamento">
-      <soap12:operation soapAction="http://tempuri.org/listarFaturamento" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/listarFaturamento" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1542,7 +1587,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ListarEstabelecimentos">
-      <soap12:operation soapAction="http://tempuri.org/ListarEstabelecimentos" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/ListarEstabelecimentos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1551,7 +1596,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarCep">
-      <soap12:operation soapAction="http://tempuri.org/ConsultarCep" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/ConsultarCep" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1560,7 +1605,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConfirmaUrlEstabelecimento">
-      <soap12:operation soapAction="http://tempuri.org/ConfirmaUrlEstabelecimento" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/ConfirmaUrlEstabelecimento" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1569,7 +1614,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EnviarEmail">
-      <soap12:operation soapAction="http://tempuri.org/EnviarEmail" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/EnviarEmail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1578,7 +1623,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EnviarEmailPadrao">
-      <soap12:operation soapAction="http://tempuri.org/EnviarEmailPadrao" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/EnviarEmailPadrao" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1587,7 +1632,16 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FinalizaToDo">
-      <soap12:operation soapAction="http://tempuri.org/FinalizaToDo" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/FinalizaToDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <soap12:operation soapAction="http://sonicbliss.com.br/CreateUsuarioWeb" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1596,7 +1650,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="JSONStringify">
-      <soap12:operation soapAction="http://tempuri.org/JSONStringify" style="document" />
+      <soap12:operation soapAction="http://sonicbliss.com.br/JSONStringify" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1787,6 +1841,13 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <http:operation location="/CreateUsuarioWeb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="wsSBHttpPost" type="tns:wsSBHttpPost">
     <http:binding verb="POST" />
@@ -1969,6 +2030,13 @@
       <wsdl:output>
         <mime:mimeXml part="Body" />
       </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsuarioWeb">
+      <http:operation location="/CreateUsuarioWeb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="wsSB">

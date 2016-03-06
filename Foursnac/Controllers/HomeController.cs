@@ -11,11 +11,21 @@ namespace Foursnac.Controllers
     {
         public ActionResult Index()
         {
-            Random numeroImagem = new Random();
-
-            ViewBag.Imagem = numeroImagem.Next(7).ToString() + ".jpg";
-        
+            //Random numeroImagem = new Random();
+            //ViewBag.Imagem = numeroImagem.Next(7).ToString() + ".jpg";
             return View();
+        }
+
+        public ActionResult IndexDelivery(string controller, string actionName)
+        {
+            if (controller.Trim().ToLower().Equals("delivery"))
+            {
+                return View("Index");
+            }
+            else
+            {
+                return RedirectToAction("Estabelecimento");
+            }
         }
 
         public ActionResult IndexEstabelecimento(string pagina)
@@ -26,14 +36,14 @@ namespace Foursnac.Controllers
 
                 if (ws.ConfirmaUrlEstabelecimento(Authenticator.WEB_KEY, pagina))
                 {
-                    return Redirect("http://localhost:8080/foursnac/pedidos/main.html#PedidosMain#Delivery#" + pagina);
+                    return Redirect(UtilController.getUrl() + "foursnac/pedidos/main.html#PedidosMain#Delivery#" + pagina);
                 }
             }
             catch (Exception)
             {
 
             }
-            
+
             return View("Index");
         }
 
