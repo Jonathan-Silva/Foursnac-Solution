@@ -1,9 +1,7 @@
 ﻿
 
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
-    
+
     /*var body = $('body');
     var $window = $(window);
 
@@ -41,7 +39,6 @@ $(document).ready(function () {
             visibleClass: 'is-menu-visible'
         });*/
 
->>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
     $('.tipo').click(function (event) {
         event.preventDefault();
         var cep = $('#Cep').val();
@@ -174,15 +171,14 @@ $(window).width(function () {
 
 });
 
-<<<<<<< HEAD
-=======
+
 $('#btCepDontPush').click(function () {
     alert('Aguarde, dentro de poucos dias...');
 });
 
->>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
 $('#btCep').click(function () {
     BuscarEndereco();
+    console.log($('#Cep').val());
 });
 
 function somenteNumeros(event) {
@@ -199,11 +195,8 @@ function somenteNumeros(event) {
     if (cep.length >= 9) {
 
         if (charCode == 13) {
-<<<<<<< HEAD
+            console.log("tecla enter")
             BuscarEndereco();
-=======
-            //BuscarEndereco();
->>>>>>> 7e7ec87f97dedc3d89624fda837d2ac786ff6338
         }
 
         return false;
@@ -261,33 +254,29 @@ function GoToTipo() {
 function BuscarEndereco() {
 
     var cep = $('#Cep').val().replace("-", "");
-    if (cep.length!=8) {
+    if (cep.length != 8) {
         cep = "00000000";
     }
 
     $.ajax({
         url: 'http://api.postmon.com.br/v1/cep/' + cep,
         method: 'GET',
-        error: function(XMLHttpRequest, textStatus, errorThrown){
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Cep inválido.");
         },
         success: function (data) {
-      
-                $('#uf').val(data.estado);
-                $('#cidade').val(data.cidade);
-                $('#rua').val(data.logradouro);
-                Ir('pesquisa');
-         
-           
+
+            $('#uf').val(data.estado);
+            $('#cidade').val(data.cidade);
+            $('#rua').val(data.logradouro);
+            Ir('pesquisa');
+
+
         }
-        
+
     });
 
 }
-
-function Erro() {
-}
-
 
 $('#Cep').focus(function () {
     var x = screen.width;
