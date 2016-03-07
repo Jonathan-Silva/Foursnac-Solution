@@ -1,43 +1,57 @@
+<<<<<<< HEAD:Foursnac/Scripts/funcoes-Home.js
 ﻿
 
 $(document).ready(function () {
 
     /*var body = $('body');
     var $window = $(window);
+=======
+﻿$(document).ready(function () {
+    
+    $(function () {
+        navigator.geolocation.getCurrentPosition(showPosition, positionError);
+>>>>>>> 3979752397f00dccba543030271ffc6a492f71c2:Foursnac/Scripts/Home.js
 
-    body.addClass('is-loading');
+        function showPosition(position) {
+            var coordinates = position.coords;
+            window.sessionStorage.setItem('coordinates', coordinates.latitude + '#' + coordinates.longitude);
+            ReverseGeolocation(coordinates.latitude, coordinates.longitude);
+        }
 
-    $window.on('load', function () {
-        window.setTimeout(function () {
-            body.removeClass('is-loading');
-        }, 100);
+        function positionError(position) {
+            alert('Erro ao obter geolocalidade. Erro: ' + position.code);
+        }
     });
 
-    $('#menu').append($('<a/>').attr('href', '#menu').addClass('close'));
-    $('#menu').appendTo(body);
-    $('#menu').panel({
-        delay: 500,
-        hideOnClick: true,
-        hideOnSwipe: true,
-        resetScroll: true,
-        resetForms: true,
-        side: 'right',
-        target: body,
-        visibleClass: 'is-menu-visible'
-    });
-    $('#menu')
-        .append('<a href="#menu" class="close"></a>')
-        .appendTo($body)
-        .panel({
-            delay: 500,
-            hideOnClick: true,
-            hideOnSwipe: true,
-            resetScroll: true,
-            resetForms: true,
-            side: 'right',
-            target: $body,
-            visibleClass: 'is-menu-visible'
-        });*/
+    function ReverseGeolocation(lat, lng) {
+        var geocoder = new google.maps.Geocoder();
+        var city = null;
+        var latlng = new google.maps.LatLng(lat, lng);
+        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[1]) {
+                    for (var i = 0; i < results[0].address_components.length; i++) {
+                        for (var x = 0; x < results[0].address_components[i].types.length; x++) {
+                            if (results[0].address_components[i].types[x] == 'locality') {
+                                city = results[0].address_components[i];
+                                break;
+                            }
+                        }
+                    }
+
+                    window.history.pushState('Object', 'Foursnac - Peça Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
+                    window.document.title = 'Foursnac - Delivery de comida Online em ' + city.long_name +' | Peça Foursnac';
+
+                } else {
+                    window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+                    window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+                }
+            } else {
+                window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+                window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+            }
+        });
+    }
 
     $('.tipo').click(function (event) {
         event.preventDefault();
@@ -65,52 +79,12 @@ $(document).ready(function () {
 
 });
 
-$('#Passo1').mouseenter(function () {
-
-    $('#Passo1').addClass('corPassoHover');
-
+$('.corPassoCir').mouseenter(function (ev) {
+    $(this).toggleClass('corPassoHover', true);
 });
 
-$('#Passo1').mouseleave(function () {
-
-    $('#Passo1').removeClass('corPassoHover');
-
-});
-
-$('#Passo2').mouseenter(function () {
-
-    $('#Passo2').addClass('corPassoHover');
-
-});
-
-$('#Passo2').mouseleave(function () {
-
-    $('#Passo2').removeClass('corPassoHover');
-
-});
-
-$('#Passo3').mouseenter(function () {
-
-    $('#Passo3').addClass('corPassoHover');
-
-});
-
-$('#Passo3').mouseleave(function () {
-
-    $('#Passo3').removeClass('corPassoHover');
-
-});
-
-$('#Passo4').mouseenter(function () {
-
-    $('#Passo4').addClass('corPassoHover');
-
-});
-
-$('#Passo4').mouseleave(function () {
-
-    $('#Passo4').removeClass('corPassoHover');
-
+$('.corPassoCir').mouseleave(function () {
+    $(this).toggleClass('corPassoHover', false);
 });
 
 $(window).width(function () {

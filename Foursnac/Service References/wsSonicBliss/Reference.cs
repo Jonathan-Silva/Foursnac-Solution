@@ -12,161 +12,168 @@ namespace Foursnac.wsSonicBliss {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="wsSonicBliss.wsSBSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://sonicbliss.com.br", ConfigurationName="wsSonicBliss.wsSBSoap")]
     public interface wsSBSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getPedidos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getPedidos", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Pedidos[] getPedidos(string ID_ESTABELECIMENTO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getPedidos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getPedidos", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Pedidos[]> getPedidosAsync(string ID_ESTABELECIMENTO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getPedido", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getPedido", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Pedidos getPedido(string ID_ESTABELECIMENTO, string ID_PEDIDO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getPedido", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getPedido", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Pedidos> getPedidoAsync(string ID_ESTABELECIMENTO, string ID_PEDIDO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SomethingTodo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SomethingTodo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.HasSomethingToDo[] SomethingTodo(string ID_ESTABELECIMENTO, string ID_MAQUINA, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SomethingTodo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SomethingTodo", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.HasSomethingToDo[]> SomethingTodoAsync(string ID_ESTABELECIMENTO, string ID_MAQUINA, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getDadosEstabelecimento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getDadosEstabelecimento", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Estabelecimento getDadosEstabelecimento(string ID_ESTABELECIMENTO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getDadosEstabelecimento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getDadosEstabelecimento", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Estabelecimento> getDadosEstabelecimentoAsync(string ID_ESTABELECIMENTO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getDadosEstabelecimentoByCNPJ", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getDadosEstabelecimentoByCNPJ", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Estabelecimento getDadosEstabelecimentoByCNPJ(string CNPJ, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getDadosEstabelecimentoByCNPJ", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getDadosEstabelecimentoByCNPJ", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Estabelecimento> getDadosEstabelecimentoByCNPJAsync(string CNPJ, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getInfos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getInfos", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Informacao getInfos(string ID_ESTABLECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getInfos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getInfos", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Informacao> getInfosAsync(string ID_ESTABLECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getItensPedido", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getItensPedido", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Itens[] getItensPedido(string ID_ESTABELECIMENTO, string ID_PEDIDO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getItensPedido", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getItensPedido", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Itens[]> getItensPedidoAsync(string ID_ESTABELECIMENTO, string ID_PEDIDO);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getItensAdicioanis", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getItensAdicioanis", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.ITENS_ADICIONAIS[] getItensAdicioanis(string ID_PEDIDO_ITEM, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getItensAdicioanis", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getItensAdicioanis", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.ITENS_ADICIONAIS[]> getItensAdicioanisAsync(string ID_PEDIDO_ITEM, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DadosCliente", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/DadosCliente", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Cliente DadosCliente(string ID_CLIENTE, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DadosCliente", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/DadosCliente", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Cliente> DadosClienteAsync(string ID_CLIENTE, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LoadParameter", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/LoadParameter", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string LoadParameter(string P_NOME, string P_TIPO, string ID_ESTABELECIMENTO, string K_FOURSNAC);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LoadParameter", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/LoadParameter", ReplyAction="*")]
         System.Threading.Tasks.Task<string> LoadParameterAsync(string P_NOME, string P_TIPO, string ID_ESTABELECIMENTO, string K_FOURSNAC);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SetMaquinaImpressao", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SetMaquinaImpressao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string SetMaquinaImpressao(string ID_ESTABELECIMENTO, string MAQUINA, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SetMaquinaImpressao", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SetMaquinaImpressao", ReplyAction="*")]
         System.Threading.Tasks.Task<string> SetMaquinaImpressaoAsync(string ID_ESTABELECIMENTO, string MAQUINA, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TimeClear", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/TimeClear", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool TimeClear(string ID_SB, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TimeClear", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/TimeClear", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> TimeClearAsync(string ID_SB, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SalvarParametro", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SalvarParametro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool SalvarParametro(string P_NOME, string P_VALOR, string P_TIPO, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SalvarParametro", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/SalvarParametro", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> SalvarParametroAsync(string P_NOME, string P_VALOR, string P_TIPO, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getEnderecoUsuarioweb", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getEnderecoUsuarioweb", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.EnderecoWeb getEnderecoUsuarioweb(string ID_CLIENTE, string ID_ENDERECO_WEB, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getEnderecoUsuarioweb", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/getEnderecoUsuarioweb", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.EnderecoWeb> getEnderecoUsuariowebAsync(string ID_CLIENTE, string ID_ENDERECO_WEB, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/listarFaturamento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/listarFaturamento", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.FATURAMENTO[] listarFaturamento(string ID_ESTABELECIMENTO, string DATA_INICIO, string DATA_FINAL, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/listarFaturamento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/listarFaturamento", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.FATURAMENTO[]> listarFaturamentoAsync(string ID_ESTABELECIMENTO, string DATA_INICIO, string DATA_FINAL, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEstabelecimentos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ListarEstabelecimentos", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Foursnac.wsSonicBliss.Estabelecimento[] ListarEstabelecimentos(string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarEstabelecimentos", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ListarEstabelecimentos", ReplyAction="*")]
         System.Threading.Tasks.Task<Foursnac.wsSonicBliss.Estabelecimento[]> ListarEstabelecimentosAsync(string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ConsultarCep", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ConsultarCep", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string ConsultarCep(string WEB_KEY, string cep);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ConsultarCep", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ConsultarCep", ReplyAction="*")]
         System.Threading.Tasks.Task<string> ConsultarCepAsync(string WEB_KEY, string cep);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ConfirmaUrlEstabelecimento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ConfirmaUrlEstabelecimento", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool ConfirmaUrlEstabelecimento(string WEB_KEY, string url);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ConfirmaUrlEstabelecimento", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/ConfirmaUrlEstabelecimento", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> ConfirmaUrlEstabelecimentoAsync(string WEB_KEY, string url);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviarEmail", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/EnviarEmail", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool EnviarEmail(string ID_PEDIDO, string ID_ESTABELECIMENTO, string ASSUNTO, string BODY_NAME, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviarEmail", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/EnviarEmail", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> EnviarEmailAsync(string ID_PEDIDO, string ID_ESTABELECIMENTO, string ASSUNTO, string BODY_NAME, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviarEmailPadrao", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/EnviarEmailPadrao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool EnviarEmailPadrao(string[] CAMPOS, string CORPO, string BODY_NAME, string STR_TO, string STR_NOME, string ASSUNTO, string STR_FROM, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnviarEmailPadrao", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/EnviarEmailPadrao", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> EnviarEmailPadraoAsync(string[] CAMPOS, string CORPO, string BODY_NAME, string STR_TO, string STR_NOME, string ASSUNTO, string STR_FROM, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FinalizaToDo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/FinalizaToDo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool FinalizaToDo(string ID_TODO, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FinalizaToDo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/FinalizaToDo", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> FinalizaToDoAsync(string ID_TODO, string ID_ESTABELECIMENTO, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JSONStringify", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/CreateUsuarioWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        void CreateUsuarioWeb(string JsonUsuarioWeb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/CreateUsuarioWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task CreateUsuarioWebAsync(string JsonUsuarioWeb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/JSONStringify", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         void JSONStringify(object VALOR, string WEB_KEY);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JSONStringify", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://sonicbliss.com.br/JSONStringify", ReplyAction="*")]
         System.Threading.Tasks.Task JSONStringifyAsync(object VALOR, string WEB_KEY);
     }
     
@@ -175,7 +182,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class Pedidos : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -431,7 +438,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class FATURAMENTO : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idEstabelecimentoField;
@@ -561,7 +568,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class EnderecoWeb : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -691,7 +698,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class Cliente : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -793,7 +800,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class ITENS_ADICIONAIS : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -909,7 +916,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class Itens : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -1025,7 +1032,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class Informacao : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -1127,7 +1134,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class Estabelecimento : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -1313,7 +1320,7 @@ namespace Foursnac.wsSonicBliss {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://sonicbliss.com.br")]
     public partial class HasSomethingToDo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
@@ -1659,6 +1666,14 @@ namespace Foursnac.wsSonicBliss {
         
         public System.Threading.Tasks.Task<bool> FinalizaToDoAsync(string ID_TODO, string ID_ESTABELECIMENTO, string WEB_KEY) {
             return base.Channel.FinalizaToDoAsync(ID_TODO, ID_ESTABELECIMENTO, WEB_KEY);
+        }
+        
+        public void CreateUsuarioWeb(string JsonUsuarioWeb) {
+            base.Channel.CreateUsuarioWeb(JsonUsuarioWeb);
+        }
+        
+        public System.Threading.Tasks.Task CreateUsuarioWebAsync(string JsonUsuarioWeb) {
+            return base.Channel.CreateUsuarioWebAsync(JsonUsuarioWeb);
         }
         
         public void JSONStringify(object VALOR, string WEB_KEY) {
