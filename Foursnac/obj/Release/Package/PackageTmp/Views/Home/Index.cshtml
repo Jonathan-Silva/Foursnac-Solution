@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="~/Content/css/main.css" />
     <link rel="stylesheet" href="~/Content/css/Site.css" >
     <link rel="stylesheet" href="~/Content/css/bootstrap.css" >
-    <link href="~/Content/css/jquery.message.css" rel="stylesheet" />
+    
     <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
     <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -81,8 +81,8 @@
                     <div id="divCep" class="divCep">
                         <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off"/>
                     </div>
-                    @*<button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>*@
-                    <button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>
+                    <button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>
+                    @*<button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>*@
 
 
                 </form>
@@ -214,7 +214,8 @@
     <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
     <script src="~/Scripts/main.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/funcoes-Home.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="~/Scripts/Home.js"></script>
 </body>
 </html>
 
