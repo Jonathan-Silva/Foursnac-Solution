@@ -10,7 +10,8 @@
         }
 
         function positionError(position) {
-            alert('Erro ao obter geolocalidade. Erro: ' + position.code);
+            window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+            window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
         }
     });
 

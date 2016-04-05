@@ -1,4 +1,26 @@
-﻿.Barra {
+﻿.span-circle{
+    
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: #b3b3b3;
+    height: 98px;
+    width: 98px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    text-align: center;
+
+}
+
+.span-circle:hover{
+    background-color:#ff2930;
+    cursor: pointer;
+}
+
+.Barra {
     background-color: #FF2930 !important;
     -webkit-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
     -moz-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
