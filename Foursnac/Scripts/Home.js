@@ -1,16 +1,7 @@
-<<<<<<< HEAD:Foursnac/Scripts/funcoes-Home.js
-﻿
-
-$(document).ready(function () {
-
-    /*var body = $('body');
-    var $window = $(window);
-=======
 ﻿$(document).ready(function () {
     
     $(function () {
         navigator.geolocation.getCurrentPosition(showPosition, positionError);
->>>>>>> 3979752397f00dccba543030271ffc6a492f71c2:Foursnac/Scripts/Home.js
 
         function showPosition(position) {
             var coordinates = position.coords;
@@ -19,7 +10,8 @@ $(document).ready(function () {
         }
 
         function positionError(position) {
-            alert('Erro ao obter geolocalidade. Erro: ' + position.code);
+            window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+            window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
         }
     });
 
@@ -145,14 +137,12 @@ $(window).width(function () {
 
 });
 
-
 $('#btCepDontPush').click(function () {
     alert('Aguarde, dentro de poucos dias...');
 });
 
 $('#btCep').click(function () {
     BuscarEndereco();
-    console.log($('#Cep').val());
 });
 
 function somenteNumeros(event) {
@@ -169,7 +159,6 @@ function somenteNumeros(event) {
     if (cep.length >= 9) {
 
         if (charCode == 13) {
-            console.log("tecla enter")
             BuscarEndereco();
         }
 
@@ -228,29 +217,33 @@ function GoToTipo() {
 function BuscarEndereco() {
 
     var cep = $('#Cep').val().replace("-", "");
-    if (cep.length != 8) {
+    if (cep.length!=8) {
         cep = "00000000";
     }
 
     $.ajax({
         url: 'http://api.postmon.com.br/v1/cep/' + cep,
         method: 'GET',
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        error: function(XMLHttpRequest, textStatus, errorThrown){
             alert("Cep inválido.");
         },
         success: function (data) {
-
-            $('#uf').val(data.estado);
-            $('#cidade').val(data.cidade);
-            $('#rua').val(data.logradouro);
-            Ir('pesquisa');
-
-
+      
+                $('#uf').val(data.estado);
+                $('#cidade').val(data.cidade);
+                $('#rua').val(data.logradouro);
+                Ir('pesquisa');
+         
+           
         }
-
+        
     });
 
 }
+
+function Erro() {
+}
+
 
 $('#Cep').focus(function () {
     var x = screen.width;

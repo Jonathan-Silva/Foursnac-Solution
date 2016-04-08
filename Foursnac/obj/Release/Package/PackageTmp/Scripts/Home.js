@@ -1,43 +1,49 @@
-﻿
+﻿$(document).ready(function () {
+    
+    $(function () {
+        navigator.geolocation.getCurrentPosition(showPosition, positionError);
 
-$(document).ready(function () {
+        function showPosition(position) {
+            var coordinates = position.coords;
+            window.sessionStorage.setItem('coordinates', coordinates.latitude + '#' + coordinates.longitude);
+            ReverseGeolocation(coordinates.latitude, coordinates.longitude);
+        }
 
-    /*var body = $('body');
-    var $window = $(window);
-
-    body.addClass('is-loading');
-
-    $window.on('load', function () {
-        window.setTimeout(function () {
-            body.removeClass('is-loading');
-        }, 100);
+        function positionError(position) {
+            window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+            window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+        }
     });
 
-    $('#menu').append($('<a/>').attr('href', '#menu').addClass('close'));
-    $('#menu').appendTo(body);
-    $('#menu').panel({
-        delay: 500,
-        hideOnClick: true,
-        hideOnSwipe: true,
-        resetScroll: true,
-        resetForms: true,
-        side: 'right',
-        target: body,
-        visibleClass: 'is-menu-visible'
-    });
-    $('#menu')
-        .append('<a href="#menu" class="close"></a>')
-        .appendTo($body)
-        .panel({
-            delay: 500,
-            hideOnClick: true,
-            hideOnSwipe: true,
-            resetScroll: true,
-            resetForms: true,
-            side: 'right',
-            target: $body,
-            visibleClass: 'is-menu-visible'
-        });*/
+    function ReverseGeolocation(lat, lng) {
+        var geocoder = new google.maps.Geocoder();
+        var city = null;
+        var latlng = new google.maps.LatLng(lat, lng);
+        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[1]) {
+                    for (var i = 0; i < results[0].address_components.length; i++) {
+                        for (var x = 0; x < results[0].address_components[i].types.length; x++) {
+                            if (results[0].address_components[i].types[x] == 'locality') {
+                                city = results[0].address_components[i];
+                                break;
+                            }
+                        }
+                    }
+
+                    window.history.pushState('Object', 'Foursnac - Peça Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
+                    window.document.title = 'Foursnac - Delivery de comida Online em ' + city.long_name +' | Peça Foursnac';
+
+                } else {
+                    window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+                    window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+                }
+            } else {
+                window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
+                window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+            }
+        });
+    }
 
     $('.tipo').click(function (event) {
         event.preventDefault();
@@ -65,52 +71,12 @@ $(document).ready(function () {
 
 });
 
-$('#Passo1').mouseenter(function () {
-
-    $('#Passo1').addClass('corPassoHover');
-
+$('.corPassoCir').mouseenter(function (ev) {
+    $(this).toggleClass('corPassoHover', true);
 });
 
-$('#Passo1').mouseleave(function () {
-
-    $('#Passo1').removeClass('corPassoHover');
-
-});
-
-$('#Passo2').mouseenter(function () {
-
-    $('#Passo2').addClass('corPassoHover');
-
-});
-
-$('#Passo2').mouseleave(function () {
-
-    $('#Passo2').removeClass('corPassoHover');
-
-});
-
-$('#Passo3').mouseenter(function () {
-
-    $('#Passo3').addClass('corPassoHover');
-
-});
-
-$('#Passo3').mouseleave(function () {
-
-    $('#Passo3').removeClass('corPassoHover');
-
-});
-
-$('#Passo4').mouseenter(function () {
-
-    $('#Passo4').addClass('corPassoHover');
-
-});
-
-$('#Passo4').mouseleave(function () {
-
-    $('#Passo4').removeClass('corPassoHover');
-
+$('.corPassoCir').mouseleave(function () {
+    $(this).toggleClass('corPassoHover', false);
 });
 
 $(window).width(function () {
@@ -171,14 +137,12 @@ $(window).width(function () {
 
 });
 
-
 $('#btCepDontPush').click(function () {
     alert('Aguarde, dentro de poucos dias...');
 });
 
 $('#btCep').click(function () {
     BuscarEndereco();
-    console.log($('#Cep').val());
 });
 
 function somenteNumeros(event) {
@@ -195,7 +159,6 @@ function somenteNumeros(event) {
     if (cep.length >= 9) {
 
         if (charCode == 13) {
-            console.log("tecla enter")
             BuscarEndereco();
         }
 
@@ -254,29 +217,33 @@ function GoToTipo() {
 function BuscarEndereco() {
 
     var cep = $('#Cep').val().replace("-", "");
-    if (cep.length != 8) {
+    if (cep.length!=8) {
         cep = "00000000";
     }
 
     $.ajax({
         url: 'http://api.postmon.com.br/v1/cep/' + cep,
         method: 'GET',
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        error: function(XMLHttpRequest, textStatus, errorThrown){
             alert("Cep inválido.");
         },
         success: function (data) {
-
-            $('#uf').val(data.estado);
-            $('#cidade').val(data.cidade);
-            $('#rua').val(data.logradouro);
-            Ir('pesquisa');
-
-
+      
+                $('#uf').val(data.estado);
+                $('#cidade').val(data.cidade);
+                $('#rua').val(data.logradouro);
+                Ir('pesquisa');
+         
+           
         }
-
+        
     });
 
 }
+
+function Erro() {
+}
+
 
 $('#Cep').focus(function () {
     var x = screen.width;

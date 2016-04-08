@@ -1,5 +1,8 @@
 ﻿
 $(document).ready(function () {
+
+    
+
     $('#aLogin').click(function (event) {
         event.preventDefault();
         var dest = '';
