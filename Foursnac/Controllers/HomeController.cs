@@ -60,5 +60,10 @@ namespace Foursnac.Controllers
 
             return View();
         }
+        public ActionResult EmBreve()
+        {
+         
+            return View();
+        }
     }
 }

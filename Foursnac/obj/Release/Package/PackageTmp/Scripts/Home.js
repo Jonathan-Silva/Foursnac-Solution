@@ -11,7 +11,7 @@
 
         function positionError(position) {
             window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-            window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+            window.document.title = 'Delivery de comidas online - Foursnac';
         }
     });
 
@@ -30,17 +30,17 @@
                             }
                         }
                     }
-
-                    window.history.pushState('Object', 'Foursnac - Peça Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
-                    window.document.title = 'Foursnac - Delivery de comida Online em ' + city.long_name +' | Peça Foursnac';
+                    //Delivery em Araçatuba e Birigui - Foursnac
+                    window.history.pushState('Object', 'Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
+                    window.document.title = 'Delivery em ' + city.long_name + ' - Foursnac';
 
                 } else {
                     window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-                    window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+                    window.document.title = 'Delivery de comidas online - Foursnac';
                 }
-            } else {
+                } else {
                 window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-                window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
+                window.document.title = 'Delivery de comidas online - Foursnac';
             }
         });
     }
@@ -149,6 +149,9 @@ function somenteNumeros(event) {
 
     var charCode = (event.which) ? event.which : event.keyCode;
     var cep = $('#Cep').val();
+    if (charCode == 8) {
+        return true;
+    }
 
     if (cep.length == 5) {
         cep += '-';
@@ -161,8 +164,8 @@ function somenteNumeros(event) {
         if (charCode == 13) {
             BuscarEndereco();
         }
-
         return false;
+        
     }
 
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {

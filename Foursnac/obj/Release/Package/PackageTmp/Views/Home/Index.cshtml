@@ -5,38 +5,35 @@
 
 <html>
 <head>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522b154a53d8cdad"></script>
+    <script type="text/javascript">
+        addthis.layers({
+            'theme': 'transparent',
+            'share': {
+                'position': 'right',
+                'services': 'facebook,twitter,google_plusone_share,pinterest_share,linkedin,more',
+                'mobile': true
+            }
+        });
+    </script>
 
-    <meta charset="utf-8" >
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FF2930">
 
-    <title>Foursnac</title>
-
+    <title>Delivery em Araçatuba e Birigui - Foursnac</title>
+    <meta name="description" content="Faça seu pedido pela intenet e receba em casa. A maoir lista de restaurantes online em sua cidade. O jeito mais  facil de pedir de comida.">
+    <meta name="keywords" content="delivery, delidery araçatuba, delivery birigui, pizza em araçatuba, pizza em birigui, lanches, lanches birigui, lanches araçatuba, pedir comida araçatuba, pedir comida birigui, restaurantes araçatuba, restaurantes birigui">
 
     <link rel="stylesheet" href="~/Content/css/main.css" />
-    <link rel="stylesheet" href="~/Content/css/Site.css" >
-    <link rel="stylesheet" href="~/Content/css/bootstrap.css" >
-    
+    <link rel="stylesheet" href="~/Content/css/Site.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+
     <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
     <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/ico/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
-    <link rel="manifest" href="~/Content/img/ico/manifest.json">
+
 
 </head>
 
@@ -71,22 +68,22 @@
         <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
         <section id="Titulo" class="Titulo">
-            <a  href="/home/index"><div class="LogoCentral"></div></a>
-            
+            <a href="/home/index"><div class="LogoCentral"></div></a>
+
             <!--Busca Cep-->
             <div id="CaixaCep" class="CaixaCep">
 
                 <form name="form" id="form">
 
                     <div id="divCep" class="divCep">
-                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off"/>
+                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off" />
                     </div>
                     <button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>
                     @*<button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>*@
 
 
                 </form>
-            </div> 
+            </div>
 
             <!-- Resultado Endereço -->
             <div id="Logo2" class="LogoCentral1 NoDisplay"></div>
@@ -95,23 +92,23 @@
 
 
                 <div class="divUf">
-                    <input id="uf"  readonly="true" type="text" class="inputUf" value="" />
+                    <input id="uf" readonly="true" type="text" class="inputUf" value="" />
                 </div>
 
                 <div class="divCidade">
-                    <input id="cidade"  readonly="true" type="text" class="inputCidade" value="" />
+                    <input id="cidade" readonly="true" type="text" class="inputCidade" value="" />
                 </div>
 
                 <div class="divRua">
-                    <input id="rua"  readonly="true" type="text" class="inputRua" value="" />
+                    <input id="rua" readonly="true" type="text" class="inputRua" value="" />
                 </div>
 
                 <div class="divNum">
-                    <input id="num" type="tel"  class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
+                    <input id="num" type="tel" class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
                 </div>
 
                 <div class="divComplemento">
-                    <input id="complemento"  type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                    <input id="complemento" type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
                 </div>
 
                 <button class="btVoltar" onclik="Voltar()">voltar</button>
@@ -125,15 +122,15 @@
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
                 <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
 
-                        <div class="img-Delivery"></div>
-                        <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
+                    <div class="img-Delivery"></div>
+                    <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
 
                 </div>
 
                 <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
 
-                        <div class="img-Pickup"></div>
-                        <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
+                    <div class="img-Pickup"></div>
+                    <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
 
                 </div>
             </div>
@@ -153,9 +150,8 @@
                 <div class="col-md-12 col-sm-12  col-xs-12">
                     <div class="row text-center">
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo1">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo1"></i>
-                                <i class="icon-location74" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
+                            <span class="fa fa-4x span-circle" id="Passo1">
+                                <i class="icon-location74" style="position:absolute; margin:30px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
                             </span>
                             <div><b>1.</b><span class="TextoPasso">Localize</span></div>
                             <div class="TextoPasso">facilmente</div>
@@ -163,7 +159,7 @@
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
                             <span class="fa fa-4x span-circle" id="Passo2">
-                                
+
                                 <i class="icon-iconesestabelecimentos" style="position:absolute; margin:22px 15PX 0 -25PX; color:#FFF; font-size:50px; font-weight:500; cursor:pointer">  </i>
 
                             </span>
@@ -172,9 +168,8 @@
                         </div>
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo3"></i>
-                                <i class="icon-pizza2" style="position:absolute; margin:35px 15PX 0 -16PX; color:#FFF; font-size:40px;">  </i>
+                            <span class="fa fa-4x span-circle" id="Passo3">
+                                <i class="icon-pizza2" style="position:absolute; margin:30px 15PX 0 -16PX; color:#FFF; font-size:40px;">  </i>
                             </span>
                             <div><b>3.</b><span class="TextoPasso">Escolha sua</span></div>
                             <div class="TextoPasso">comida</div>
@@ -182,9 +177,8 @@
 
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo4"></i>
-                                <i class="icon-money-card4" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
+                            <span class="fa fa-4x span-circle" id="Passo4">
+                                <i class="icon-money-card4" style="position:absolute; margin:30px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
                             </span>
                             <div><b>4.</b><span class="TextoPasso">Defina como</span></div>
                             <div class="TextoPasso">pagar</div>
@@ -204,11 +198,11 @@
     </div>
 
     <!-- Scripts -->
-    
+
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/jquery.scrollex.min.js"></script>
     <script src="~/Scripts/jquery.scrolly.min.js"></script>
-    
+
     <script src="~/Scripts/skel.min.js"></script>
     <script src="~/Scripts/util.js"></script>
     <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
@@ -216,8 +210,19 @@
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="~/Scripts/Home.js"></script>
+
+    <!--Analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-76623427-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>
-
-
-

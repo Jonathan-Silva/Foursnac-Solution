@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DeliveryController.cs" />
+    <Compile Include="Controllers\EmBreveController.cs" />
     <Compile Include="Controllers\EstabelecimentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -205,6 +206,7 @@
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.svg" />
     <Content Include="Content\fonts\font-foursnac\style.css" />
     <Content Include="Content\img\delivery.png" />
+    <Content Include="Content\img\embreve.png" />
     <Content Include="Content\img\foursnac1.png" />
     <Content Include="Content\img\ico\android-icon-144x144.png" />
     <Content Include="Content\img\ico\android-icon-192x192.png" />
@@ -390,10 +392,12 @@
     <Content Include="Views\Estabelecimento\Registro.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Service References\wsSonicBliss\wsSB.wsdl" />
+    <Content Include="Views\EmBreve\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Delivery\" />
+    <Folder Include="Views\Outros\" />
     <Folder Include="Views\Util\" />
   </ItemGroup>
   <ItemGroup>
