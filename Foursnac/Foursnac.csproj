@@ -234,7 +234,7 @@
     <Content Include="Content\img\ico\ms-icon-150x150.png" />
     <Content Include="Content\img\ico\ms-icon-310x310.png" />
     <Content Include="Content\img\ico\ms-icon-70x70.png" />
-    <Content Include="Content\img\logocentral.png" />
+    <Content Include="Content\img\foursnac.png" />
     <Content Include="Content\img\pickup .png" />
     <Content Include="Content\img\pickup1.png" />
     <Content Include="Content\img\pickup3.png" />
@@ -251,6 +251,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
+    <Content Include="Scripts\BarraSocial.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\sass\ie8.scss" />
