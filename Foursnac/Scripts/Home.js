@@ -132,6 +132,7 @@ $(window).width(function () {
 
         $('#footer').addClass('NoDisplay');
         $('#Passo').addClass('NoDisplay');
+        $('#about').addClass('NoDisplay');
     }
 
 
@@ -159,21 +160,50 @@ function somenteNumeros(event) {
 
     $('#Cep').val(cep);
 
-    if (cep.length >= 9) {
+    if (cep.length == 9) {
 
-        if (charCode == 13) {
-            BuscarEndereco();
-        }
+        BuscarEndereco();
+        
         return false;
         
     }
-
+    if (charCode == 13) {
+        BuscarEndereco();
+    }
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     }
 
     return true;
 }
+
+function numeroFocus(event) {
+
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode == 13) {
+        $("#complemento").focus();
+    }
+    return true;
+}
+
+function numeroFocus(event) {
+
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode == 13)
+    {
+        $("#complemento").focus();
+    }
+    return true;
+}
+function complementoFocus(event) {
+
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode == 13) {
+        GoToTipo();
+    }
+    return true;
+}
+
 
 function Voltar() {
     $('#CaixaCep').removeClass('NoDisplay');
@@ -286,7 +316,7 @@ addthis.layers({
     'share': {
         'position': 'right',
         'services': 'facebook,twitter,google_plusone_share,pinterest_share,linkedin,more',
-        'mobile': true
+        'mobile': false
     }
 });
 

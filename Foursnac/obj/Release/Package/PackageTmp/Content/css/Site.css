@@ -1,4 +1,63 @@
-﻿.span-circle {
+﻿.tituloAbout{
+    margin-bottom: 20px !important;
+    text-transform: uppercase;
+}
+
+.icoCirculo{
+    position:absolute;
+    margin:30px 15PX 0 -20PX; 
+    color:#FFF; 
+    font-size:40px;
+}
+.icoCirculoPizza{
+    margin:30px 15PX 0 -15PX !important;
+}
+.TextLink{
+    color: #000 !important;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none !important;
+    border:none;
+}
+.TextLink:hover{
+    color: #2A87E5 !important;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 25px !important;
+    text-decoration: none !important;
+}
+
+.who{
+    background-color: #FFF !important;
+    font-family: 'Segoe UI' !important;
+    padding:3%;
+}
+.whoTitulo{
+    background-color: #FFF !important;
+    font-size:16px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+.whoText{
+    background-color: #FFF !important;
+    font-size:14px;
+    font-weight:lighter;
+}
+.LogoCentralHeader {
+    height: 161px;
+    max-width: 123px;
+    background-image: url(/Content/img/foursnac.png) !important;
+    background-size: 123px 161px;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    top:0;
+    margin: 50px auto 0 auto;
+    background-color: transparent;
+    z-index: 99999;
+}
+
+.span-circle {
     border-radius: 100%;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -29,7 +88,7 @@
 }
 
 .spnLogoBreve {
-    background-image: url(/Content/img/logocentral.png);
+    background-image: url(/Content/img/foursnac.png);
     position: absolute;
     top: 0;
     width: 100px;
@@ -75,7 +134,7 @@
 .LogoCentral {
     height: 161px;
     max-width: 123px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    background-image: url(/Content/img/foursnac.png) !important;
     background-size: 123px 161px;
     background-repeat: no-repeat;
     left: 0;
@@ -88,12 +147,12 @@
 .LogoCentral1 {
     height: 161px;
     max-width: 123px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    background-image: url(/Content/img/foursnac.png) !important;
     background-size: 123px 161px;
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    margin: 2% auto 0 auto;
+    margin: 0% auto 0 auto;
     background-color: transparent;
     z-index: 99999;
 }
@@ -101,7 +160,7 @@
 .LogoCentralBarra {
     height: 40px;
     max-width: 28px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    background-image: url(/Content/img/foursnac.png) !important;
     background-size: 28px 40px;
     background-repeat: no-repeat;
     margin-right: auto;
@@ -536,7 +595,7 @@
 }
 
 .Email {
-    max-width: 250px;
+    max-width: 380px;
     width: 100%;
     outline: none !important;
     text-decoration: none !important;
@@ -676,8 +735,9 @@ a:link
 
 .Voltar {
     color: #FF2930 !important;
-    font-size: 30px !important;
-    margin: 7px 0 0 7px;
+    font-size: 23px !important;
+    margin: 10px 20px 0px 0px;
+    float: right;
 }
 
 
@@ -691,6 +751,7 @@ a:link
     padding: 0px;
     text-align: center;
     position: absolute;
+    top:42px;
 }
 
 .divDelivery {
@@ -778,6 +839,7 @@ a:link
         background-color: rgba(255,255,255,1);
         padding: 0px;
         text-align: center;
+        top:42px;
     }
 
     .divDelivery {
@@ -797,9 +859,9 @@ a:link
     .img-Pickup {
         background-image: url('/Content/img/pickup .png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -807,9 +869,9 @@ a:link
     .img-Delivery {
         background-image: url('/Content/img/delivery.png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -839,6 +901,20 @@ a:link
         font-weight: lighter !important;
         font-family: 'Segoe UI';
         font-size: 16px;
+    }
+
+    .LogoCentralHeader{
+        height: 30px;
+        max-width: 23px;
+        background-image: url(/Content/img/foursnac.png) !important;
+        background-size: 23px 30px;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 5px auto 0 auto;
+        background-color: transparent;
+        z-index: 99999;
     }
 
     .divPickupCor {
@@ -1086,7 +1162,7 @@ a:link
     .LogoCentral {
         height: 130px;
         max-width: 92px;
-        background-image: url(/Content/img/logocentral.png) !important;
+        background-image: url(/Content/img/foursnac.png) !important;
         background-size: 92px 130px;
         background-repeat: no-repeat;
         left: 0;
@@ -1100,7 +1176,7 @@ a:link
     .LogoCentral1 {
         height: 80px;
         max-width: 60px;
-        background-image: url(/Content/img/logocentral.png) !important;
+        background-image: url(/Content/img/foursnac.png) !important;
         background-size: 60px 80px;
         background-repeat: no-repeat;
         left: 0;
@@ -1112,8 +1188,8 @@ a:link
 
     .Voltar {
         color: #FFF !important;
-        font-size: 30px !important;
-        margin: 7px 0 0 7px;
+        font-size: 23px !important;
+        margin: 10px 10px 0 7px;
     }
 
 

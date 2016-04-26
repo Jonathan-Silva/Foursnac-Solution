@@ -3304,6 +3304,7 @@ body.is-menu-visible #menu {
 
 #header.alt {
     background: transparent;
+    position: absolute;
 }
 
     #header.alt h1 {

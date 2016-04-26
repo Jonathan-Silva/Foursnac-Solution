@@ -1,4 +1,9 @@
-﻿.icoCirculo{
+﻿.tituloAbout{
+    margin-bottom: 20px !important;
+    text-transform: uppercase;
+}
+
+.icoCirculo{
     position:absolute;
     margin:30px 15PX 0 -20PX; 
     color:#FFF; 
@@ -854,9 +859,9 @@ a:link
     .img-Pickup {
         background-image: url('/Content/img/pickup .png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -864,9 +869,9 @@ a:link
     .img-Delivery {
         background-image: url('/Content/img/delivery.png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -896,6 +901,20 @@ a:link
         font-weight: lighter !important;
         font-family: 'Segoe UI';
         font-size: 16px;
+    }
+
+    .LogoCentralHeader{
+        height: 30px;
+        max-width: 23px;
+        background-image: url(/Content/img/foursnac.png) !important;
+        background-size: 23px 30px;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 5px auto 0 auto;
+        background-color: transparent;
+        z-index: 99999;
     }
 
     .divPickupCor {
