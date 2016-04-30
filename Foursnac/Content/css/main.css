@@ -3198,7 +3198,7 @@ body.is-menu-visible #menu {
     -webkit-transition: background-color 0.2s ease;
     -ms-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
-    background: #2e3842;
+    background: transparent;
     height: 3em;
     left: 0;
     line-height: 3em;
@@ -3301,19 +3301,6 @@ body.is-menu-visible #menu {
 #header nav > ul > li:first-child {
     margin-left: 0;
 }
-
-#header.alt {
-    background: transparent;
-    position: absolute;
-}
-
-    #header.alt h1 {
-        -moz-pointer-events: none;
-        -webkit-pointer-events: none;
-        -ms-pointer-events: none;
-        pointer-events: none;
-        opacity: 0;
-    }
 
 /* Banner */
 

@@ -3,6 +3,76 @@
     text-transform: uppercase;
 }
 
+.headerFixo{
+    background-color: rgb(255, 255, 255) !important;
+    position: fixed !important;
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+    box-shadow:-1px 3px 10px -4px rgba(0,0,0,1);
+}
+
+.LogoEscrita{
+    height: 20px;
+    width: 185px;
+    background-image: url(/Content/img/foursnac-escrita.png) !important;
+    background-size: 185px 20px;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+    margin-top: 9px;
+    z-index: 99999;
+    float: left;
+}
+
+.mar1{
+    margin-top: -1px !important;
+}
+
+.fundoIco{
+    background-color:#b3b3b3 !important;
+}
+.btLogar{
+    border-radius: 8px;
+    padding: 0px 25px;
+    background: #FFF;
+    font-weight: lighter;
+    color: #FF2930;
+    float:right;
+    font-size:12px;
+    line-height:25px;
+    margin-top: 8px;
+    margin-right:20px;
+    cursor:pointer;
+    border:1px solid #FF2930;
+}
+.btCadastrar{
+    border-radius: 8px;
+    padding: 0px 15px;
+    background: #FFF;
+    font-weight: lighter;
+    color: #2A87E5;
+    float:right;
+    font-size:12px;
+    line-height:25px;
+    margin-top: 8px;
+    margin-right:20px;
+    cursor:pointer;
+    border:1px solid #2A87E5;
+}
+
+
+.icoMenu000::after{
+    background-image: url("images/bars000.svg") !important;
+    width: 1.5em !important;
+    margin-left: 10px;
+    height: 3.4em !important;
+}
+.alt {
+    background: transparent;
+    position: absolute;
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+}
+
 .icoCirculo{
     position:absolute;
     margin:30px 15PX 0 -20PX; 

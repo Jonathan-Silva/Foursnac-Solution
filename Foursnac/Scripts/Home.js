@@ -278,6 +278,30 @@ function BuscarEndereco() {
 
 }
 
+$(window).scroll(function () {
+ 
+    var top = $(window).scrollTop();
+    var w = screen.width;
+    if (x > 700)
+    {
+        if (top > 50) {
+            $('#header').addClass('headerFixo');
+            //$('#icoMenu').addClass('icoMenu000'); 
+            $('#fundoIcoM').addClass('fundoIco');
+            $('#btlLR').removeClass('NoDisplay');
+            $('#LogoEscrita').removeClass('NoDisplay');
+
+        } else {
+
+            $('#header').removeClass('headerFixo');
+            //$('#icoMenu').removeClass('icoMenu000');
+            $('#btlLR').addClass('NoDisplay');
+            $('#fundoIcoM').removeClass('fundoIco');
+            $('#LogoEscrita').addClass('NoDisplay');
+        }
+    }
+});
+
 function Erro() {
 }
 
@@ -319,6 +343,17 @@ addthis.layers({
         'mobile': false
     }
 });
+
+//Zoopim
+window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+            d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                z.set.
+                _.push(o)
+            }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+    $.src = "//v2.zopim.com/?3hCSZlIi04fStrYCFoyIkBr5QCysyWDQ"; z.t = +new Date; $.
+    type = "text/javascript"; e.parentNode.insertBefore($, e)
+})(document, "script");
 
 //Analytics
     (function (i, s, o, g, r, a, m) {
