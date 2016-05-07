@@ -205,3 +205,9 @@ D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\bin\Microsoft.Owin.Se
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Release\Foursnac.csprojResolveAssemblyReference.cache
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Release\Foursnac.dll
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Release\Foursnac.pdb
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Net.Http.Formatting.dll
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Web.Http.dll
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Web.Http.WebHost.dll
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Net.Http.Formatting.xml
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Web.Http.xml
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\System.Web.Http.WebHost.xml

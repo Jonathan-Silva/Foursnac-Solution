@@ -133,8 +133,10 @@ $(window).width(function () {
         $('#footer').addClass('NoDisplay');
         $('#Passo').addClass('NoDisplay');
         $('#about').addClass('NoDisplay');
+     
     }
 
+    sistema();
 
 });
 
@@ -270,8 +272,7 @@ function BuscarEndereco() {
                 $('#cidade').val(data.cidade);
                 $('#rua').val(data.logradouro);
                 Ir('pesquisa');
-         
-           
+                
         }
         
     });
@@ -282,28 +283,74 @@ $(window).scroll(function () {
  
     var top = $(window).scrollTop();
     var w = screen.width;
-    if (x > 700)
+    if (w > 700)
     {
         if (top > 50) {
             $('#header').addClass('headerFixo');
             //$('#icoMenu').addClass('icoMenu000'); 
-            $('#fundoIcoM').addClass('fundoIco');
-            $('#btlLR').removeClass('NoDisplay');
-            $('#LogoEscrita').removeClass('NoDisplay');
+            $('#nav').addClass('fundoIco');
+            $('.btCadastrar').addClass('btCadastrarBranco');
+            $('.btLogar').addClass('btLogarBranco'); 
+            $('.LogoCentralHeader').addClass('MarginAjustLogo');
+            
+            //$('#btlLR').removeClass('NoDisplay');
+            //$('#LogoEscrita').removeClass('NoDisplay');
+            $('#icoMenu').addClass('menuicoAPP2');
+           // $('#menu').addClass('menuAPP2');
+
+     
 
         } else {
 
             $('#header').removeClass('headerFixo');
             //$('#icoMenu').removeClass('icoMenu000');
-            $('#btlLR').addClass('NoDisplay');
-            $('#fundoIcoM').removeClass('fundoIco');
-            $('#LogoEscrita').addClass('NoDisplay');
+            $('#nav').removeClass('fundoIco');
+            $('.btCadastrar').removeClass('btCadastrarBranco');
+            $('.btLogar').removeClass('btLogarBranco');
+            $('.LogoCentralHeader').removeClass('MarginAjustLogo');
+
+            //$('#btlLR').addClass('NoDisplay');
+            //$('#LogoEscrita').addClass('NoDisplay');
+            $('#icoMenu').removeClass('menuicoAPP2');
+            $('#menu').removeClass('menuAPP2');
         }
     }
 });
 
 function Erro() {
 }
+
+function sistema()
+{
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var android = deviceAgent.match(/(android)/);
+    var windowsP = deviceAgent.match(/(Windows Phone)/) ;
+    var ios  = deviceAgent.match(/(iphone|ipod|ipad|ios)/);
+
+    if (ios!="") {
+        $('.headerAPP').addClass('NoDisplay');
+    } else if (android != "") {
+
+        $('#btGStore').removeClass('NoDisplay');
+        $('#header').removeClass('top70');
+        $('#menu').addClass('menuAPP');
+        
+
+    } else if (windowsP  != "") {
+        $('.headerAPP').addClass('NoDisplay');
+    }
+
+    $('#btGStore').removeClass('NoDisplay');
+    $('#header').removeClass('top70');
+}
+
+
+$('.closeAPP').click(function () {
+    $('.headerAPP').addClass('NoDisplay');
+    $('#menu').removeClass('menuAPP');
+
+});
+
 
 
 $('#Cep').focus(function () {

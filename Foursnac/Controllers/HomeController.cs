@@ -11,10 +11,11 @@ namespace Foursnac.Controllers
     {
         public ActionResult Index()
         {
-            //Random numeroImagem = new Random();
-            //ViewBag.Imagem = numeroImagem.Next(7).ToString() + ".jpg";
+            Random numeroImagem = new Random();
+            ViewBag.Imagem = numeroImagem.Next(1, 9).ToString() + ".jpg";
             return View();
         }
+
 
         public ActionResult IndexDelivery(string controller, string actionName)
         {

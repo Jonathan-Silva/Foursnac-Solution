@@ -14,7 +14,7 @@
     <meta name="theme-color" content="#FF2930">
 
     <title>Delivery em Araçatuba e Birigui - Foursnac</title>
-    <meta name="description" content="Faça seu pedido pela internet e receba em casa. A maior lista de restaurantes online em sua cidade. O jeito mais fácil de pedir de comida.">
+    <meta name="description" content="Peça comida online em diversos restaurantes em Araçatuba, Birigui, Guararapes e região. Encontre pizzas, lanches e sushis. Entrega à domicilio com delivery.">
     <meta name="keywords" content="delivery, delidery araçatuba, delivery birigui, pizza em araçatuba, pizza em birigui, lanches, lanches birigui, lanches araçatuba, pedir comida araçatuba, pedir comida birigui, restaurantes araçatuba, restaurantes birigui">
 
     <link rel="stylesheet" href="~/Content/css/main.css" />
@@ -34,26 +34,42 @@
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
+        <!-- Header Instalar app -->
+        <div class="headerAPP">
 
+            <div class="closeAPP" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+            <div id="goAPP" class="goAPP"></div>
+
+            <div class="divP">
+                <p class="pAPP">Foursnac</p>
+                <p class="pAPP2">Baixe o app Foursnac</p>
+                <p class="pAPP2">Coma rapido, coma fácil :)</p>
+            </div>
+            <a id="btGStore" class="baixarAPP NoDisplay" href="https://play.google.com/store/apps/details?id=io.cordova.myapp118f03&hl=pt_BR">baixar</a>
+            <a id="btIStore" class="baixarAPP NoDisplay" href="">baixar</a>
+            <a id="btWStore" class="baixarAPP NoDisplay" href="">baixar</a>
+            
+        </div>
         <!-- Header -->
         <header id="header" class="alt">
+            <div style="background-image:url(/Content/img/);"></div>
             <div id="icoVoltar" onclick="Voltar();" class="fa fa-chevron-circle-left Voltar NoDisplay"></div>
             <div id="LogoEscrita" class="LogoEscrita NoDisplay"></div>
-            <div id="btlLR" class="NoDisplay">
+            <div id="btlLR" class="some">
                 <a href="http://app.foursnac.com/registrar.html"><div class="btCadastrar">cadastrar</div></a>
                 <a href="http://app.foursnac.com/logar.html"><div class="btLogar">entrar</div></a>
             </div>
-            <a id="Logo3" href="/home/index"><div class="LogoCentralHeader NoDisplay" title="Foursnac"></div></a>
+            <a id="Logo3" href="/home/index"><div class="LogoCentralHeader" title="Foursnac"></div></a>
             <nav id="nav">
                 <ul class="mar1">
                     <li id="fundoIcoM" class="special">
-                        <a id="icoMenu" href="#menu" class="menuToggle"></a>
-                        <div id="menu">
+                        <a id="icoMenu" href="#menu" class="menuicoAPP menuToggle"></a>
+                        <div id="menu" class="menuAPP">
                             <ul>
-                                <li><a href="/home/index">Home</a></li>
-                                <li><a href="http://app.foursnac.com/logar.html" id="aLogin">Login</a></li>
-                                <li><a href="http://app.foursnac.com/registrar.html">Cadastre-se</a></li>
-                                <li><a href="/estabelecimento/index">Estabelecimento</a></li>
+                                <li><a class="btnLLogar" href="http://app.foursnac.com/logar.html" id="aLogin">entrar</a></li>
+                                <li class="secondli"><a class="btnLRegistrar" href="http://app.foursnac.com/registrar.html">cadastre-se</a></li>
+                                <li class="limenu"><a href="/home/index">home</a></li>
+                                <li class="limenu"><a href="/estabelecimento/index">estabelecimento</a></li>
                             </ul>
                         </div>
                     </li>
@@ -65,7 +81,7 @@
         <!-- Banner -->
         <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
-        <section id="Titulo" class="Titulo">
+        <section id="Titulo" class="semfotomo Titulo" style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem); background-size:100%">
             <a href="/home/index"><div class="LogoCentral" title="Foursnac"></div></a>
             <img />
             <!--Busca Cep-->
@@ -84,7 +100,7 @@
             </div>
 
             <!-- Resultado Endereço -->
-            <a href="/home/index"><div id="Logo2" class="LogoCentral1 NoDisplay"  title="Foursnac"></div></a>
+            <a href="/home/index"><div id="Logo2" class="LogoCentral1 NoDisplay" title="Foursnac"></div></a>
 
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
@@ -116,7 +132,7 @@
             </div>
 
             <!--Seleciona o tipo Delivery/Pickup-->
-            
+
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
                 <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
 
@@ -145,8 +161,9 @@
                     <div class="col-lg-12 text-center">
                         <h1 class="FooterTitulo tituloAbout">delivery de comida em araçatuba, birigui e região</h1>
                         <p class="whoText">
-                            Ligar para pedir comida é coisa do passado. Agora com o FourSnac, em quatro passos simples você recebe na sua casa ou busca sem ficar esperando seu pedido ficar pronto. No FourSnac você encontra os melhores restaurantes, lanchonetes e pizzarias perto da sua casa. É prático e seguro. Experimente!     
-                        </p>
+                            Pedir delivery de comida online nunca foi tão fácil. Encontre diversos <b>restaurantes com delivery</b> e entrega à domicílio com várias culinárias e tipos de comida . Sushis, Lanches, Pizzas, Carnes, Comida Saudável, Pizzarias,
+                            Restaurantes, Lanchonetes em Araçatuba , Birigui, Guararapes. É pratico e segura. Peça delivery de comida pela internet agora mesmo.
+                      </p>
                     </div>
                 </div>
             </div>
@@ -201,7 +218,7 @@
             </div>
 
         </section>
-        
+
 
         <!-- Footer -->
         @Html.Partial("_Footer")

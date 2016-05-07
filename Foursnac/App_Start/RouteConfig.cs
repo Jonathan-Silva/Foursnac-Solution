@@ -30,6 +30,16 @@ namespace Foursnac
                 new { controller = "Estabelecimento", action = "Index" });
 
             routes.MapRoute(
+            "Rastreio",
+            "{controller}/{actionName}/{campanha}",
+            new { controller = "Rastreio", action = "Index", campanha = UrlParameter.Optional });
+
+            routes.MapRoute(
+              "Home",
+              "{controller}/{actionName}",
+              new { controller = "Home", action = "Index" });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
