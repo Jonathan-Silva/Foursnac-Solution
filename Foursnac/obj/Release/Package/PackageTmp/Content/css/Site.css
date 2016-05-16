@@ -1,4 +1,306 @@
-﻿.Barra {
+﻿.tituloAbout {
+    margin-bottom: 20px !important;
+    text-transform: uppercase;
+}
+
+.limenu {
+    padding: 15px 10px 35px 15px !important;
+}
+
+.baixarAPP {
+    font-size: 0px;
+}
+
+.menuicoAPP2 {
+}
+
+.menuAPP2 {
+    top: 10px !important;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+.divP {
+    font-size: 0px;
+}
+
+.closeAPP {
+    font-size: 0px;
+}
+
+.headerFixo {
+    background-color: rgb(255, 255, 255) !important;
+    position: fixed !important;
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+    box-shadow: -1px 3px 10px -4px rgba(0,0,0,1);
+}
+
+.LogoEscrita {
+    height: 27px;
+    width: 140px;
+    background-image: url(/Content/img/foursnac-escrita.png) !important;
+    background-size: 140px 27px;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+    margin-top: 7px;
+    z-index: 99999;
+    float: left;
+}
+
+.mar1 {
+    margin-top: -1px !important;
+}
+
+.fundoIco {
+    background-color: #000 !important;
+}
+
+.btLogar {
+    border-radius: 8px;
+    padding: 4px 20px;
+    background: #FFF;
+    font-weight: lighter;
+    color: #FF2930;
+    float: right;
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid #FF2930;
+}
+
+    .btLogar:hover {
+        border: 1px solid #FFF;
+        background: #FF2930;
+        color: #FFF;
+        transition: all .30s;
+        -moz-transition: all .30s;
+        -webkit-transition: all .30s;
+    }
+
+.btCadastrar {
+    border-radius: 8px;
+    padding: 4px 10px;
+    background: #FFF;
+    font-weight: 100 !important;
+    color: #2A87E5;
+    float: right;
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid #FF2930;
+}
+
+    .btCadastrar:hover {
+        border: 1px solid #FFF;
+        background: #2A87E5;
+        color: #FFF;
+        transition: all .30s;
+        -moz-transition: all .30s;
+        -webkit-transition: all .30s;
+    }
+
+.btCadastrarBranco {
+    border: 1px solid #2A87E5 !important;
+}
+
+    .btCadastrarBranco:hover {
+        transition: all 1s;
+        border: 1px solid #2A87E5 !important;
+    }
+
+
+.btnLLogar {
+    background-color: #FFF !important;
+    padding: 5% 0 !important;
+    border-radius: 8px;
+    text-align: center !important;
+    text-transform: lowercase !important;
+    color: #FF2930 !important;
+    transition: all .30s;
+    -moz-transition: all .30s;
+    -webkit-transition: all .30s;
+}
+
+    .btnLLogar:hover {
+        color: #FFF !important;
+        background-color: #FF2930 !important;
+        transition: all .30s;
+        -moz-transition: all .30s;
+        -webkit-transition: all .30s;
+    }
+
+
+.btLogarBranco {
+    border: 1px solid #FF2930 !important;
+}
+
+    .btLogarBranco:hover {
+        transition: all 1s;
+        border: 1px solid #FF2930 !important;
+    }
+
+.secondli {
+    background-color: rgb(0, 0, 0) !important;
+    margin: 0px !important;
+    padding-bottom: 50px !important;
+    border: none !important;
+}
+
+.btnLRegistrar {
+    background-color: #FFF;
+    padding: 5% 0 !important;
+    border-radius: 8px;
+    text-align: center !important;
+    text-transform: lowercase !important;
+    color: #2A87E5 !important;
+    transition: all .30s;
+    -moz-transition: all .30s;
+    -webkit-transition: all .30s;
+}
+
+    .btnLRegistrar:hover {
+        color: #FFF !important;
+        background-color: #2A87E5 !important;
+        transition: all .30s;
+        -moz-transition: all .30s;
+        -webkit-transition: all .30s;
+    }
+
+.icoMenu000::after {
+    background-image: url("images/bars000.svg") !important;
+    width: 1.5em !important;
+    margin-left: 10px;
+    height: 3.4em !important;
+}
+
+.alt {
+    background: transparent;
+    position: absolute;
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+}
+
+.icoCirculo {
+    position: absolute;
+    margin: 30px 15PX 0 -20PX;
+    color: #FFF;
+    font-size: 40px;
+}
+
+.icoCirculoPizza {
+    margin: 30px 15PX 0 -15PX !important;
+}
+
+.TextLink {
+    color: #000 !important;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none !important;
+    border: none;
+}
+
+    .TextLink:hover {
+        color: #2A87E5 !important;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 25px !important;
+        text-decoration: none !important;
+    }
+
+.who {
+    background-color: #FFF !important;
+    font-family: 'Segoe UI' !important;
+    padding: 3%;
+}
+
+.whoTitulo {
+    background-color: #FFF !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.whoText {
+    background-color: #FFF !important;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.LogoCentralHeader {
+    height: 35px;
+    max-width: 25px;
+    background-image: url(/Content/img/foursnac.png) !important;
+    background-size: 25px 35px;
+    background-repeat: no-repeat;
+    top: 0;
+    margin: 6px 0 0 45px;
+    background-color: transparent;
+    z-index: 99999;
+}
+
+.MarginAjustLogo {
+    margin: 6px 0 0 65px !important;
+}
+
+.span-circle {
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: #b3b3b3;
+    height: 98px;
+    width: 98px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.spnEmBreve {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 23%;
+    position: absolute;
+    font-size: 3.5em;
+    width: 100% !important;
+    color: #FFF;
+    font-weight: 100;
+    text-shadow: 2px 1px 5px #333;
+    font-family: Segoe UI;
+    text-align: center;
+}
+
+.spnLogoBreve {
+    background-image: url(/Content/img/foursnac.png);
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 140px;
+    background-size: 100px 140px;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgEmBreve {
+}
+
+.span-circle:hover {
+    background-color: #ff2930;
+    cursor: pointer;
+}
+
+.Barra {
     background-color: #FF2930 !important;
     -webkit-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
     -moz-box-shadow: 2px 18px 46px -4px rgba(227,227,227,0.28);
@@ -22,32 +324,33 @@
 .LogoCentral {
     height: 161px;
     max-width: 123px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    /* background-image: url(/Content/img/foursnac.png) !important;*/
     background-size: 123px 161px;
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    margin: 2% auto 0 auto;
+    margin: 4% auto 0 auto;
     background-color: transparent;
     z-index: 99999;
 }
 
-    .LogoCentral1 {
+.LogoCentral1 {
     height: 161px;
     max-width: 123px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    background-image: url(/Content/img/foursnac.png) !important;
     background-size: 123px 161px;
     background-repeat: no-repeat;
     left: 0;
     right: 0;
-    margin: 2% auto 0 auto;
+    margin: 0% auto 0 auto;
     background-color: transparent;
     z-index: 99999;
-    }
+}
+
 .LogoCentralBarra {
     height: 40px;
     max-width: 28px;
-    background-image: url(/Content/img/logocentral.png) !important;
+    background-image: url(/Content/img/foursnac.png) !important;
     background-size: 28px 40px;
     background-repeat: no-repeat;
     margin-right: auto;
@@ -131,7 +434,7 @@
     left: 0;
     right: 0;
     margin: 2% auto 0 auto;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0,0.3);
     padding-top: 2%;
     text-align: center;
 }
@@ -313,12 +616,12 @@
     left: 0;
     right: 0;
     margin: 2% auto 0 auto;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0, 0.3);
     padding-top: 2%;
     text-align: center;
 }
 
-.CaixaCepAmarelo{
+.CaixaCepAmarelo {
     max-width: 340px;
     width: 100%;
     height: 175px;
@@ -385,20 +688,20 @@
     outline: none !important;
     text-decoration: none !important;
     border: none !important;
-    background-color: #2A87E5;
+    background-color: rgb(255, 239, 0);
     text-align: center;
     padding: 0 0 0 0;
     border: none !important;
     border-radius: 187px 187px;
     font-family: 'Segoe UI';
-    color: #FFF;
+    color: #000;
     font-weight: lighter;
     margin: 10px 30px;
     font-size: 16px;
 }
 
     .btcep:hover {
-        opacity: 0.7;
+        /*houvercep*/
     }
 
 
@@ -482,7 +785,7 @@
 }
 
 .Email {
-    max-width: 250px;
+    max-width: 380px;
     width: 100%;
     outline: none !important;
     text-decoration: none !important;
@@ -578,14 +881,30 @@
     font-weight: bold !important;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: #000;
 }
+
+a:link {
+    text-decoration: none !important;
+}
+
 
 .FooterTexto {
     font-family: 'Segoe UI' !important;
     font-size: 14px !important;
     font-weight: 300 !important;
     color: #000;
+    transition: all 0.2s;
+    text-decoration: none !important;
 }
+
+    .FooterTexto:hover {
+        color: #2A87E5 !important;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 17px !important;
+        text-decoration: none !important;
+    }
 
 .corPassoCir {
     color: #b3b3b3;
@@ -605,8 +924,9 @@
 
 .Voltar {
     color: #FF2930 !important;
-    font-size: 30px !important;
-    margin: 7px 0 0 7px;
+    font-size: 23px !important;
+    margin: 10px 20px 0px 0px;
+    float: right;
 }
 
 
@@ -619,7 +939,8 @@
     background-color: rgba(255,255,255,1);
     padding: 0px;
     text-align: center;
-    position:absolute;
+    position: absolute;
+    top: 42px;
 }
 
 .divDelivery {
@@ -638,7 +959,7 @@
 
 .img-Pickup {
     background-image: url('/Content/img/pickup .png');
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 120px 120px;
     width: 120px;
     height: 120px;
@@ -656,7 +977,7 @@
     margin-right: auto;
 }
 
-.TextoDelyvery{
+.TextoDelyvery {
     margin-top: 4% !important;
     background-color: #FF2930;
     width: 50%;
@@ -664,10 +985,11 @@
     border-radius: 8px;
     padding: 20px;
     color: #FFF;
-    font-weight:lighter !important;
-    font-family:'Segoe UI';
+    font-weight: lighter !important;
+    font-family: 'Segoe UI';
 }
-.TextoPickup{
+
+.TextoPickup {
     margin-top: 4% !important;
     background-color: #2A87E5;
     width: 50%;
@@ -675,11 +997,12 @@
     border-radius: 8px;
     padding: 20px;
     color: #FFF;
-    font-weight:lighter !important;
-    font-family:'Segoe UI';
+    font-weight: lighter !important;
+    font-family: 'Segoe UI';
 }
+
 .divPickupCor {
-     width: 50%;
+    width: 50%;
     height: 100%;
     background-color: rgba(233,233,243,1);
     float: left;
@@ -696,6 +1019,127 @@
 
 @media all and (max-width:500px) {
 
+    #footer {
+        margin-top: 280px;
+    }
+
+    .some {
+        display: none !important;
+    }
+
+    /*.semfotomo {
+        background-image: none !important;
+    }*/
+
+    .top70 {
+        top: 70px !important;
+    }
+
+    .goAPP {
+        height: 50px;
+        width: 50px;
+        background-image: url(/Content/img/foursnacAPP.png);
+        background-repeat: no-repeat;
+        margin: 0 7px 0 10px;
+        margin-top: 0px;
+        z-index: 99999;
+        float: left;
+        /* 
+        height: 50px;
+        width: 50px;
+        background-image: url(/Content/img/foursnacSVG.svg );
+        background-repeat: no-repeat;
+        margin: 0 7px 0 10px;
+        margin-top: 0px;
+        z-index: 99999;
+        float: left;
+
+       */
+    }
+
+    .menuicoAPP {
+        /*top: 68px;*/
+        -webkit-transition: all 2s;
+        transition: all 2s;
+    }
+
+    .menuAPP {
+        /*top: 76px !important;*/
+        -webkit-transition: all 2s;
+        transition: all 2s;
+    }
+
+    .secondli {
+        padding-bottom: 55px !important;
+    }
+
+    .pAPP {
+        font-family: Segoe UI;
+        font-weight: 600;
+        margin: 5px 0 0 0px;
+    }
+
+    .baixarAPP {
+        float: right;
+        text-decoration: none;
+        border: none;
+        color: #FFF;
+        font-family: Segoe UI;
+        background-color: #FF2930;
+        padding: 5px 10px;
+        border-radius: 8px;
+        margin: 10px 10px 0 0;
+        font-size: 14px;
+    }
+
+    .divP {
+        float: left;
+        width: 140px;
+        font-size: 12px !important;
+        color: #FFF;
+    }
+
+    .pAPP2 {
+        font-family: Segoe UI;
+        margin: 0px;
+        font-size: 10px;
+    }
+
+    .closeAPP {
+        color: #FFF;
+        float: left;
+        width: 10px;
+        height: 50px;
+        padding: 10px 15px 5px 5px;
+        cursor: pointer;
+        font-size: 20px !important;
+    }
+
+    .headerAPP {
+        width: 100%;
+        height: 70px;
+        background-color: #333333;
+        position: fixed !important;
+        -webkit-transition: all 2s;
+        transition: all 2s;
+        box-shadow: -1px 3px 10px -4px rgba(0,0,0,1);
+        z-index: 1003;
+        color: #FFF;
+        padding: 12px 0px;
+    }
+
+    .limenu {
+        padding: 0 10px 40px 10px !important;
+    }
+
+    .btnLRegistrar {
+        padding: 1px 10px !important;
+    }
+
+    .btnLLogar {
+        padding: 1px 10px !important;
+    }
+
     .CaixaTipo {
         width: 100%;
         height: 100%;
@@ -704,7 +1148,8 @@
         margin: 0 auto 0 auto;
         background-color: rgba(255,255,255,1);
         padding: 0px;
-        text-align: center; 
+        text-align: center;
+        top: 42px;
     }
 
     .divDelivery {
@@ -724,9 +1169,9 @@
     .img-Pickup {
         background-image: url('/Content/img/pickup .png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -734,9 +1179,9 @@
     .img-Delivery {
         background-image: url('/Content/img/delivery.png');
         background-repeat: no-repeat;
-        background-size: 128px 120px;
-        width: 128px;
-        height: 120px;
+        background-size: 90px 80px;
+        width: 90px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -766,6 +1211,20 @@
         font-weight: lighter !important;
         font-family: 'Segoe UI';
         font-size: 16px;
+    }
+
+    .LogoCentralHeader {
+        height: 30px;
+        max-width: 23px;
+        background-image: url(/Content/img/foursnac.png) !important;
+        background-size: 23px 30px;
+        background-repeat: no-repeat;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 5px auto 0 auto;
+        background-color: transparent;
+        z-index: 99999;
     }
 
     .divPickupCor {
@@ -885,7 +1344,7 @@
 
     .inputNum {
         max-width: 270px;
-        width:100%;
+        width: 100%;
         height: 55px;
         margin: 0 auto 0 auto !important;
         left: 0 !important;
@@ -894,10 +1353,10 @@
         font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
-        border:none;
+        border: none;
         border-bottom: 1px solid #FFF !important;
         color: #FFF !important;
-        outline:none;
+        outline: none;
     }
 
 
@@ -932,7 +1391,7 @@
 
     .inputComplemento {
         max-width: 270px;
-        width:100%;
+        width: 100%;
         height: 55px;
         margin: 0 auto 0 auto !important;
         left: 0 !important;
@@ -941,7 +1400,7 @@
         font-family: 'Segoe UI' !important;
         background-color: transparent;
         font-size: 16px;
-        border:none;
+        border: none;
         border-bottom: 1px solid #FFF !important;
         color: #FFF !important;
     }
@@ -1013,7 +1472,7 @@
     .LogoCentral {
         height: 130px;
         max-width: 92px;
-        background-image: url(/Content/img/logocentral.png) !important;
+        /*background-image: url(/Content/img/foursnac.png) !important;   */
         background-size: 92px 130px;
         background-repeat: no-repeat;
         left: 0;
@@ -1027,7 +1486,7 @@
     .LogoCentral1 {
         height: 80px;
         max-width: 60px;
-        background-image: url(/Content/img/logocentral.png) !important;
+        background-image: url(/Content/img/foursnac.png) !important;
         background-size: 60px 80px;
         background-repeat: no-repeat;
         left: 0;
@@ -1039,8 +1498,8 @@
 
     .Voltar {
         color: #FFF !important;
-        font-size: 30px !important;
-        margin: 7px 0 0 7px;
+        font-size: 23px !important;
+        margin: 10px 10px 0 7px;
     }
 
 
@@ -1362,41 +1821,104 @@
     }
 
     .btPlay {
-    width: 100px;
-    height: 8%;
-    margin-right: auto;
-    margin-left: auto;
-    left: 0;
-    right: 0;
-    margin-top: -46%;
-    font-size: 8em !important;
-    position: relative;
-    color: #fff;
-    cursor: pointer;
-    z-index: 999999;
-}
-        .btPlay:hover {
-        color: #FCEE21;
+        width: 100px;
+        height: 8%;
+        margin-right: auto;
+        margin-left: auto;
+        left: 0;
+        right: 0;
+        margin-top: -46%;
+        font-size: 8em !important;
+        position: relative;
+        color: #fff;
+        cursor: pointer;
+        z-index: 999999;
     }
+
+        .btPlay:hover {
+            color: #FCEE21;
+        }
 
     .Titulo {
-    padding: 45px 0 0 0;
-    width: 100%;
-    height: 100% !important;
-    background-color: #FF2930;
-    z-index: 99;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position:absolute;
+        padding: 45px 0 0 0;
+        width: 100%;
+        height: 100% !important;
+        background-color: #FF2930;
+        z-index: 99;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+    }
+
+    .Subir {
+        margin-top: -50px;
+    }
+
+    .Subir1 {
+        margin-top: -150px;
+    }
+
+    .Subir2 {
+        margin-top: -210px;
+    }
 }
 
-    .Subir{
-        margin-top:-50px;
-    }
-   .Subir1{
-        margin-top:-150px;
-    }
-   .Subir2{
-        margin-top:-210px;
+
+
+@media all and (max-width:620px) {
+    .wpFoursnac {
+        background-image: url(/Content/img/wallpapper/wp_mobile.jpg);
     }
 }
+
+@media all and (min-width:621px) and (max-width:800px) {
+    .wpFoursnac {
+        background-image: url(/Content/img/wallpapper/wp_mobile620.jpg);
+    }
+}
+
+@media all and (min-width:801px) {
+    .wpFoursnac {
+        background-image: url(/Content/img/wallpapper/6.jpg);
+    }
+}
+
+@media all and (max-width:767px) {
+    .Passo {
+        display: none;
+    }
+}
+
+@media all and (min-width:10px) {
+    .Titulo {
+        background-color: transparent;
+    }
+}
+
+#popPromocao {
+    box-shadow: 2px 5px 5px #000;
+    z-index: 999999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 150px;
+}
+
+    #popPromocao i {
+        color: #000;
+        background-color: #FFF;
+        border-radius: 100%;
+        padding-left: 7px;
+        padding-top: 4px;
+        font-size: 20px;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        cursor: pointer;
+    }

@@ -13,10 +13,37 @@ namespace Foursnac
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            
+
+            
+
             routes.MapRoute(
-                "estabelecimento",
-                "{pagina}",
-                new { controller = "Home", action = "IndexEstabelecimento" });
+                "promocao",
+                "{controller}/{actionName}",
+                new { controller = "Promocao", action = "Index" });
+
+            routes.MapRoute(
+                "Delivery",
+                "{controller}/{cidade}",
+                new { controller = "Delivery", action = "Index" });
+
+
+            routes.MapRoute(
+                "DeliveryEstabelecimento",
+                "{controller}/{actionName}",
+                new { controller = "Estabelecimento", action = "Index" });
+
+            routes.MapRoute(
+            "Rastreio",
+            "{controller}/{actionName}/{campanha}",
+            new { controller = "Rastreio", action = "Index", campanha = UrlParameter.Optional });
+
+            routes.MapRoute(
+              "Home",
+              "{controller}/{actionName}",
+              new { controller = "Home", action = "Index" });
+
+            
 
             routes.MapRoute(
                 name: "Default",

@@ -52,6 +52,10 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -60,6 +64,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -169,17 +181,26 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DeliveryController.cs" />
+    <Compile Include="Controllers\EmBreveController.cs" />
     <Compile Include="Controllers\EstabelecimentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PromocaoController.cs" />
+    <Compile Include="Controllers\RastreioController.cs" />
+    <Compile Include="Controllers\StatusRastreioController.cs" />
+    <Compile Include="Controllers\UtilController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Authenticator.cs" />
+    <Compile Include="Models\ConexaoBanco.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RastreioModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\wsSonicBliss\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -195,15 +216,23 @@
     <Content Include="Content\css\ie9.css" />
     <Content Include="Content\css\images\arrow.svg" />
     <Content Include="Content\css\images\bars.svg" />
+    <Content Include="Content\css\images\bars000.svg" />
     <Content Include="Content\css\images\close.svg" />
     <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\open-sans.css" />
     <Content Include="Content\fonts\font-awesome\css\font-awesome.css" />
     <Content Include="Content\fonts\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\font-foursnac\fonts\icomoon.svg" />
     <Content Include="Content\fonts\font-foursnac\style.css" />
+    <Content Include="Content\fonts\OpenSans-Light.svg" />
     <Content Include="Content\img\delivery.png" />
+    <Content Include="Content\img\embreve.png" />
+    <Content Include="Content\img\foursnac-escrita.png" />
     <Content Include="Content\img\foursnac1.png" />
+    <Content Include="Content\img\foursnacAPP.png" />
+    <Content Include="Content\img\foursnacAPP2.png" />
+    <Content Include="Content\img\foursnacSVG.svg" />
     <Content Include="Content\img\ico\android-icon-144x144.png" />
     <Content Include="Content\img\ico\android-icon-192x192.png" />
     <Content Include="Content\img\ico\android-icon-36x36.png" />
@@ -230,10 +259,11 @@
     <Content Include="Content\img\ico\ms-icon-150x150.png" />
     <Content Include="Content\img\ico\ms-icon-310x310.png" />
     <Content Include="Content\img\ico\ms-icon-70x70.png" />
-    <Content Include="Content\img\logocentral.png" />
+    <Content Include="Content\img\foursnac.png" />
     <Content Include="Content\img\pickup .png" />
     <Content Include="Content\img\pickup1.png" />
     <Content Include="Content\img\pickup3.png" />
+    <Content Include="Content\img\popUpPromocao.jpg" />
     <Content Include="Content\img\red.png" />
     <Content Include="Content\img\wallpapper\1.jpg" />
     <Content Include="Content\img\wallpapper\2.jpg" />
@@ -242,11 +272,15 @@
     <Content Include="Content\img\wallpapper\5.jpg" />
     <Content Include="Content\img\wallpapper\6.jpg" />
     <Content Include="Content\img\wallpapper\7.jpg" />
+    <Content Include="Content\img\wallpapper\8.jpg" />
+    <Content Include="Content\img\wallpapper\wp_mobile.jpg" />
+    <Content Include="Content\img\wallpapper\wp_mobile620.jpg" />
     <Content Include="Content\video\video1.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
+    <Content Include="Scripts\BarraSocial.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\sass\ie8.scss" />
@@ -293,10 +327,14 @@
     <Content Include="Content\video\video1.ogv" />
     <Content Include="Content\video\video1.webm" />
     <Content Include="Content\img\ico\manifest.json" />
+    <Content Include="Content\fonts\OpenSans-Light.eot" />
+    <Content Include="Content\fonts\OpenSans-Light.ttf" />
+    <Content Include="Content\fonts\OpenSans-Light.woff" />
+    <Content Include="Content\fonts\OpenSans-Light.woff2" />
     <None Include="Properties\PublishProfiles\Foursnac.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\funcoes-Estabemecimento.js" />
-    <Content Include="Scripts\funcoes-Home.js" />
+    <Content Include="Scripts\Estabemecimento.js" />
+    <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -348,7 +386,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -386,9 +426,15 @@
     <Content Include="Views\Estabelecimento\Registro.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Service References\wsSonicBliss\wsSB.wsdl" />
+    <Content Include="Views\EmBreve\Index.cshtml" />
+    <Content Include="Views\Delivery\Index.cshtml" />
+    <Content Include="Views\Promocao\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Outros\" />
+    <Folder Include="Views\Rastreio\" />
+    <Folder Include="Views\Util\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

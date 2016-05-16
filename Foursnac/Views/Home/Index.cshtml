@@ -5,60 +5,77 @@
 
 <html>
 <head>
+    <script type="text/javascript" src="~/Scripts/BarraSocial.js"></script>
+    <link rel=”canonical” href=”http://www.foursnac.com.br” />
 
-    <meta charset="utf-8" >
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FF2930">
 
-    <title>Foursnac</title>
-
+    <title>Delivery em Araçatuba e Birigui - Foursnac</title>
+    <meta name="description" content="Peça comida online em diversos restaurantes em Araçatuba, Birigui, Guararapes e região. Encontre pizzas, lanches e sushis. Entrega à domicilio com delivery.">
+    <meta name="keywords" content="delivery, delidery araçatuba, delivery birigui, pizza em araçatuba, pizza em birigui, lanches, lanches birigui, lanches araçatuba, pedir comida araçatuba, pedir comida birigui, restaurantes araçatuba, restaurantes birigui">
 
     <link rel="stylesheet" href="~/Content/css/main.css" />
-    <link rel="stylesheet" href="~/Content/css/Site.css" >
-    <link rel="stylesheet" href="~/Content/css/bootstrap.css" >
-    
+    <link rel="stylesheet" href="~/Content/css/Site.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+
     <link href="~/Content/fonts/font-foursnac/style.css" rel="stylesheet" type="text/css">
     <link href="~/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/ico/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
-    <link rel="manifest" href="~/Content/img/ico/manifest.json">
+
 
 </head>
 
 <body class="landing">
 
+    <div id="popPromocao" class="NoDisplay">
+
+        <img src="~/Content/img/popUpPromocao.jpg" class="img-responsive"  />
+        <i class="fa fa-times" aria-hidden="true" id="btnClosePromocao"></i>
+
+    </div>
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
+        <!-- Header Instalar app -->
+        <div class="headerAPP">
 
+            <div class="closeAPP"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+            <div id="goAPP" class="goAPP"></div>
+
+            <div class="divP">
+                <p class="pAPP">Foursnac</p>
+                <p class="pAPP2">Baixe o app Foursnac</p>
+                <p class="pAPP2">Coma rapido, coma fácil :)</p>
+            </div>
+            <a id="btGStore" class="baixarAPP NoDisplay" href="https://play.google.com/store/apps/details?id=io.cordova.myapp118f03&hl=pt_BR">baixar</a>
+            <a id="btIStore" class="baixarAPP NoDisplay" href="">baixar</a>
+            <a id="btWStore" class="baixarAPP NoDisplay" href="">baixar</a>
+
+        </div>
         <!-- Header -->
         <header id="header" class="alt">
+            <div style="background-image:url(/Content/img/);"></div>
             <div id="icoVoltar" onclick="Voltar();" class="fa fa-chevron-circle-left Voltar NoDisplay"></div>
+            <div id="LogoEscrita" class="LogoEscrita NoDisplay"></div>
+            <div id="btlLR" class="some">
+                <a href="http://app.foursnac.com/registrar.html"><div class="btCadastrar">cadastrar</div></a>
+                <a href="http://app.foursnac.com/logar.html"><div class="btLogar">entrar</div></a>
+            </div>
+            <a id="Logo3" href="/home/index"><div class="LogoCentralHeader" title="Foursnac"></div></a>
             <nav id="nav">
-                <ul>
-                    <li class="special">
-                        <a href="#menu" class="menuToggle"></a>
-                        <div id="menu">
+                <ul class="mar1">
+                    <li id="fundoIcoM" class="special">
+                        <a id="icoMenu" href="#menu" class="menuicoAPP menuToggle"></a>
+                        <div id="menu" class="menuAPP">
                             <ul>
-                                <li><a href="/home/index">Home</a></li>
-                                <li><a href="#" id="aLogin">Login</a></li>
-                                <li><a href="">Cadastre-se</a></li>
-                                <li><a href="/estabelecimento/index">Estabelecimento</a></li>
+                                <li><a class="btnLLogar" href="http://app.foursnac.com/logar.html" id="aLogin">entrar</a></li>
+                                <li class="secondli"><a class="btnLRegistrar" href="http://app.foursnac.com/registrar.html">cadastre-se</a></li>
+                                <li class="limenu"><a href="/home/index">home</a></li>
+                                <li class="limenu"><a href="/estabelecimento/index">estabelecimento</a></li>
                             </ul>
                         </div>
                     </li>
@@ -70,48 +87,49 @@
         <!-- Banner -->
         <!--style="background-image:url(/Content/img/wallpapper/@ViewBag.Imagem);"-->
 
-        <section id="Titulo" class="Titulo">
-            <a  href="/home/index"><div class="LogoCentral"></div></a>
-            
+        <section id="Titulo" class="wpFoursnac semfotomo Titulo" style="background-size:100%">
+            <a href="/home/index"><div class="LogoCentral" title="Foursnac"></div></a>
+            <img />
+            <img />
             <!--Busca Cep-->
             <div id="CaixaCep" class="CaixaCep">
 
                 <form name="form" id="form">
 
                     <div id="divCep" class="divCep">
-                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off"/>
+                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off" />
                     </div>
                     <button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>
                     @*<button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>*@
 
 
                 </form>
-            </div> 
+            </div>
 
             <!-- Resultado Endereço -->
-            <div id="Logo2" class="LogoCentral1 NoDisplay"></div>
+            <a href="/home/index"><div id="Logo2" class="LogoCentral1 NoDisplay" title="Foursnac"></div></a>
 
             <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
 
                 <div class="divUf">
-                    <input id="uf"  readonly="true" type="text" class="inputUf" value="" />
+                    <input id="uf" readonly="true" type="text" class="inputUf" value="" />
                 </div>
 
                 <div class="divCidade">
-                    <input id="cidade"  readonly="true" type="text" class="inputCidade" value="" />
+                    <input id="cidade" readonly="true" type="text" class="inputCidade" value="" />
                 </div>
 
                 <div class="divRua">
-                    <input id="rua"  readonly="true" type="text" class="inputRua" value="" />
+                    <input id="rua" readonly="true" type="text" class="inputRua" value="" />
                 </div>
 
                 <div class="divNum">
-                    <input id="num" type="tel"  class="inputNum" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder =''" placeholder="Nº" />
+                    <input id="num" type="tel" class="inputNum" onkeypress="return numeroFocus(event);" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder = 'Nº'" placeholder="Nº" />
                 </div>
 
                 <div class="divComplemento">
-                    <input id="complemento"  type="text" class="inputComplemento" value="" onblur="this.placeholder ='complemento'" onfocus="this.placeholder =''" placeholder="complemento" />
+                    <input id="complemento" type="text" class="inputComplemento" onkeypress="return complementoFocus(event);" value="" onblur="this.placeholder = 'complemento'" onfocus="this.placeholder ='complemento'" placeholder="complemento" />
                 </div>
 
                 <button class="btVoltar" onclik="Voltar()">voltar</button>
@@ -125,24 +143,37 @@
             <div id="CaixaTipo" class="CaixaTipo NoDisplay">
                 <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
 
-                        <div class="img-Delivery"></div>
-                        <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
+                    <div class="img-Delivery"></div>
+                    <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
 
                 </div>
 
                 <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
 
-                        <div class="img-Pickup"></div>
-                        <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
+                    <div class="img-Pickup"></div>
+                    <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
 
                 </div>
             </div>
 
 
-            <div id="NaoSei"><a href="http://www.google.com" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
+            <div id="NaoSei"><a href="" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
 
 
 
+        </section>
+        <section id="about" class="about who">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="FooterTitulo tituloAbout">delivery de comida em araçatuba, birigui e região</h1>
+                        <p class="whoText">
+                            Pedir delivery de comida online nunca foi tão fácil. Encontre diversos <b>restaurantes com delivery</b> e entrega à domicílio com várias culinárias e tipos de comida . Sushis, Lanches, Pizzas, Carnes, Comida Saudável, Pizzarias,
+                            Restaurantes, Lanchonetes em Araçatuba , Birigui, Guararapes. É pratico e segura. Peça delivery de comida pela internet agora mesmo.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--Passo a passo -->
@@ -153,18 +184,17 @@
                 <div class="col-md-12 col-sm-12  col-xs-12">
                     <div class="row text-center">
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo1">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo1"></i>
-                                <i class="icon-location74" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;"></i>
+                            <span class="fa fa-4x span-circle" id="Passo1">
+                                <i class="icon-location74 icoCirculo"></i>
                             </span>
                             <div><b>1.</b><span class="TextoPasso">Localize</span></div>
                             <div class="TextoPasso">facilmente</div>
                         </div>
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo2" mou></i>
-                                <i class="icon-iconesestabelecimentos" style="position:absolute; margin:30px 15PX 0 -25PX; color:#FFF; font-size:50px; font-weight:500">  </i>
+                            <span class="fa fa-4x span-circle" id="Passo2">
+
+                                <i class="icon-iconesestabelecimentos icoCirculo">  </i>
 
                             </span>
                             <div><b>2.</b><span class="TextoPasso">Selecione um</span></div>
@@ -172,9 +202,8 @@
                         </div>
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo3"></i>
-                                <i class="icon-pizza2" style="position:absolute; margin:35px 15PX 0 -16PX; color:#FFF; font-size:40px;">  </i>
+                            <span class="fa fa-4x span-circle" id="Passo3">
+                                <i class="icon-pizza2 icoCirculo icoCirculoPizza">  </i>
                             </span>
                             <div><b>3.</b><span class="TextoPasso">Escolha sua</span></div>
                             <div class="TextoPasso">comida</div>
@@ -182,9 +211,8 @@
 
 
                         <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x corPassoCir" id="Passo4"></i>
-                                <i class="icon-money-card4" style="position:absolute; margin:35px 15PX 0 -20PX; color:#FFF; font-size:40px;">  </i>
+                            <span class="fa fa-4x span-circle" id="Passo4">
+                                <i class="icon-money-card4 icoCirculo">  </i>
                             </span>
                             <div><b>4.</b><span class="TextoPasso">Defina como</span></div>
                             <div class="TextoPasso">pagar</div>
@@ -198,25 +226,25 @@
 
         </section>
 
+
         <!-- Footer -->
         @Html.Partial("_Footer")
 
     </div>
 
     <!-- Scripts -->
-    
+
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/jquery.scrollex.min.js"></script>
     <script src="~/Scripts/jquery.scrolly.min.js"></script>
-    
+
     <script src="~/Scripts/skel.min.js"></script>
     <script src="~/Scripts/util.js"></script>
     <!--[if lte IE 8]><script src="~/Scripts/js/ie/respond.min.js"></script><![endif]-->
     <script src="~/Scripts/main.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/funcoes-Home.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="~/Scripts/Home.js"></script>
+
 </body>
 </html>
-
-
-
