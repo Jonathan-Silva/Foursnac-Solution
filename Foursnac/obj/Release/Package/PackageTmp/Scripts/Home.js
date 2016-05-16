@@ -1,13 +1,5 @@
 ﻿$(document).ready(function () {
     
-    $('body').css('background-color', '#FFF');
-
-    var seePromotion = window.localStorage.getItem("Visualizado");
-
-    if (seePromotion == null) {
-        $('#popPromocao').removeClass("NoDisplay");
-    } 
-
     $(function () {
         navigator.geolocation.getCurrentPosition(showPosition, positionError);
 
@@ -19,7 +11,7 @@
 
         function positionError(position) {
             window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-            window.document.title = 'Delivery de comidas online - Foursnac';
+            window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
         }
     });
 
@@ -38,26 +30,20 @@
                             }
                         }
                     }
-                    //Delivery em Araçatuba e Birigui - Foursnac
-                    window.history.pushState('Object', 'Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
-                    window.document.title = 'Delivery em ' + city.long_name + ' - Foursnac';
+
+                    window.history.pushState('Object', 'Foursnac - Peça Delivery em ' + city.long_name, '/Delivery/' + city.long_name);
+                    window.document.title = 'Foursnac - Delivery de comida Online em ' + city.long_name +' | Peça Foursnac';
 
                 } else {
                     window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-                    window.document.title = 'Delivery de comidas online - Foursnac';
+                    window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
                 }
-                } else {
+            } else {
                 window.history.pushState('Object', 'Foursnac - Peça Delivery em Araçatuba', '/Delivery/Araçatuba');
-                window.document.title = 'Delivery de comidas online - Foursnac';
+                window.document.title = 'Foursnac - Delivery de comida Online em Araçatuba | Peça Foursnac';
             }
         });
     }
-
-    $('#btnClosePromocao').click(function (event) {
-        event.preventDefault();
-        $("#popPromocao").addClass("NoDisplay");
-        window.localStorage.setItem("Visualizado", "sim");
-    });
 
     $('.tipo').click(function (event) {
         event.preventDefault();
@@ -146,11 +132,8 @@ $(window).width(function () {
 
         $('#footer').addClass('NoDisplay');
         $('#Passo').addClass('NoDisplay');
-        $('#about').addClass('NoDisplay');
-     
     }
 
-    sistema();
 
 });
 
@@ -166,9 +149,6 @@ function somenteNumeros(event) {
 
     var charCode = (event.which) ? event.which : event.keyCode;
     var cep = $('#Cep').val();
-    if (charCode == 8) {
-        return true;
-    }
 
     if (cep.length == 5) {
         cep += '-';
@@ -176,50 +156,21 @@ function somenteNumeros(event) {
 
     $('#Cep').val(cep);
 
-    if (cep.length == 9) {
+    if (cep.length >= 9) {
 
-        BuscarEndereco();
-        
+        if (charCode == 13) {
+            BuscarEndereco();
+        }
+
         return false;
-        
     }
-    if (charCode == 13) {
-        BuscarEndereco();
-    }
+
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     }
 
     return true;
 }
-
-function numeroFocus(event) {
-
-    var charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode == 13) {
-        $("#complemento").focus();
-    }
-    return true;
-}
-
-function numeroFocus(event) {
-
-    var charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode == 13)
-    {
-        $("#complemento").focus();
-    }
-    return true;
-}
-function complementoFocus(event) {
-
-    var charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode == 13) {
-        GoToTipo();
-    }
-    return true;
-}
-
 
 function Voltar() {
     $('#CaixaCep').removeClass('NoDisplay');
@@ -228,7 +179,6 @@ function Voltar() {
     $('.LogoCentral').removeClass('NoDisplay');
     $('.Titulo').removeClass('Subir1');
     $('.Titulo').removeClass('Subir2');
-    $('.LogoCentralHeader').addClass('NoDisplay');
 
     $('#CaixaResultado').addClass('NoDisplay');
     $('#CaixaTipo').addClass('NoDisplay');
@@ -243,11 +193,9 @@ function Ir(tipo) {
         $('#CaixaResultado').addClass('NoDisplay');
         $('.LogoCentral').addClass('NoDisplay');
         $('.LogoCentral1').addClass('NoDisplay');
-        $('.LogoCentralHeader').removeClass('NoDisplay');
         $('.Titulo').removeClass('Subir');
         $('.Titulo').removeClass('Subir1');
         $('.Titulo').removeClass('Subir2');
-
     } else {
         $('#CaixaCep').addClass('NoDisplay');
         $('#CaixaResultado').removeClass('NoDisplay');
@@ -257,8 +205,7 @@ function Ir(tipo) {
         $('.LogoCentral1').removeClass('NoDisplay');
         $('#icoVoltar').removeClass('NoDisplay');
         $('#footer').addClass('NoDisplay');
-        $('#Passo').addClass('NoDisplay'); 
-        $('#about').addClass('NoDisplay');
+        $('#Passo').addClass('NoDisplay');
         $('#num').focus();
     }
 }
@@ -286,85 +233,16 @@ function BuscarEndereco() {
                 $('#cidade').val(data.cidade);
                 $('#rua').val(data.logradouro);
                 Ir('pesquisa');
-                
+         
+           
         }
         
     });
 
 }
 
-$(window).scroll(function () {
- 
-    var top = $(window).scrollTop();
-    var w = screen.width;
-    if (w > 700)
-    {
-        if (top > 50) {
-            $('#header').addClass('headerFixo');
-            //$('#icoMenu').addClass('icoMenu000'); 
-            $('#nav').addClass('fundoIco');
-            $('.btCadastrar').addClass('btCadastrarBranco');
-            $('.btLogar').addClass('btLogarBranco'); 
-            $('.LogoCentralHeader').addClass('MarginAjustLogo');
-            
-            //$('#btlLR').removeClass('NoDisplay');
-            //$('#LogoEscrita').removeClass('NoDisplay');
-            $('#icoMenu').addClass('menuicoAPP2');
-           // $('#menu').addClass('menuAPP2');
-
-     
-
-        } else {
-
-            $('#header').removeClass('headerFixo');
-            //$('#icoMenu').removeClass('icoMenu000');
-            $('#nav').removeClass('fundoIco');
-            $('.btCadastrar').removeClass('btCadastrarBranco');
-            $('.btLogar').removeClass('btLogarBranco');
-            $('.LogoCentralHeader').removeClass('MarginAjustLogo');
-
-            //$('#btlLR').addClass('NoDisplay');
-            //$('#LogoEscrita').addClass('NoDisplay');
-            $('#icoMenu').removeClass('menuicoAPP2');
-            $('#menu').removeClass('menuAPP2');
-        }
-    }
-});
-
 function Erro() {
 }
-
-function sistema()
-{
-    var deviceAgent = navigator.userAgent.toLowerCase();
-    var android = deviceAgent.match(/(android)/);
-    var windowsP = deviceAgent.match(/(Windows Phone)/) ;
-    var ios  = deviceAgent.match(/(iphone|ipod|ipad|ios)/);
-
-    if (ios!="") {
-        $('.headerAPP').addClass('NoDisplay');
-    } else if (android != "") {
-
-        $('#btGStore').removeClass('NoDisplay');
-        $('#header').removeClass('top70');
-        $('#menu').addClass('menuAPP');
-        
-
-    } else if (windowsP  != "") {
-        $('.headerAPP').addClass('NoDisplay');
-    }
-
-    $('#btGStore').removeClass('NoDisplay');
-    $('#header').removeClass('top70');
-}
-
-
-$('.closeAPP').click(function () {
-    $('.headerAPP').addClass('NoDisplay');
-    $('#menu').removeClass('menuAPP');
-
-});
-
 
 
 $('#Cep').focus(function () {
@@ -394,36 +272,4 @@ $('#complemento').focus(function () {
         $('.Titulo').addClass('Subir2');
     }
 });
-
-//BarraSocial
-addthis.layers({
-    'theme': 'transparent',
-    'share': {
-        'position': 'right',
-        'services': 'facebook,twitter,google_plusone_share,pinterest_share,linkedin,more',
-        'mobile': false
-    }
-});
-
-//Zoopim
-window.$zopim || (function (d, s) {
-    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
-            d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
-                z.set.
-                _.push(o)
-            }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
-    $.src = "//v2.zopim.com/?3hCSZlIi04fStrYCFoyIkBr5QCysyWDQ"; z.t = +new Date; $.
-    type = "text/javascript"; e.parentNode.insertBefore($, e)
-})(document, "script");
-
-//Analytics
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-76623427-1', 'auto');
-ga('send', 'pageview');
 

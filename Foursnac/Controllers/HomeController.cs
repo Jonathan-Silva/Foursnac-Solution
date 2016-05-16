@@ -12,6 +12,7 @@ namespace Foursnac.Controllers
         public ActionResult Index()
 
         {
+<<<<<<< HEAD
             Random numeroImagem = new Random();
             ViewBag.Imagem = "6.jpg"; //numeroImagem.Next(1, 9).ToString() + ".jpg";
             return View();
@@ -22,13 +23,23 @@ namespace Foursnac.Controllers
             return RedirectToAction("Promocao", "Index");
         }
 
+=======
+            //Random numeroImagem = new Random();
+            //ViewBag.Imagem = numeroImagem.Next(7).ToString() + ".jpg";
+            return View();
+        }
+
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
         public ActionResult IndexDelivery(string controller, string actionName)
         {
             if (controller.Trim().ToLower().Equals("delivery"))
             {
                 return View("Index");
             }
+<<<<<<< HEAD
             
+=======
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
             else
             {
                 return RedirectToAction("Estabelecimento");

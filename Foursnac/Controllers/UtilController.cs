@@ -22,7 +22,10 @@ namespace Foursnac.Controllers
                 return "http://app.foursnac.com.br/";
             }
         }
+<<<<<<< HEAD
 
      
+=======
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
     }
 }

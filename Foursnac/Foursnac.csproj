@@ -184,6 +184,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DeliveryController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\EmBreveController.cs" />
     <Compile Include="Controllers\EstabelecimentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -191,6 +192,11 @@
     <Compile Include="Controllers\PromocaoController.cs" />
     <Compile Include="Controllers\RastreioController.cs" />
     <Compile Include="Controllers\StatusRastreioController.cs" />
+=======
+    <Compile Include="Controllers\EstabelecimentoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
     <Compile Include="Controllers\UtilController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -432,8 +438,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
     <Folder Include="Views\Outros\" />
     <Folder Include="Views\Rastreio\" />
+=======
+    <Folder Include="Views\Delivery\" />
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
     <Folder Include="Views\Util\" />
   </ItemGroup>
   <ItemGroup>

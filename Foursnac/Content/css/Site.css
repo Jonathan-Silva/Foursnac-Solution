@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿.tituloAbout {
     margin-bottom: 20px !important;
     text-transform: uppercase;
@@ -248,6 +249,10 @@
 }
 
 .span-circle {
+=======
+﻿.span-circle{
+    
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
     border-radius: 100%;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -260,6 +265,7 @@
     margin-bottom: 10px;
     padding-top: 0px;
     text-align: center;
+<<<<<<< HEAD
 }
 
 .spnEmBreve {
@@ -297,6 +303,13 @@
 
 .span-circle:hover {
     background-color: #ff2930;
+=======
+
+}
+
+.span-circle:hover{
+    background-color:#ff2930;
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
     cursor: pointer;
 }
 

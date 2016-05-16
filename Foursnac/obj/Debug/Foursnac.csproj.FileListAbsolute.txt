@@ -205,6 +205,7 @@ D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\bin\Microsoft.Owin.Se
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.csprojResolveAssemblyReference.cache
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.dll
 D:\Users\Denis\Documents\GitHub\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.pdb
+<<<<<<< HEAD
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\roslyn\csc.exe
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -354,3 +355,5 @@ D:\Users\Denis\Documents\GitHub\FoursnacLandingPage\Foursnac-Solution\Foursnac\b
 D:\Users\Denis\Documents\GitHub\FoursnacLandingPage\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.csprojResolveAssemblyReference.cache
 D:\Users\Denis\Documents\GitHub\FoursnacLandingPage\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.dll
 D:\Users\Denis\Documents\GitHub\FoursnacLandingPage\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.pdb
+=======
+>>>>>>> 74f1aead32d6ab094e36d9aa8d3b22bc165dc5d6
