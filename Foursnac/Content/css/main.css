@@ -1810,7 +1810,7 @@ input[type="radio"] {
     }
 
 ::-webkit-input-placeholder {
-    color: rgb(209, 209, 209) !important;
+    color: #999 !important;
     opacity: 1.0;
     font-weight: lighter !important;
 }

@@ -279,3 +279,4 @@ C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\Microsoft.Owin.Security.Twit
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.dll
 C:\Projetos\Solution\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.pdb
+C:\Projetos\Solution\Foursnac-Solution\Foursnac\obj\Debug\Foursnac.csprojResolveAssemblyReference.cache

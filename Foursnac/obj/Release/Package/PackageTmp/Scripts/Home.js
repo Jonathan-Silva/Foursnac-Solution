@@ -212,6 +212,7 @@ function Voltar() {
     $('#NaoSei').removeClass('NoDisplay');
     $('.LogoCentral1').addClass('NoDisplay');
     $('.LogoCentral').removeClass('NoDisplay');
+    $('.btPlayStore').removeClass('NoDisplay');
     $('.Titulo').removeClass('Subir1');
     $('.Titulo').removeClass('Subir2');
     $('.LogoCentralHeader').addClass('NoDisplay');
@@ -244,7 +245,8 @@ function Ir(tipo) {
         $('#icoVoltar').removeClass('NoDisplay');
         $('#footer').addClass('NoDisplay');
         $('#Passo').addClass('NoDisplay'); 
-        $('#about').addClass('NoDisplay');
+        $('#about').addClass('NoDisplay'); 
+        $('.btPlayStore').addClass('NoDisplay');
         $('#num').focus();
     }
 }

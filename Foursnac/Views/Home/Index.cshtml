@@ -14,7 +14,9 @@
     <meta name="theme-color" content="#FF2930">
 
     <title>Delivery em Araçatuba e Birigui - Foursnac</title>
-    <meta name="description" content="Peça comida online em diversos restaurantes em Araçatuba, Birigui, Guararapes e região. Encontre pizzas, lanches e sushis. Entrega à domicilio com delivery.">
+    <!--<meta name="description" content="Peça comida online em diversos restaurantes em Araçatuba, Birigui, Guararapes e região. Encontre pizzas, lanches e sushis. Entrega à domicilio com delivery.">-->
+    <!--FRASE DO LUCAS-->
+    <meta name="description" content="Peça delivery de comida online em diversos restaurantes de Araçatuba, Birigui e Guararapes. Delivery (Entrega à Domicílio): Lanches, Pizzas, Sushis e Comida Japonesa.">
     <meta name="keywords" content="delivery, delidery araçatuba, delivery birigui, pizza em araçatuba, pizza em birigui, lanches, lanches birigui, lanches araçatuba, pedir comida araçatuba, pedir comida birigui, restaurantes araçatuba, restaurantes birigui">
 
     <link rel="stylesheet" href="~/Content/css/main.css" />
@@ -37,7 +39,7 @@
         <!-- Header Instalar app -->
         <div class="headerAPP">
 
-            <div class="closeAPP" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+            <div class="closeAPP"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
             <div id="goAPP" class="goAPP"></div>
 
             <div class="divP">
@@ -48,7 +50,7 @@
             <a id="btGStore" class="baixarAPP NoDisplay" href="https://play.google.com/store/apps/details?id=io.cordova.myapp118f03&hl=pt_BR">baixar</a>
             <a id="btIStore" class="baixarAPP NoDisplay" href="">baixar</a>
             <a id="btWStore" class="baixarAPP NoDisplay" href="">baixar</a>
-            
+
         </div>
         <!-- Header -->
         <header id="header" class="alt">
@@ -90,7 +92,7 @@
                 <form name="form" id="form">
 
                     <div id="divCep" class="divCep">
-                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder ='digite seu cep'" onfocus="this.placeholder =''" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off" />
+                        <input id="Cep" type="tel" onkeypress="return somenteNumeros(event);" onblur="this.placeholder = 'infome aqui o seu cep'" onfocus="this.placeholder='digite seu cep'" name="cep" value="" class="Cep" placeholder="digite seu cep" autocomplete="off" />
                     </div>
                     <button type="button" name="btCep" value="tipo" id="btCep" class="btcep">pedir comida</button>
                     @*<button type="button" name="btCepDontPush" value="tipo" id="btCepDontPush" class="btcep" style="background-color:yellow; color:#000">dentro de poucos dias...</button>*@
@@ -98,130 +100,132 @@
 
                 </form>
             </div>
+            <a href='https://play.google.com/store/apps/details?id=io.cordova.myapp118f03&hl=pt_BR&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <div class="btPlayStore"><img alt='Play Store' src='~/Content/img/btPlayStore.png' /></div>
+            </a>
+    <!-- Resultado Endereço -->
+    <a href="/home/index"><div id="Logo2" class="LogoCentral1 NoDisplay" title="Foursnac"></div></a>
 
-            <!-- Resultado Endereço -->
-            <a href="/home/index"><div id="Logo2" class="LogoCentral1 NoDisplay" title="Foursnac"></div></a>
-
-            <div id="CaixaResultado" class="CaixaResultado NoDisplay">
+    <div id="CaixaResultado" class="CaixaResultado NoDisplay">
 
 
-                <div class="divUf">
-                    <input id="uf" readonly="true" type="text" class="inputUf" value="" />
+        <div class="divUf">
+            <input id="uf" readonly="true" type="text" class="inputUf" value="" />
+        </div>
+
+        <div class="divCidade">
+            <input id="cidade" readonly="true" type="text" class="inputCidade" value="" />
+        </div>
+
+        <div class="divRua">
+            <input id="rua" readonly="true" type="text" class="inputRua" value="" />
+        </div>
+
+        <div class="divNum">
+            <input id="num" type="tel" class="inputNum" onkeypress="return numeroFocus(event);" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder = 'Nº'" placeholder="Nº" />
+        </div>
+
+        <div class="divComplemento">
+            <input id="complemento" type="text" class="inputComplemento" onkeypress="return complementoFocus(event);" value="" onblur="this.placeholder = 'complemento'" onfocus="this.placeholder ='complemento'" placeholder="complemento" />
+        </div>
+
+        <button class="btVoltar" onclik="Voltar()">voltar</button>
+        <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
+
+
+    </div>
+
+    <!--Seleciona o tipo Delivery/Pickup-->
+
+    <div id="CaixaTipo" class="CaixaTipo NoDisplay">
+        <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
+
+            <div class="img-Delivery"></div>
+            <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
+
+        </div>
+
+        <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
+
+            <div class="img-Pickup"></div>
+            <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
+
+        </div>
+    </div>
+
+
+    <div id="NaoSei"><a href="" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
+
+
+
+    </section>
+    <section id="about" class="about who">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="FooterTitulo tituloAbout">delivery de comida em araçatuba, birigui e região</h1>
+                    <p class="whoText">
+                        Pedir delivery de comida online nunca foi tão fácil. Encontre diversos <b>restaurantes com delivery</b> e entrega à domicílio com várias culinárias e tipos de comida . Sushis, Lanches, Pizzas, Carnes, Comida Saudável, Pizzarias,
+                        Restaurantes, Lanchonetes em Araçatuba , Birigui, Guararapes. É pratico e segura. Peça delivery de comida pela internet agora mesmo.
+                    </p>
                 </div>
-
-                <div class="divCidade">
-                    <input id="cidade" readonly="true" type="text" class="inputCidade" value="" />
-                </div>
-
-                <div class="divRua">
-                    <input id="rua" readonly="true" type="text" class="inputRua" value="" />
-                </div>
-
-                <div class="divNum">
-                    <input id="num" type="tel" class="inputNum" onkeypress="return numeroFocus(event);" value="" onblur="this.placeholder ='Nº'" onfocus="this.placeholder = 'Nº'" placeholder="Nº" />
-                </div>
-
-                <div class="divComplemento">
-                    <input id="complemento" type="text" class="inputComplemento" onkeypress="return complementoFocus(event);" value="" onblur="this.placeholder = 'complemento'" onfocus="this.placeholder ='complemento'" placeholder="complemento" />
-                </div>
-
-                <button class="btVoltar" onclik="Voltar()">voltar</button>
-                <button class="btContinuar" id="goTipo" onclick="GoToTipo();">pedir comida</button>
-
-
             </div>
+        </div>
+    </section>
 
-            <!--Seleciona o tipo Delivery/Pickup-->
+    <!--Passo a passo -->
+    <section id="Passo" class="Passo">
 
-            <div id="CaixaTipo" class="CaixaTipo NoDisplay">
-                <div class="divDeliveryCor tipo" id="delivery" style="cursor:pointer">
+        <div class="container">
 
-                    <div class="img-Delivery"></div>
-                    <div class="TextoDelyvery">quero <span style="font-weight:bold">delivery</span> </div>
-
-                </div>
-
-                <div class="divPickupCor tipo" id="pickup" style="cursor:pointer">
-
-                    <div class="img-Pickup"></div>
-                    <div class="TextoPickup">quero <span style="font-weight:bold">buscar no local</span> </div>
-
-                </div>
-            </div>
-
-
-            <div id="NaoSei"><a href="" class="NaoSeiCep NoDisplay">Não sei meu cep </a></div>
-
-
-
-        </section>
-        <section id="about" class="about who">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="FooterTitulo tituloAbout">delivery de comida em araçatuba, birigui e região</h1>
-                        <p class="whoText">
-                            Pedir delivery de comida online nunca foi tão fácil. Encontre diversos <b>restaurantes com delivery</b> e entrega à domicílio com várias culinárias e tipos de comida . Sushis, Lanches, Pizzas, Carnes, Comida Saudável, Pizzarias,
-                            Restaurantes, Lanchonetes em Araçatuba , Birigui, Guararapes. É pratico e segura. Peça delivery de comida pela internet agora mesmo.
-                      </p>
+            <div class="col-md-12 col-sm-12  col-xs-12">
+                <div class="row text-center">
+                    <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo1">
+                        <span class="fa fa-4x span-circle" id="Passo1">
+                            <i class="icon-location74 icoCirculo"></i>
+                        </span>
+                        <div><b>1.</b><span class="TextoPasso">Localize</span></div>
+                        <div class="TextoPasso">facilmente</div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!--Passo a passo -->
-        <section id="Passo" class="Passo">
+                    <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
+                        <span class="fa fa-4x span-circle" id="Passo2">
 
-            <div class="container">
+                            <i class="icon-iconesestabelecimentos icoCirculo">  </i>
 
-                <div class="col-md-12 col-sm-12  col-xs-12">
-                    <div class="row text-center">
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo1">
-                            <span class="fa fa-4x span-circle" id="Passo1">
-                                <i class="icon-location74 icoCirculo"></i>
-                            </span>
-                            <div><b>1.</b><span class="TextoPasso">Localize</span></div>
-                            <div class="TextoPasso">facilmente</div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo2">
-                            <span class="fa fa-4x span-circle" id="Passo2">
-
-                                <i class="icon-iconesestabelecimentos icoCirculo">  </i>
-
-                            </span>
-                            <div><b>2.</b><span class="TextoPasso">Selecione um</span></div>
-                            <div class="TextoPasso">estabelecimento</div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
-                            <span class="fa fa-4x span-circle" id="Passo3">
-                                <i class="icon-pizza2 icoCirculo icoCirculoPizza">  </i>
-                            </span>
-                            <div><b>3.</b><span class="TextoPasso">Escolha sua</span></div>
-                            <div class="TextoPasso">comida</div>
-                        </div>
-
-
-                        <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo4">
-                            <span class="fa fa-4x span-circle" id="Passo4">
-                                <i class="icon-money-card4 icoCirculo">  </i>
-                            </span>
-                            <div><b>4.</b><span class="TextoPasso">Defina como</span></div>
-                            <div class="TextoPasso">pagar</div>
-                        </div>
-
+                        </span>
+                        <div><b>2.</b><span class="TextoPasso">Selecione um</span></div>
+                        <div class="TextoPasso">estabelecimento</div>
                     </div>
+
+                    <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo3">
+                        <span class="fa fa-4x span-circle" id="Passo3">
+                            <i class="icon-pizza2 icoCirculo icoCirculoPizza">  </i>
+                        </span>
+                        <div><b>3.</b><span class="TextoPasso">Escolha sua</span></div>
+                        <div class="TextoPasso">comida</div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-3  col-sm-12 col-xs-12" id="divCirculo4">
+                        <span class="fa fa-4x span-circle" id="Passo4">
+                            <i class="icon-money-card4 icoCirculo">  </i>
+                        </span>
+                        <div><b>4.</b><span class="TextoPasso">Defina como</span></div>
+                        <div class="TextoPasso">pagar</div>
+                    </div>
+
                 </div>
-
-
             </div>
 
-        </section>
+
+        </div>
+
+    </section>
 
 
-        <!-- Footer -->
-        @Html.Partial("_Footer")
+    <!-- Footer -->
+    @Html.Partial("_Footer")
 
     </div>
 
